@@ -30,6 +30,8 @@
   border: 1px solid black;
   border-bottom: none;
   background-color: white;
+
+  font-size: clamp(1.5rem, 0.25rem + 2.5vw, 1.75rem);
 }
 
 .skills {
@@ -54,4 +56,31 @@
   font-style: italic;
   font-weight: 700;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* 반응형 - 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  .navbar-content {
+    padding: 0 5rem;
+  }
+}
+
+/* 반응형 - 모바일 (768px) */
+@media (max-width: 768px) {
+  .navbar-content {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    /* 그리드 */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.5rem;
+    align-items: center;
+
+    .about-me {
+      border-left: none;
+    }
+  }
 }

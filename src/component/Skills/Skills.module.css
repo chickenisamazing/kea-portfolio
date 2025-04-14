@@ -1,6 +1,5 @@
 .content {
   max-width: 90rem;
-  height: 100%;
   margin: 0 auto;
   padding: 0 15rem;
 
@@ -8,18 +7,114 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.5rem;
-  align-items: center;
 }
 
 .title {
   margin-top: 8rem;
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-style: italic;
   font-weight: 700;
-  grid-column: 2 / span 4;
+  grid-column: 2 / span 8;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    to right bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-.logo-list {
-  grid-column: 2 / span 4;
+.logo-container {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  grid-column: 2 / span 10;
+  gap: 2rem;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.logo-icon {
+  cursor: pointer;
+  filter: grayscale(60%);
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+  opacity: 0.7;
+}
+
+.logo-icon:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.logo-icon.selected {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.description {
+  grid-column: 2 / span 10;
+  margin-top: 4rem;
+  padding: 1rem;
+  word-break: keep-all;
+
+  /* 이건 삭제 */
+  margin-bottom: 10rem;
+
+  .selected-skill-name {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #663399;
+    margin-bottom: 4rem;
+  }
+
+  .sentence {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+}
+
+/* 반응형 - 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  .content {
+    padding: 0 5rem;
+  }
+}
+
+/* 반응형 - 모바일 (768px) */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1.5rem;
+  }
+
+  .title,
+  .profile-image,
+  .link-container,
+  .description,
+  .description-2 {
+    grid-column: 1 / -1;
+  }
+
+  .profile-image {
+    /* max-width: 19rem; */
+    /* width: 80%; */
+    /* height: auto; */
+    grid-column: 1 / span 12;
+    justify-self: center;
+  }
+
+  .profile-image img {
+    max-width: 15rem;
+    width: 80%;
+    justify-content: center;
+  }
 }

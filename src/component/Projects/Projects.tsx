@@ -2,7 +2,7 @@
 
 // import { useState } from "react";
 import Image from "next/image";
-import { projectsData, type Project } from "@/data/projectsData";
+import { projectsData, type Project, type Stack } from "@/data/projectsData";
 
 import styles from "./Projects.module.css";
 
@@ -15,9 +15,10 @@ export default function Projects() {
         </h2>
         <div className={styles["project-container"]}>
           {projectsData.map((project: Project) => (
-            <div key={project.projectId}>
-              <span className={styles["project-name"]}>{project.name}</span>
-              <div className={styles["image-desc-container"]}>
+            <div key={project.projectId} className={styles["project-card"]}>
+              {/* 프로젝트 내부 컨테이너 */}
+              <div className={styles["project-inner-container"]}>
+                <span className={styles["project-name"]}>{project.name}</span>
                 <Image
                   className={styles["browser-image"]}
                   src={project.image.src}
@@ -26,17 +27,29 @@ export default function Projects() {
                   height={200}
                   priority
                 />
-                <div>
-                  <dl className={styles["dl-style"]}>
-                    <dt className={styles["dt-style"]}>유형</dt>
-                    <dd className={styles["dd-style"]}>{project.type}</dd>
+                <dl className={styles["dl-style"]}>
+                  <dt className={styles["dt-style"]}>유형</dt>
+                  <dd className={styles["dd-style"]}>{project.type}</dd>
 
-                    <dt className={styles["dt-style"]}>기간</dt>
-                    <dd className={styles["dd-style"]}>{project.duration}</dd>
+                  <dt className={styles["dt-style"]}>기간</dt>
+                  <dd className={styles["dd-style"]}>{project.duration}</dd>
 
-                    <dt className={styles["dt-style"]}>역할</dt>
-                    <dd className={styles["dd-style"]}>{project.role}</dd>
-                  </dl>
+                  <dt className={styles["dt-style"]}>역할</dt>
+                  <dd className={styles["dd-style"]}>{project.role}</dd>
+                </dl>
+                <div className={styles["skills-container"]}>
+                  <span className={styles["skill-list-name"]}>Skills</span>
+                  <div className={styles["skill-list"]}>
+                    {project.skills.map((stack: Stack) => (
+                      <span
+                        style={{ background: stack.fontColor }}
+                        className={styles["skill"]}
+                        key={stack.stack}
+                      >
+                        {stack.stack}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

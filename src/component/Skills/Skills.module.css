@@ -77,6 +77,12 @@
   font-weight: 700;
 }
 
+.description-list {
+  padding-left: 0;
+  margin-top: 0;
+  margin-top: 0;
+}
+
 .description {
   grid-column: 2 / span 10;
   margin-top: 4rem;

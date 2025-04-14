@@ -14,7 +14,7 @@ export default function Tools() {
   return (
     <div>
       <div className={styles.content}>
-        <h2 id="about-me-title" className={styles.title}>
+        <h2 id="tools-title" className={styles.title}>
           Tools
         </h2>
         <div className={styles["logo-container"]}>
@@ -33,7 +33,6 @@ export default function Tools() {
                 alt={tool.alt}
                 width={64}
                 height={64}
-                onClick={() => setSelected(tool.name)}
                 priority={selected === tool.name}
               />
             </button>

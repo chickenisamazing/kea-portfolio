@@ -24,6 +24,7 @@ export default function AboutMe() {
               href="https://github.com/chickenisamazing"
               target="_blank"
               rel="noopener noreferrer"
+              className={styles["link"]}
             >
               github.com/chickenisamazing
             </a>
@@ -35,6 +36,7 @@ export default function AboutMe() {
               href="https://unhandled.tistory.com"
               target="_blank"
               rel="noopener noreferrer"
+              className={styles["link"]}
             >
               unhandled.tistory.com
             </a>
@@ -42,7 +44,11 @@ export default function AboutMe() {
 
           <dt className={styles["link-category"]}>email.</dt>
           <dd className={styles["link-link-group"]}>
-            <a href="mailto:kakapokachip@gmail.com" rel="noopener noreferrer">
+            <a
+              href="mailto:kakapokachip@gmail.com"
+              rel="noopener noreferrer"
+              className={styles["link"]}
+            >
               kakapokachip@gmail.com
             </a>
           </dd>

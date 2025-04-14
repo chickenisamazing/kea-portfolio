@@ -16,7 +16,7 @@ export default function Skills() {
   return (
     <div>
       <div className={styles.content}>
-        <h2 id="about-me-title" className={styles.title}>
+        <h2 id="skills-title" className={styles.title}>
           Skills
         </h2>
         <div className={styles["logo-container"]}>
@@ -35,7 +35,6 @@ export default function Skills() {
                 alt={skill.alt}
                 width={64}
                 height={64}
-                onClick={() => setSelected(skill.name)}
                 priority={selected === skill.name}
               />
             </button>

@@ -11,7 +11,7 @@
 
 /* Tools의 소제목은 Skills보다 조금 작게 */
 .title {
-  margin-top: 6rem;
+  margin-top: 8rem;
   padding: 1rem;
   font-size: 3rem;
   font-style: italic;
@@ -44,6 +44,10 @@
   border: none;
   background: none;
   padding: 0;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  transition: width 0.2s ease-in-out;
 }
 
 .btn-logo:focus-visible {
@@ -57,13 +61,6 @@
   transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
   opacity: 0.7;
   flex-shrink: 0;
-
-  img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-    transition: width 0.2s ease-in-out;
-  }
 }
 
 .logo-icon:hover {
@@ -97,7 +94,7 @@
   word-break: keep-all;
 
   /* 이건 삭제 */
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
 
   .selected-skill-name {
     display: block;

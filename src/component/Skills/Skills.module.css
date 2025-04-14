@@ -39,6 +39,12 @@
   padding: 1rem;
 }
 
+.btn-logo {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
 .logo-icon {
   cursor: pointer;
   filter: grayscale(60%);

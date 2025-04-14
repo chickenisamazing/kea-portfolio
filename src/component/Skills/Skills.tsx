@@ -21,18 +21,24 @@ export default function Skills() {
         </h2>
         <div className={styles["logo-container"]}>
           {skillsData.map((skill: Skill) => (
-            <Image
+            <button
+              className={styles["btn-logo"]}
+              type="button"
               key={skill.name}
-              className={`${styles["logo-icon"]} ${
-                selected === skill.name ? styles.selected : ""
-              }`}
-              src={skill.src}
-              alt={skill.alt}
-              width={64}
-              height={64}
               onClick={() => setSelected(skill.name)}
-              priority={selected === skill.name}
-            />
+            >
+              <Image
+                className={`${styles["logo-icon"]} ${
+                  selected === skill.name ? styles.selected : ""
+                }`}
+                src={skill.src}
+                alt={skill.alt}
+                width={64}
+                height={64}
+                onClick={() => setSelected(skill.name)}
+                priority={selected === skill.name}
+              />
+            </button>
           ))}
         </div>
 

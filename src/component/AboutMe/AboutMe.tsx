@@ -7,7 +7,7 @@ export default function AboutMe() {
     <div>
       <div className={styles.content}>
         <h2 id="about-me-title" className={styles.title}>
-          About Me.
+          About Me
         </h2>
         <Image
           className={styles["profile-image"]}

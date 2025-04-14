@@ -1,0 +1,118 @@
+.content {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 15rem;
+
+  /* 그리드 */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.5rem;
+}
+
+.title {
+  margin-top: 8rem;
+  padding: 1rem;
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 700;
+  grid-column: 2 / span 8;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    to right bottom,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.project-container {
+  grid-column: 2 / span 8;
+  display: flex;
+}
+
+.project-name {
+  font-size: 1.75rem;
+  font-weight: 550;
+  display: inline-block;
+  color: white;
+  background-color: black;
+  padding: 0.25rem 2.5rem;
+  border-radius: 1.25rem;
+}
+
+/* .image-desc-container {
+  display: flex;
+} */
+
+.browser-image {
+  grid-column: 2 / span 4;
+}
+
+.dl-style {
+  /* display: grid; */
+  grid-column: 7 / span 2;
+
+  .dt-style {
+    /* grid-column: max-content 1fr; */
+    display: inline-block;
+    color: white;
+    font-size: 1rem;
+    font-weight: 550;
+    background-color: black;
+    padding: 0.25rem 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .dd-style {
+    margin: 0;
+    margin-top: 0.25rem;
+    /* display: inline-block; */
+    font-size: 1.125rem;
+    padding: 0.25rem 0rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* 반응형 - 모바일 (768px) */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1.5rem;
+  }
+
+  .title {
+    grid-column: 1/-1;
+  }
+
+  .logo-container {
+    grid-column: 1/-1;
+  }
+
+  .description {
+    grid-column: 1/-1;
+  }
+
+  .logo-icon {
+    transform: scale(0.9);
+  }
+  /* .logo-icon {
+        transform: scale(0.9);
+      } */
+}
+
+/* 반응형 - 더 작은 화면 (576px) */
+@media (max-width: 576px) {
+  .content {
+    padding: 0 1.5rem;
+  }
+
+  .logo-container {
+    /* 내부 그리드 추가 */
+    /* grid-column: 1/-1; */
+    display: grid;
+    /* grid-template-rows: auto auto; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    place-items: center;
+  }
+}

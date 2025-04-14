@@ -2,14 +2,16 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { skillsData } from "@/data/skillsData";
+import { skillsData, type Skill } from "@/data/skillsData";
 
 import styles from "./Skills.module.css";
 
 export default function Skills() {
   const [selected, setSelected] = useState<string>(skillsData[0]?.name || "");
 
-  const selectedSkill = skillsData.find((skill) => skill.name === selected);
+  const selectedSkill = skillsData.find(
+    (skill: Skill) => skill.name === selected
+  );
 
   return (
     <div>
@@ -18,7 +20,7 @@ export default function Skills() {
           Skills
         </h2>
         <div className={styles["logo-container"]}>
-          {skillsData.map((skill) => (
+          {skillsData.map((skill: Skill) => (
             <Image
               key={skill.name}
               className={`${styles["logo-icon"]} ${
@@ -43,11 +45,13 @@ export default function Skills() {
               {selectedSkill.name}
             </span>
             <ul className={styles["description-list"]}>
-              {selectedSkill.description.map((sentence, index) => (
-                <li key={index} className={styles.sentence}>
-                  {sentence}
-                </li>
-              ))}
+              {selectedSkill.description.map(
+                (sentence: string, index: number) => (
+                  <li key={index} className={styles.sentence}>
+                    {sentence}
+                  </li>
+                )
+              )}
             </ul>
           </div>
         )}

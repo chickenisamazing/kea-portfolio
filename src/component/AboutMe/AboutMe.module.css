@@ -61,7 +61,7 @@
   word-break: break-all;
   margin-bottom: 0.75rem;
 
-  a {
+  .link {
     text-decoration: none;
     color: inherit;
   }

@@ -51,6 +51,16 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
+                <div className={styles["description-container"]}>
+                  <span className={styles["skill-list-name"]}>
+                    프로젝트 개요
+                  </span>
+                  {project.description.map((desc: string, index: number) => (
+                    <span key={index} className={styles["desc"]}>
+                      {desc}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

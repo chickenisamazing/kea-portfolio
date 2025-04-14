@@ -9,7 +9,7 @@ export interface Skill {
 export const skillsData: Skill[] = [
   {
     name: "HTML",
-    src: "/assets/logos/HTML_logo.svg",
+    src: "/assets/logos/skills/HTML_logo.svg",
     alt: "HTML logo",
     fontColor: "#E44D26",
     description: [
@@ -20,7 +20,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "CSS",
-    src: "/assets/logos/CSS_logo.svg",
+    src: "/assets/logos/skills/CSS_logo.svg",
     alt: "CSS logo",
     fontColor: "#663399",
     description: [
@@ -33,7 +33,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "JavaScript",
-    src: "/assets/logos/JavaScript_logo.svg",
+    src: "/assets/logos/skills/JavaScript_logo.svg",
     alt: "JavaScript logo",
     fontColor: "#F7DF1E",
     description: [
@@ -45,7 +45,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "TypeScript",
-    src: "/assets/logos/TypeScript_logo.svg",
+    src: "/assets/logos/skills/TypeScript_logo.svg",
     alt: "TypeScript logo",
     fontColor: "#007ACC",
     description: [
@@ -56,7 +56,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "React",
-    src: "/assets/logos/React_logo.svg",
+    src: "/assets/logos/skills/React_logo.svg",
     alt: "React logo",
     fontColor: "#61DAFB",
     description: [
@@ -69,7 +69,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Next.js",
-    src: "/assets/logos/Next_js_logo.svg",
+    src: "/assets/logos/skills/Next_js_logo.svg",
     alt: "Next.js logo",
     fontColor: "#000000",
     description: [

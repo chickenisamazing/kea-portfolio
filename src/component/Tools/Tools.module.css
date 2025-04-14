@@ -9,10 +9,11 @@
   column-gap: 1.5rem;
 }
 
+/* Tools의 소제목은 Skills보다 조금 작게 */
 .title {
-  margin-top: 8rem;
+  margin-top: 6rem;
   padding: 1rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-style: italic;
   font-weight: 700;
   grid-column: 2 / span 8;
@@ -95,6 +96,9 @@
   padding: 1rem;
   word-break: keep-all;
 
+  /* 이건 삭제 */
+  margin-bottom: 10rem;
+
   .selected-skill-name {
     display: block;
     font-size: 2rem;
@@ -157,8 +161,8 @@
     transform: scale(0.9);
   }
   /* .logo-icon {
-    transform: scale(0.9);
-  } */
+      transform: scale(0.9);
+    } */
 }
 
 /* 반응형 - 더 작은 화면 (576px) */

@@ -11,7 +11,7 @@
 
 /* Tools의 소제목은 Skills보다 조금 작게 */
 .title {
-  margin-top: 6rem;
+  margin-top: 8rem;
   padding: 1rem;
   font-size: 3rem;
   font-style: italic;
@@ -97,7 +97,7 @@
   word-break: keep-all;
 
   /* 이건 삭제 */
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
 
   .selected-skill-name {
     display: block;

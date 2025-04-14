@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 개인 포트폴리오
 
-## Getting Started
+## 개요
 
-First, run the development server:
+### 1. 네비게이션 바
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [x] HTML 마크업 & CSS 스타일링
+- [x] 반응형 웹 구현
+- [ ] 카테고리 클릭 시 해당 섹션으로 스크롤 이동
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. About Me 섹션
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [x] HTML 마크업 & CSS 스타일링
+- [x] 시맨틱 태그 적용
+- [x] 반응형 웹 구현
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Skills 섹션
 
-## Learn More
+- [ ] HTML 마크업 & CSS 스타일링
+- [ ] 사용자 상호작용 요소 구현
+- [ ] 시맨틱 태그 적용
+- [ ] 반응형 웹 구현
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Tools
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] HTML 마크업 & CSS 스타일링
+- [ ] 사용자 상호작용 요소 구현
+- [ ] 시맨틱 태그 적용
+- [ ] 반응형 웹 구현
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 5. Projects 섹션
 
-## Deploy on Vercel
+- [ ] HTML 마크업 & CSS 스타일링
+- [ ] 시맨틱 태그 적용
+- [ ] 반응형 웹 구현
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 6. 검색 엔진 최적화(SEO)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] SEO 개선
+
+### 7. 배포(Deployment)
+
+- [ ] 배포 플랫폼 설정
+- [ ] 도메인 연결

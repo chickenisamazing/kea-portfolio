@@ -125,11 +125,13 @@ export default function AboutMe() {
             >
               {selectedSkill.name}
             </span>
-            {selectedSkill.description.map((sentence, index) => (
-              <span key={index} className={styles.sentence}>
-                {sentence}
-              </span>
-            ))}
+            <ul className={styles["description-list"]}>
+              {selectedSkill.description.map((sentence, index) => (
+                <li key={index} className={styles.sentence}>
+                  {sentence}
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>

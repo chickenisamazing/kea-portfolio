@@ -14,7 +14,7 @@ export default function AboutMe() {
   const skills = [
     {
       name: "HTML",
-      src: "/assets/logos/HTML_logo.png",
+      src: "/assets/logos/HTML_logo.svg",
       alt: "HTML logo",
       fontColor: "#E44D26",
       description: [
@@ -25,7 +25,7 @@ export default function AboutMe() {
     },
     {
       name: "CSS",
-      src: "/assets/logos/CSS_logo.png",
+      src: "/assets/logos/CSS_logo.svg",
       alt: "CSS logo",
       fontColor: "#663399",
       description: [
@@ -38,7 +38,7 @@ export default function AboutMe() {
     },
     {
       name: "JavaScript",
-      src: "/assets/logos/JavaScript_logo.png",
+      src: "/assets/logos/JavaScript_logo.svg",
       alt: "JavaScript logo",
       fontColor: "#F7DF1E",
       description: [
@@ -50,7 +50,7 @@ export default function AboutMe() {
     },
     {
       name: "TypeScript",
-      src: "/assets/logos/TypeScript_logo.png",
+      src: "/assets/logos/TypeScript_logo.svg",
       alt: "TypeScript logo",
       fontColor: "#007ACC",
       description: [
@@ -61,7 +61,7 @@ export default function AboutMe() {
     },
     {
       name: "React",
-      src: "/assets/logos/React_logo.png",
+      src: "/assets/logos/React_logo.svg",
       alt: "React logo",
       fontColor: "#61DAFB",
       description: [
@@ -74,7 +74,7 @@ export default function AboutMe() {
     },
     {
       name: "Next.js",
-      src: "/assets/logos/Next_js_logo.png",
+      src: "/assets/logos/Next_js_logo.svg",
       alt: "Next.js logo",
       fontColor: "#000000",
       description: [

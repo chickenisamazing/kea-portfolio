@@ -93,6 +93,18 @@
   }
 }
 
+.skill-list-name {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 550;
+  background-color: black;
+  padding: 0.25rem 1rem;
+  border-radius: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
 .skills-container {
   grid-column: 2 / span 6;
 
@@ -121,6 +133,13 @@
     padding: 0.125rem 0.875rem;
     margin-right: 0.5rem;
     margin-bottom: 0.25rem;
+  }
+}
+
+.description-container {
+  grid-column: 8 / span 3;
+
+  .desc {
   }
 }
 

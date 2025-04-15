@@ -13,7 +13,7 @@ export interface Project {
     src: string;
     alt: string;
   };
-  description: string[];
+  description: string;
   skills: Stack[];
   features: string[];
   links: {
@@ -34,7 +34,8 @@ export const projectsData: Project[] = [
       src: "/assets/temp_browser_image.png",
       alt: "프로젝트 이미지",
     },
-    description: ["프로젝트 설명1", "프로젝트 설명2"],
+    description:
+      "저의 개인 포트폴리오입니다. 자기소개와 제가 사용하는 기술 스택, 그리고 제가 참여했던 프로젝트에 대해 소개합니다.",
     skills: [
       {
         stack: "HTML",

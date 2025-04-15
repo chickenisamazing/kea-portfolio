@@ -55,11 +55,12 @@ export default function Projects() {
                   <span className={styles["skill-list-name"]}>
                     프로젝트 개요
                   </span>
-                  {project.description.map((desc: string, index: number) => (
+                  {project.description}
+                  {/* {project.description.map((desc: string, index: number) => (
                     <span key={index} className={styles["desc"]}>
                       {desc}
                     </span>
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>

@@ -18,7 +18,10 @@ export default function Projects() {
             <div key={project.projectId} className={styles["project-card"]}>
               {/* 프로젝트 내부 컨테이너 */}
               <div className={styles["project-inner-container"]}>
+                {/* 프로젝트명 */}
                 <span className={styles["project-name"]}>{project.name}</span>
+
+                {/* 프로젝트 캡쳐 이미지 */}
                 <Image
                   className={styles["browser-image"]}
                   src={project.image.src}
@@ -27,6 +30,8 @@ export default function Projects() {
                   height={200}
                   priority
                 />
+
+                {/* 프로젝트 유형 */}
                 <dl className={styles["dl-style"]}>
                   <dt className={styles["dt-style"]}>유형</dt>
                   <dd className={styles["dd-style"]}>{project.type}</dd>
@@ -37,6 +42,8 @@ export default function Projects() {
                   <dt className={styles["dt-style"]}>역할</dt>
                   <dd className={styles["dd-style"]}>{project.role}</dd>
                 </dl>
+
+                {/* 기술 스택 */}
                 <div className={styles["skills-container"]}>
                   <span className={styles["skill-list-name"]}>Skills</span>
                   <div className={styles["skill-list"]}>
@@ -51,15 +58,27 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
+
+                {/* 프로젝트 개요 */}
                 <div className={styles["description-container"]}>
-                  <span className={styles["skill-list-name"]}>
+                  <span className={styles["description-name"]}>
                     프로젝트 개요
                   </span>
-                  {project.description.map((desc: string, index: number) => (
-                    <span key={index} className={styles["desc"]}>
-                      {desc}
-                    </span>
-                  ))}
+                  <span className={styles.description}>
+                    {project.description}
+                  </span>
+                </div>
+
+                {/* 구현 기능 */}
+                <div className={styles["feature-container"]}>
+                  <span className={styles["feature-name"]}>구현 기능</span>
+                  <div className={styles["feature-list"]}>
+                    {project.features.map((feature: string, index: number) => (
+                      <span key={index} className={styles.feature}>
+                        {feature}
+                      </span>
+                    ))}{" "}
+                  </div>
                 </div>
               </div>
             </div>

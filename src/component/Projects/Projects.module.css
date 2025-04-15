@@ -93,6 +93,7 @@
   }
 }
 
+/* description-name 및 다른 속성과 동일 -> 합치기  */
 .skill-list-name {
   display: inline-block;
   text-align: center;
@@ -137,9 +138,69 @@
 }
 
 .description-container {
-  grid-column: 8 / span 3;
+  grid-column: 8 / span 4;
 
-  .desc {
+  .description-name {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 550;
+    background-color: black;
+    padding: 0.25rem 1rem;
+    border-radius: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    display: inline-block;
+  }
+}
+
+.feature-container {
+  grid-column: 2 / span 6;
+  margin-bottom: 3rem;
+
+  .feature-name {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 550;
+    background-color: black;
+    padding: 0.25rem 1rem;
+    border-radius: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    .feature {
+      display: inline-block;
+    }
+  }
+}
+
+/* 반응형 - 데스크탑(작은 모니터) (1440px) */
+@media (max-width: 1440px) {
+  .content {
+    padding: 0 10rem;
+  }
+}
+
+/* 반응형 - 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  .content {
+    padding: 0 5rem;
+  }
+
+  .logo-container {
+    gap: 1.25rem;
+  }
+
+  .logo-icon {
+    transform: scale(0.95);
   }
 }
 

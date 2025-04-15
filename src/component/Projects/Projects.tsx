@@ -19,8 +19,9 @@ export default function Projects() {
               {/* 프로젝트 내부 컨테이너 */}
               <div className={styles["project-inner-container"]}>
                 {/* 프로젝트명 */}
-                <span className={styles["project-name"]}>{project.name}</span>
-
+                <div className={styles["project-name-container"]}>
+                  <span className={styles["project-name"]}>{project.name}</span>
+                </div>
                 {/* 프로젝트 캡쳐 이미지 */}
                 <Image
                   className={styles["browser-image"]}

@@ -62,7 +62,7 @@ export const projectsData: Project[] = [
         fontColor: "#000000",
       },
     ],
-    features: ["구현 기능1", "구현 기능2"],
+    features: ["소개 페이지 구현", "사용자 인터렉션 요소 구현"],
     links: {
       github: "깃헙 주소",
       domain: "도메인 주소",

@@ -27,20 +27,26 @@ export default function Projects() {
                   className={styles["browser-image"]}
                   src={project.image.src}
                   alt={project.image.alt}
-                  width={400}
-                  height={200}
+                  width={700}
+                  height={350}
                   priority
                 />
 
                 {/* 프로젝트 유형 */}
                 <dl className={styles["dl-style"]}>
-                  <dt className={styles["dt-style"]}>유형</dt>
+                  <dt className={styles["dt-style"]}>
+                    <span className={styles["dt-span-style"]}>유형</span>
+                  </dt>
                   <dd className={styles["dd-style"]}>{project.type}</dd>
 
-                  <dt className={styles["dt-style"]}>기간</dt>
+                  <dt className={styles["dt-style"]}>
+                    <span className={styles["dt-span-style"]}>기간</span>
+                  </dt>
                   <dd className={styles["dd-style"]}>{project.duration}</dd>
 
-                  <dt className={styles["dt-style"]}>역할</dt>
+                  <dt className={styles["dt-style"]}>
+                    <span className={styles["dt-span-style"]}>역할</span>
+                  </dt>
                   <dd className={styles["dd-style"]}>{project.role}</dd>
                 </dl>
 

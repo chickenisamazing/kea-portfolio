@@ -153,9 +153,6 @@
   .logo-icon {
     transform: scale(0.9);
   }
-  /* .logo-icon {
-    transform: scale(0.9);
-  } */
 }
 
 /* 반응형 - 더 작은 화면 (576px) */
@@ -165,10 +162,7 @@
   }
 
   .logo-container {
-    /* 내부 그리드 추가 */
-    /* grid-column: 1/-1; */
     display: grid;
-    /* grid-template-rows: auto auto; */
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     place-items: center;

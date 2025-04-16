@@ -39,9 +39,6 @@
     background-color: #ededed;
     border-radius: 0.75rem;
 
-    /* 나중에 삭제 */
-    /* margin-bottom: 15rem; */
-
     .project-inner-container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -74,7 +71,6 @@
   grid-column: 2 / span 6;
   width: 100%;
   height: auto;
-  /* max-width: 400px; */
   border-radius: 0.75rem;
 }
 
@@ -100,7 +96,6 @@
   .dd-style {
     margin: 0;
     margin-top: 0.25rem;
-    /* display: inline-block; */
     font-size: 1.125rem;
     padding: 0.25rem 0rem;
     margin-bottom: 0.75rem;
@@ -146,12 +141,10 @@
 
     .skill {
       display: inline-block;
-      /* display: flex; */
       justify-content: center;
       align-items: center;
       font-size: 0.875rem;
       color: white;
-      /* border: 1px solid black; */
       border-radius: 0.5rem;
       padding: 0.125rem 0.75rem;
       margin-right: 0.5rem;
@@ -232,8 +225,32 @@
     padding: 0 5rem;
   }
 
-  .logo-icon {
-    transform: scale(0.95);
+  /* 프로젝트명 */
+  .project-name-container {
+    grid-column: 2 / span 7;
+  }
+
+  /* 프로젝트 이미지 */
+  .browser-image {
+    grid-column: 2 / span 10;
+    grid-row: 2;
+  }
+  .skills-feature-container {
+    /* 구현 기능 */
+    .feature-container {
+      margin-bottom: 0;
+    }
+  }
+
+  .dl-style {
+    margin: 0;
+    grid-column: 8/-1;
+    grid-row: 3;
+  }
+
+  .description-container {
+    grid-column: 2 / span 10;
+    margin-bottom: 2rem;
   }
 }
 
@@ -247,40 +264,14 @@
     grid-column: 1/-1;
 
     .project-card {
-      background-color: #ededed;
-      border-radius: 0.75rem;
-
-      /* 나중에 삭제 */
-      /* margin-bottom: 15rem; */
-
       .project-inner-container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
         gap: 1.5rem;
-        align-items: flex-start;
       }
     }
   }
 
-  /* .project-inner-container {
-    gap: 1rem;
-  } */
-
-  .project-name-container {
-    grid-column: 2 / span 10;
-  }
-
   .title {
     grid-column: 1/-1;
-  }
-
-  /* 프로젝트 이미지 */
-  .browser-image {
-    grid-column: 2 / span 10;
-    width: 100%;
-    height: auto;
-    /* max-width: 400px; */
-    border-radius: 0.75rem;
   }
 
   /* 프로젝트 유형/기간/역할 */
@@ -288,106 +279,30 @@
     grid-column: 2 / span 10;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-
-    margin: 0;
-    /* margin-top: 0.5rem; */
 
     .dt-style {
       grid-row: 1;
-      background: none;
       justify-self: left;
       padding: 0 0;
 
       .dt-span-style {
-        /* text-align: left; */
         display: inline-block;
-
-        color: white;
-        font-size: 1rem;
-        font-weight: 550;
-        background-color: black;
         padding: 0.25rem 1rem;
-        border-radius: 1.25rem;
       }
     }
 
     .dd-style {
       margin: 0;
       margin-top: 0.25rem;
-      display: inline-block;
-      font-size: 1.125rem;
-      /* text-align: center; */
-      /* padding: 0.25rem 0rem; */
-      /* margin-bottom: 0.75rem; */
     }
   }
   /* 기술 스택 + 구현 기능 */
   .skills-feature-container {
-    grid-column: 2 / span 10;
-
-    /* 기술 스택 */
-    .skills-container {
-      .skill-list-name {
-        display: inline-block;
-        text-align: center;
-        color: white;
-        font-size: 1rem;
-        font-weight: 550;
-        background-color: black;
-        padding: 0.25rem 1rem;
-        border-radius: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .skill-list {
-        gap: 1rem;
-
-        /* skill-list는 features와 wrap되어있으므로 gap이 아닌 margin-bottom으로 간격을 준다 */
-        margin-bottom: 1.5rem;
-      }
-
-      .skill {
-        display: inline-block;
-        font-size: 0.875rem;
-        color: white;
-        /* border: 1px solid black; */
-        border-radius: 0.5rem;
-        padding: 0.125rem 0.75rem;
-        margin-right: 0.5rem;
-        margin-bottom: 0.25rem;
-      }
-    }
-
-    /* 구현 기능 */
-    .feature-container {
-      margin-bottom: 0;
-
-      .feature-name {
-        display: inline-block;
-        text-align: center;
-        color: white;
-        font-size: 1rem;
-        font-weight: 550;
-        background-color: black;
-        padding: 0.25rem 1rem;
-        border-radius: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .feature-list {
-        display: flex;
-        flex-direction: column;
-        .feature {
-          display: inline-block;
-        }
-      }
-    }
+    grid-column: 2 / span 8;
   }
 
   .description-container {
-    grid-column: 2 / span 10;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 }
 

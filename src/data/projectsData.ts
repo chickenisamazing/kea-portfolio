@@ -49,10 +49,6 @@ export const projectsData: Project[] = [
         stack: "CSS Modules",
         fontColor: "#017671",
       },
-      // {
-      //   stack: "JavaScript",
-      //   fontColor: "#F7DF1E",
-      // },
       {
         stack: "TypeScript",
         fontColor: "#3178C6",
@@ -98,10 +94,6 @@ export const projectsData: Project[] = [
         stack: "CSS Modules",
         fontColor: "#017671",
       },
-      // {
-      //   stack: "JavaScript",
-      //   fontColor: "#F7DF1E",
-      // },
       {
         stack: "TypeScript",
         fontColor: "#3178C6",
@@ -122,8 +114,8 @@ export const projectsData: Project[] = [
     features: [
       "네비게이션 바",
       "칵테일 레시피 상세 조회",
-      "커스텀 칵테일 레시피 리스트 조회 및 페이지네이션",
-      "커스텀 칵테일 레시피 상세 조회/등록/수정/삭제",
+      "커스텀 칵테일 레시피 리스트/페이지네이션",
+      "커스텀 칵테일 레시피 상세 CRUD",
     ],
     links: {
       github: "깃헙 주소",
@@ -156,10 +148,6 @@ export const projectsData: Project[] = [
         stack: "Tailwind CSS",
         fontColor: "#06B6D4",
       },
-      // {
-      //   stack: "JavaScript",
-      //   fontColor: "#F7DF1E",
-      // },
       {
         stack: "TypeScript",
         fontColor: "#3178C6",
@@ -184,8 +172,8 @@ export const projectsData: Project[] = [
     features: [
       "네비게이션 바",
       "칵테일 레시피 상세 조회",
-      "커스텀 칵테일 레시피 리스트 조회 및 페이지네이션",
-      "커스텀 칵테일 레시피 상세 조회/등록/수정/삭제",
+      "커스텀 칵테일 레시피 리스트/페이지네이션",
+      "커스텀 칵테일 레시피 상세 CRUD",
     ],
     links: {
       github: "깃헙 주소",
@@ -234,8 +222,8 @@ export const projectsData: Project[] = [
     features: [
       "네비게이션 바",
       "칵테일 레시피 상세 조회",
-      "커스텀 칵테일 레시피 리스트 조회 및 페이지네이션",
-      "커스텀 칵테일 레시피 상세 조회/등록/수정/삭제",
+      "커스텀 칵테일 레시피 리스트/페이지네이션",
+      "커스텀 칵테일 레시피 상세 CRUD",
     ],
     links: {
       github: "깃헙 주소",

@@ -30,8 +30,6 @@
   grid-column: 2 / span 4;
   padding: 1rem;
   margin-top: 4rem;
-  /* width: 18rem;
-  height: 18rem; */
 }
 
 .profile-image img {
@@ -158,9 +156,6 @@
   }
 
   .profile-image {
-    /* max-width: 19rem; */
-    /* width: 80%; */
-    /* height: auto; */
     grid-column: 1 / span 12;
     justify-self: center;
   }

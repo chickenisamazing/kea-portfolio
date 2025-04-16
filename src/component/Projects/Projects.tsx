@@ -1,10 +1,43 @@
 "use client";
 
+import { ComponentType } from "react";
+
 // import { useState } from "react";
 import Image from "next/image";
 import { projectsData, type Project, type Stack } from "@/data/projectsData";
 
 import styles from "./Projects.module.css";
+
+import HTMLIcon from "../icons/HTMLIcon";
+import CSSIcon from "../icons/CSSIcon";
+import CSSModulesIcon from "../icons/CSSModulesIcon";
+import JavaScriptIcon from "../icons/JavaScriptIcon";
+import TypeScriptIcon from "../icons/TypeScriptIcon";
+import ReactIcon from "../icons/ReactIcon";
+import NextIcon from "../icons/NextIcon";
+import TailwindCSSIcon from "../icons/TailwindCSSIcon";
+import PWAIcon from "../icons/PWAIcon";
+import ZustandIcon from "../icons/ZustandIcon";
+
+interface IconProps {
+  size?: number;
+  color?: string;
+  className?: string;
+  [key: string]: unknown;
+}
+
+const iconComponents: { [key: string]: ComponentType<IconProps> } = {
+  HTML: HTMLIcon,
+  CSS: CSSIcon,
+  "CSS Modules": CSSModulesIcon,
+  "Tailwind CSS": TailwindCSSIcon,
+  JavaScript: JavaScriptIcon,
+  TypeScript: TypeScriptIcon,
+  React: ReactIcon,
+  "Next.js App Router": NextIcon,
+  PWA: PWAIcon,
+  Zustand: ZustandIcon,
+};
 
 export default function Projects() {
   return (
@@ -56,15 +89,29 @@ export default function Projects() {
                   <div className={styles["skills-container"]}>
                     <span className={styles["skill-list-name"]}>Skills</span>
                     <div className={styles["skill-list"]}>
-                      {project.skills.map((stack: Stack) => (
-                        <span
-                          style={{ background: stack.fontColor }}
-                          className={styles["skill"]}
-                          key={stack.stack}
-                        >
-                          {stack.stack}
-                        </span>
-                      ))}
+                      {project.skills.map((stack: Stack) => {
+                        const specificIconComponent =
+                          iconComponents[stack.stack];
+
+                        const IconToRender = specificIconComponent || ReactIcon;
+                        return (
+                          <span
+                            style={{ background: stack.fontColor }}
+                            className={styles["skill"]}
+                            key={stack.stack}
+                          >
+                            <span className={styles["icon-align"]}>
+                              {IconToRender ? (
+                                <IconToRender
+                                  className={styles.icon}
+                                  color="white"
+                                />
+                              ) : null}
+                              {stack.stack}
+                            </span>
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
 

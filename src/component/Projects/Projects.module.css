@@ -68,10 +68,8 @@
 
 /* 프로젝트 이미지 */
 .browser-image {
-  /* grid-column-start: 2; */
   grid-column: 2 / span 6;
   width: 100%;
-  /* width: 380px; */
   height: auto;
   border-radius: 0.75rem;
 }
@@ -227,23 +225,7 @@
     padding: 0 5rem;
   }
 
-  .project-container {
-    .project-card {
-      .project-inner-container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        align-items: start;
-      }
-    }
-  }
-
   .skills-feature-container {
-    grid-column: 2 / span 5;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-
     /* 구현 기능 */
     .feature-container {
       margin-bottom: 0;
@@ -252,25 +234,19 @@
 
   .dl-style {
     margin: 0;
-    grid-column: 7/-1;
+    grid-column: 8/-1;
     grid-row: 3;
   }
 
   .description-container {
     grid-column: 2 / span 10;
-    grid-row: 4;
-    margin-top: 0;
     margin-bottom: 2rem;
-    align-self: start;
   }
 
   /* 프로젝트 이미지 */
   .browser-image {
     grid-column: 2 / span 10;
     grid-row: 2;
-    width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
   }
 }
 
@@ -284,32 +260,14 @@
     grid-column: 1/-1;
 
     .project-card {
-      background-color: #ededed;
-      border-radius: 0.75rem;
-
       .project-inner-container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
         gap: 1.5rem;
-        align-items: flex-start;
       }
     }
   }
 
-  .project-name-container {
-    grid-column: 2 / span 10;
-  }
-
   .title {
     grid-column: 1/-1;
-  }
-
-  /* 프로젝트 이미지 */
-  .browser-image {
-    grid-column: 2 / span 10;
-    width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
   }
 
   /* 프로젝트 유형/기간/역할 */
@@ -317,103 +275,30 @@
     grid-column: 2 / span 10;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    /* grid-row: none; */
-    margin: 0;
 
     .dt-style {
       grid-row: 1;
-      background: none;
       justify-self: left;
       padding: 0 0;
 
       .dt-span-style {
         display: inline-block;
-
-        color: white;
-        font-size: 1rem;
-        font-weight: 550;
-        background-color: black;
         padding: 0.25rem 1rem;
-        border-radius: 1.25rem;
       }
     }
 
     .dd-style {
       margin: 0;
       margin-top: 0.25rem;
-      display: inline-block;
-      font-size: 1.125rem;
     }
   }
   /* 기술 스택 + 구현 기능 */
   .skills-feature-container {
-    grid-column: 2 / span 10;
-    grid-row: auto;
-
-    /* 기술 스택 */
-    .skills-container {
-      .skill-list-name {
-        display: inline-block;
-        text-align: center;
-        color: white;
-        font-size: 1rem;
-        font-weight: 550;
-        background-color: black;
-        padding: 0.25rem 1rem;
-        border-radius: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .skill-list {
-        gap: 1rem;
-
-        /* skill-list는 features와 wrap되어있으므로 gap이 아닌 margin-bottom으로 간격을 준다 */
-        margin-bottom: 1.75rem;
-      }
-
-      .skill {
-        display: inline-block;
-        font-size: 0.875rem;
-        color: white;
-        border-radius: 0.5rem;
-        padding: 0.125rem 0.75rem;
-        margin-right: 0.5rem;
-        margin-bottom: 0.25rem;
-      }
-    }
-
-    /* 구현 기능 */
-    .feature-container {
-      margin-bottom: 0;
-
-      .feature-name {
-        display: inline-block;
-        text-align: center;
-        color: white;
-        font-size: 1rem;
-        font-weight: 550;
-        background-color: black;
-        padding: 0.25rem 1rem;
-        border-radius: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .feature-list {
-        display: flex;
-        flex-direction: column;
-        .feature {
-          display: inline-block;
-        }
-
-        margin-bottom: 2rem;
-      }
-    }
+    grid-column: 2 / span 8;
   }
 
   .description-container {
-    /* grid-column: 2 / span 10; */
-    margin-bottom: 0.25rem;
+    margin-bottom: 3rem;
   }
 }
 

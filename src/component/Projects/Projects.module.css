@@ -225,6 +225,16 @@
     padding: 0 5rem;
   }
 
+  /* 프로젝트명 */
+  .project-name-container {
+    grid-column: 2 / span 7;
+  }
+
+  /* 프로젝트 이미지 */
+  .browser-image {
+    grid-column: 2 / span 10;
+    grid-row: 2;
+  }
   .skills-feature-container {
     /* 구현 기능 */
     .feature-container {
@@ -241,12 +251,6 @@
   .description-container {
     grid-column: 2 / span 10;
     margin-bottom: 2rem;
-  }
-
-  /* 프로젝트 이미지 */
-  .browser-image {
-    grid-column: 2 / span 10;
-    grid-row: 2;
   }
 }
 

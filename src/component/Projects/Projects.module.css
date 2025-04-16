@@ -140,18 +140,28 @@
 
     .skill-list {
       gap: 1rem;
+      margin-top: 0.25rem;
       margin-bottom: 2rem;
     }
 
     .skill {
       display: inline-block;
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
       font-size: 0.875rem;
       color: white;
       /* border: 1px solid black; */
       border-radius: 0.5rem;
-      padding: 0.125rem 0.875rem;
+      padding: 0.125rem 0.75rem;
       margin-right: 0.5rem;
       margin-bottom: 0.25rem;
+    }
+
+    .icon-align {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
     }
   }
 
@@ -174,6 +184,7 @@
     .feature-list {
       display: flex;
       flex-direction: column;
+      margin-top: 0.25rem;
 
       .feature {
         display: inline-block;
@@ -200,6 +211,7 @@
   }
 
   .description {
+    margin-top: 0.25rem;
     font-size: 1.125rem;
     display: inline-block;
     word-break: keep-all;
@@ -341,7 +353,7 @@
         color: white;
         /* border: 1px solid black; */
         border-radius: 0.5rem;
-        padding: 0.125rem 0.875rem;
+        padding: 0.125rem 0.75rem;
         margin-right: 0.5rem;
         margin-bottom: 0.25rem;
       }

@@ -115,7 +115,7 @@ export const projectsData: Project[] = [
         fontColor: "#000000",
       },
       {
-        stack: "zustand",
+        stack: "Zustand",
         fontColor: "#5C5149",
       },
     ],
@@ -173,7 +173,7 @@ export const projectsData: Project[] = [
         fontColor: "#000000",
       },
       {
-        stack: "zustand",
+        stack: "Zustand",
         fontColor: "#5C5149",
       },
       {

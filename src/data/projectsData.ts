@@ -64,8 +64,8 @@ export const projectsData: Project[] = [
     ],
     features: ["소개 페이지 구현", "사용자 인터렉션 요소 구현"],
     links: {
-      github: "깃헙 주소",
-      domain: "도메인 주소",
+      github: "https://github.com/chickenisamazing/kea-portfolio",
+      domain: "https://kea-portfolio-lovat.vercel.app/",
       blogPost: "블로그 주소",
     },
   },
@@ -118,7 +118,7 @@ export const projectsData: Project[] = [
       "커스텀 칵테일 레시피 상세 CRUD",
     ],
     links: {
-      github: "깃헙 주소",
+      github: "https://github.com/chickenisamazing/DALKAK",
       domain: "도메인 주소",
       blogPost: "블로그 주소",
     },
@@ -170,13 +170,13 @@ export const projectsData: Project[] = [
       },
     ],
     features: [
+      "카카오 소셜 로그인",
+      "이상형 리스트 조회",
+      "이상형 상세 모달 CRUD",
       "네비게이션 바",
-      "칵테일 레시피 상세 조회",
-      "커스텀 칵테일 레시피 리스트/페이지네이션",
-      "커스텀 칵테일 레시피 상세 CRUD",
     ],
     links: {
-      github: "깃헙 주소",
+      github: "https://github.com/chickenisamazing/AIN",
       domain: "도메인 주소",
       blogPost: "블로그 주소",
     },
@@ -191,8 +191,7 @@ export const projectsData: Project[] = [
       src: "/assets/temp_browser_image.png",
       alt: "프로젝트 이미지",
     },
-    description:
-      "홈텐딩 유저들을 위한 칵테일 레시피 열람 및 커스텀 칵테일 레시피를 공유할 수 있는 서비스. 개인의 취향 또는 냉장고에 있는 재료를 기반으로 칵테일 레시피를 추천받을 수 있습니다.",
+    description: "실시간 채팅이 가능한 웹툰 정보 모음 플랫폼",
     skills: [
       {
         stack: "HTML",
@@ -220,10 +219,20 @@ export const projectsData: Project[] = [
       },
     ],
     features: [
-      "네비게이션 바",
-      "칵테일 레시피 상세 조회",
-      "커스텀 칵테일 레시피 리스트/페이지네이션",
-      "커스텀 칵테일 레시피 상세 CRUD",
+      "회원 가입",
+      "(마이페이지) 내 정보 조회/수정",
+      "(마이페이지) 내 서재 리스트 조회",
+      "(마이페이지) 내가 구독한 서재 리스트 조회",
+      "(마이페이지) 내가 쓴 글 조회",
+      "(마이페이지) 내가 쓴 댓글 조회",
+      "인기 서재 리스트 조회",
+      "내 서재 리스트 조회",
+      "내 서재 리스트에서 서재 추가/이름 변경",
+      "웹툰 검색 모달을 통한 내 서재에 웹툰 추가",
+      "내 서재에서 웹툰 삭제",
+      "타인의 서재 구독/구독 취소",
+      "자유게시판 CRUD/페이지네이션",
+      "댓글,대댓글 작성/삭제",
     ],
     links: {
       github: "깃헙 주소",

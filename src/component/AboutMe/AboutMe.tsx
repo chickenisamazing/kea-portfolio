@@ -75,6 +75,18 @@ export default function AboutMe() {
             <span className={styles.bold}>개념적 명확성</span>을 추구합니다.
           </span>
         </p>
+
+        <p className={styles["description-2"]}>
+          <span className={styles["education-container"]}>
+            <span className={styles["education-title"]}>education</span>
+            <span className={styles["education-sentence"]}>
+              2023.07 ~ 2024.06
+            </span>
+            <span className={styles["education-sentence-2"]}>
+              삼성 청년 SW 아카데미 10기 수료
+            </span>
+          </span>
+        </p>
       </div>
     </div>
   );

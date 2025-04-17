@@ -127,6 +127,38 @@
   }
 }
 
+.education-container {
+  display: flex;
+  flex-direction: column;
+
+  .education-title {
+    font-size: 2.75rem;
+    font-style: italic;
+    font-weight: 700;
+    grid-column: 2 / span 8;
+    margin-bottom: 4rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(
+      to right bottom,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .education-sentence {
+    font-size: 1.25rem;
+    /* font-weight: 500; */
+    line-height: 1.5;
+  }
+  .education-sentence-2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
 /* 반응형 - 데스크탑(작은 모니터) (1440px) */
 @media (max-width: 1440px) {
   .content {

@@ -11,7 +11,7 @@ export default function AboutMe() {
         </h2>
         <Image
           className={styles["profile-image"]}
-          src="/assets/profileImage.png"
+          src="/assets/kea_penrose.png"
           alt="kea's profile image"
           width={288}
           height={288}

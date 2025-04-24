@@ -2,6 +2,9 @@
   height: 4rem;
   background-color: #7da3fc;
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar-content {
@@ -17,7 +20,11 @@
   align-items: center;
 }
 
-.about-me {
+.active-navbar {
+  /* 버튼 기본 CSS 제거 */
+  background: transparent;
+  border: 0;
+
   height: 4rem;
   line-height: 4rem;
   grid-column: span 4;
@@ -27,14 +34,25 @@
   text-align: center;
 
   /* 탭 활성화 상태 */
+  color: black;
   border: 1px solid black;
   border-bottom: none;
   background-color: white;
 
   font-size: clamp(1.5rem, 0.25rem + 2.5vw, 1.75rem);
+  cursor: pointer;
 }
 
-.skills {
+.active-navbar:focus-visible {
+  outline: 4px solid black;
+  outline-offset: -4px;
+}
+
+.inactive-navbar {
+  /* 버튼 기본 CSS 제거 */
+  background: transparent;
+  border: 0;
+
   height: 4rem;
   line-height: 4rem;
   font-size: 1.75rem;
@@ -44,18 +62,12 @@
   font-style: italic;
   font-weight: 700;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  cursor: pointer;
 }
 
-.projects {
-  height: 4rem;
-  line-height: 4rem;
-  font-size: 1.75rem;
-  grid-column: span 4;
-  text-align: center;
-  color: white;
-  font-style: italic;
-  font-weight: 700;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.inactive-navbar:focus-visible {
+  outline: 4px solid black;
+  outline-offset: -4px;
 }
 
 /* 반응형 - 태블릿 (1024px) */

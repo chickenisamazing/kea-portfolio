@@ -1,9 +1,14 @@
 "use client";
+import { useState } from "react";
 
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+  const [scrollLocation, getScrollLocation] =
+    useState<string>("about-me-title");
+
   function scrollToSection(props: string) {
+    getScrollLocation(props);
     document.getElementById(props)?.scrollIntoView({ behavior: "smooth" });
   }
 
@@ -13,21 +18,33 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => scrollToSection("about-me-title")}
-          className={styles["about-me"]}
+          className={`${
+            scrollLocation === "about-me-title"
+              ? styles["active-navbar"]
+              : styles["inactive-navbar"]
+          }`}
         >
           About Me
         </button>
         <button
           type="button"
           onClick={() => scrollToSection("skills-title")}
-          className={styles.skills}
+          className={` ${
+            scrollLocation === "skills-title"
+              ? styles["active-navbar"]
+              : styles["inactive-navbar"]
+          }`}
         >
           Skills
         </button>
         <button
           type="button"
           onClick={() => scrollToSection("projects-title")}
-          className={styles.projects}
+          className={`${
+            scrollLocation === "projects-title"
+              ? styles["active-navbar"]
+              : styles["inactive-navbar"]
+          }`}
         >
           Projects
         </button>

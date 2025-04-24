@@ -43,6 +43,11 @@
   cursor: pointer;
 }
 
+.active-navbar:focus-visible {
+  outline: 4px solid black;
+  outline-offset: -4px;
+}
+
 .inactive-navbar {
   /* 버튼 기본 CSS 제거 */
   background: transparent;
@@ -58,6 +63,11 @@
   font-weight: 700;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   cursor: pointer;
+}
+
+.inactive-navbar:focus-visible {
+  outline: 4px solid black;
+  outline-offset: -4px;
 }
 
 /* 반응형 - 태블릿 (1024px) */

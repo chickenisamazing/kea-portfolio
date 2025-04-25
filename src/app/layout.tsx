@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../component/Navbar/Navbar";
 
@@ -9,16 +8,6 @@ const pretendard = localFont({
   src: ".././font/PretendardVariable.woff2",
   display: "swap",
   variable: "--font-pretendard",
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -33,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${pretendard.className}`}
-      >
+      <body className={`antialiased ${pretendard.className}`}>
         <Navbar />
         <main>{children}</main>
         <Analytics />

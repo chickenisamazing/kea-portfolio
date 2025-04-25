@@ -1,4 +1,9 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@font-face {
+  font-family: "pretendard";
+  src: url("../font/PretendardVariable.woff2") format("woff-variations");
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* Colors */

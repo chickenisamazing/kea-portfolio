@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
   font-family: "pretendard";
   src: url("../font/PretendardVariable.woff2") format("woff-variations");
   font-style: normal;
   font-display: swap;
-}
+} */
 
 :root {
   /* Colors */

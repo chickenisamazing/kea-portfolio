@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../component/Navbar/Navbar";
 
-const pretendard = localFont({
-  src: ".././font/PretendardVariable.woff2",
-  display: "swap",
-  variable: "--font-pretendard",
-});
+// const pretendard = localFont({
+//   src: ".././font/PretendardVariable.woff2",
+//   display: "swap",
+//   variable: "--font-pretendard",
+// });
 
 export const metadata: Metadata = {
   title: "케아의 포트폴리오",
@@ -22,7 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${pretendard.className}`}>
+      {/* <body className={`antialiased ${pretendard.className}`}> */}
+      <body>
         <Navbar />
         <main>{children}</main>
         <Analytics />

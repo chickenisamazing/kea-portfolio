@@ -167,10 +167,10 @@
   }
 
   /* 중첩그리드 */
-  /* .logo-container {
+  .logo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     place-items: center;
-  } */
+  }
 }

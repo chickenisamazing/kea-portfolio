@@ -41,12 +41,12 @@
     border-radius: 0.75rem;
 
     /* 중첩 그리드 */
-    /* .project-inner-container {
+    .project-inner-container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 2rem;
       align-items: flex-start;
-    } */
+    }
   }
 }
 
@@ -282,7 +282,7 @@
   /* 프로젝트 유형/기간/역할 */
   .dl-style {
     /* 중첩그리드 */
-    /* grid-column: 2 / span 10;
+    grid-column: 2 / span 10;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -295,7 +295,7 @@
         display: inline-block;
         padding: 0.25rem 1rem;
       }
-    } */
+    }
 
     .dd-style {
       margin: 0;

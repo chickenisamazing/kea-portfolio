@@ -166,11 +166,11 @@
     padding: 0 1.5rem;
   }
 
-  .logo-container {
-    /* 내부 그리드 추가 */
+  /* 중첩 그리드 */
+  /* .logo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     place-items: center;
-  }
+  } */
 }

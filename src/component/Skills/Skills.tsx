@@ -35,7 +35,6 @@ export default function Skills() {
                 alt={skill.alt}
                 width={64}
                 height={64}
-                priority={selected === skill.name}
               />
             </button>
           ))}

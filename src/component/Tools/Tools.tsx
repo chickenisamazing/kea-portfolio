@@ -33,7 +33,6 @@ export default function Tools() {
                 alt={tool.alt}
                 width={64}
                 height={64}
-                priority={selected === tool.name}
               />
             </button>
           ))}

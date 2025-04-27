@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 
 import styles from "./AboutMe.module.css";
 
@@ -9,14 +9,14 @@ export default function AboutMe() {
         <h2 id="about-me-title" className={styles.title}>
           About Me
         </h2>
-        {/* <Image
+        <Image
           className={styles["profile-image"]}
           src="/assets/kea_penrose_resized.png"
           alt="kea's profile image"
           width={288}
           height={288}
           priority
-        /> */}
+        />
         <dl className={styles["link-container"]}>
           <dt className={styles["link-category"]}>github.</dt>
           <dd className={styles["link-link-group"]}>

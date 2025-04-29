@@ -62,7 +62,6 @@ export default function Projects() {
                   alt={project.image.alt}
                   width={700}
                   height={350}
-                  priority
                 />
 
                 {/* 프로젝트 유형 */}

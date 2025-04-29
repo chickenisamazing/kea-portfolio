@@ -24,6 +24,9 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   title: "프론트엔드 개발자 케아의 포트폴리오",
   description: "프론트엔드 개발자 케아를 소개합니다.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

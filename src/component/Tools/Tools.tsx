@@ -17,27 +17,28 @@ export default function Tools() {
         <h2 id="tools-title" className={styles.title}>
           Tools
         </h2>
-        <div className={styles["logo-container"]}>
+        <ul className={styles["logo-container"]} role="list">
           {toolsData.map((tool: Tool) => (
-            <button
-              className={styles["btn-logo"]}
-              type="button"
-              aria-pressed={selected === tool.name ? "true" : "false"}
-              key={tool.name}
-              onClick={() => setSelected(tool.name)}
-            >
-              <Image
-                className={`${styles["logo-icon"]} ${
-                  selected === tool.name ? styles.selected : ""
-                }`}
-                src={tool.src}
-                alt={tool.alt}
-                width={64}
-                height={64}
-              />
-            </button>
+            <li key={tool.name} className={styles["list-styling"]}>
+              <button
+                className={styles["btn-logo"]}
+                type="button"
+                aria-pressed={selected === tool.name ? "true" : "false"}
+                onClick={() => setSelected(tool.name)}
+              >
+                <Image
+                  className={`${styles["logo-icon"]} ${
+                    selected === tool.name ? styles.selected : ""
+                  }`}
+                  src={tool.src}
+                  alt={tool.alt}
+                  width={64}
+                  height={64}
+                />
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {selectedTool && (
           <div className={styles.description}>

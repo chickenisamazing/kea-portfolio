@@ -85,6 +85,11 @@
   font-weight: 700;
 }
 
+.list-styling {
+  /* li 태그 기본 스타일링 제거 */
+  list-style: none;
+}
+
 .description-list {
   padding-left: 0;
   margin-top: 0;

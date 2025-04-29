@@ -19,27 +19,28 @@ export default function Skills() {
         <h2 id="skills-title" className={styles.title}>
           Skills
         </h2>
-        <div className={styles["logo-container"]}>
+        <ul className={styles["logo-container"]} role="list">
           {skillsData.map((skill: Skill) => (
-            <button
-              className={styles["btn-logo"]}
-              type="button"
-              aria-pressed={selected === skill.name ? "true" : "false"}
-              key={skill.name}
-              onClick={() => setSelected(skill.name)}
-            >
-              <Image
-                className={`${styles["logo-icon"]} ${
-                  selected === skill.name ? styles.selected : ""
-                }`}
-                src={skill.src}
-                alt={skill.alt}
-                width={64}
-                height={64}
-              />
-            </button>
+            <li key={skill.name} className={styles["list-styling"]}>
+              <button
+                className={styles["btn-logo"]}
+                type="button"
+                aria-pressed={selected === skill.name ? "true" : "false"}
+                onClick={() => setSelected(skill.name)}
+              >
+                <Image
+                  className={`${styles["logo-icon"]} ${
+                    selected === skill.name ? styles.selected : ""
+                  }`}
+                  src={skill.src}
+                  alt={skill.alt}
+                  width={64}
+                  height={64}
+                />
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {selectedSkill && (
           <div className={styles.description}>

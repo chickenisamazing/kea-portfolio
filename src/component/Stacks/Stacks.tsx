@@ -23,12 +23,12 @@ export default function Stacks({ title, data }: StackProps) {
   const selectedStack = data.find((stack: Stack) => stack.name === selected);
 
   return (
-    <div>
+    <section>
       <div className={styles.content}>
         <h2 id="skills-title" className={styles.title}>
           {title}
         </h2>
-        <ul className={styles["logo-container"]} role="list">
+        <ul className={styles["logo-container"]}>
           {data.map((stack: Stack) => (
             <li key={stack.name} className={styles["list-styling"]}>
               <button
@@ -69,6 +69,6 @@ export default function Stacks({ title, data }: StackProps) {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }

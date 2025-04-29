@@ -102,10 +102,6 @@
       background-color: black;
       padding: 0 0.75rem;
     }
-
-    .kea {
-      font-weight: 700;
-    }
   }
 }
 
@@ -121,10 +117,6 @@
     display: block;
     /* 줄 간격 */
     line-height: 1.5;
-
-    .bold {
-      font-weight: 700;
-    }
   }
 }
 

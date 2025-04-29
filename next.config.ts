@@ -6,9 +6,14 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: true,
-  openAnalyzer: true,
-});
-module.exports = withBundleAnalyzer({});
+if (process.env.ANALYZE === "true") {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const withBundleAnalyzer = require("@next/bundle-analyzer")({
+    enabled: process.env.ANALYZE === "true",
+    openAnalyzer: process.env.ANALYZE === "true",
+  });
+
+  module.exports = withBundleAnalyzer(nextConfig);
+} else {
+  module.exports = nextConfig;
+}

@@ -24,6 +24,7 @@ export default function Skills() {
             <button
               className={styles["btn-logo"]}
               type="button"
+              aria-pressed={selected === skill.name ? "true" : "false"}
               key={skill.name}
               onClick={() => setSelected(skill.name)}
             >

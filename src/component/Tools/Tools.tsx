@@ -22,6 +22,7 @@ export default function Tools() {
             <button
               className={styles["btn-logo"]}
               type="button"
+              aria-pressed={selected === tool.name ? "true" : "false"}
               key={tool.name}
               onClick={() => setSelected(tool.name)}
             >

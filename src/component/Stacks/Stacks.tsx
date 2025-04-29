@@ -13,10 +13,11 @@ export interface Stack {
 }
 
 interface StackProps {
+  title: string;
   data: Stack[];
 }
 
-export default function Stacks({ data }: StackProps) {
+export default function Stacks({ title, data }: StackProps) {
   const [selected, setSelected] = useState<string>(data[0]?.name || "");
 
   const selectedStack = data.find((stack: Stack) => stack.name === selected);
@@ -25,7 +26,7 @@ export default function Stacks({ data }: StackProps) {
     <div>
       <div className={styles.content}>
         <h2 id="skills-title" className={styles.title}>
-          Skills
+          {title}
         </h2>
         <ul className={styles["logo-container"]} role="list">
           {data.map((stack: Stack) => (

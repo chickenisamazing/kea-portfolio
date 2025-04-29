@@ -7,7 +7,7 @@
 <img src="./assets/readme/kea_penrose_resized.png" alt="프로필 이미지" style="display: block; margin-right: auto; margin-left: auto; margin-top: 35px; margin-bottom: 50px; width: 40%;">
 <br>
 <br>
-<p>프론트엔드 개발자 $\large{\rm{\color{#7DA3FC}KEA}}$의<br><strong>개인 포트폴리오</strong> 프로젝트</p>
+<p>프론트엔드 개발자 <strong>KEA</strong>의<br><strong>개인 포트폴리오</strong> 프로젝트</p>
 <br>
 
 ### 1. 내비게이션 바
@@ -61,3 +61,11 @@
 
 - [x] 배포 플랫폼 설정
 - [x] 도메인 연결
+
+### 8. 성능(Performance)
+
+- [ ] 폰트 최적화
+
+### 8. 웹 접근성(Accessibility)
+
+- [ ] 웹 접근성 점수 개선

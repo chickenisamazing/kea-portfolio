@@ -10,7 +10,7 @@ export const skillsData: Skill[] = [
   {
     name: "HTML",
     src: "/assets/logos/skills/HTML_logo.svg",
-    alt: "HTML logo",
+    alt: "HTML",
     fontColor: "#E44D26",
     description: [
       "· 시맨틱 태그를 사용한 웹페이지 구조화가 가능합니다.",
@@ -21,7 +21,7 @@ export const skillsData: Skill[] = [
   {
     name: "CSS",
     src: "/assets/logos/skills/CSS_logo.svg",
-    alt: "CSS logo",
+    alt: "CSS",
     fontColor: "#663399",
     description: [
       "· CSS Modules를 사용해본 경험이 있습니다.",
@@ -34,7 +34,7 @@ export const skillsData: Skill[] = [
   {
     name: "JavaScript",
     src: "/assets/logos/skills/JavaScript_logo.svg",
-    alt: "JavaScript logo",
+    alt: "JavaScript",
     fontColor: "#F7DF1E",
     description: [
       "· ES6+ 문법을 사용합니다.",
@@ -46,7 +46,7 @@ export const skillsData: Skill[] = [
   {
     name: "TypeScript",
     src: "/assets/logos/skills/TypeScript_logo.svg",
-    alt: "TypeScript logo",
+    alt: "TypeScript",
     fontColor: "#007ACC",
     description: [
       "· 타입 안정성 확보를 위해 타입스크립트를 사용합니다.",
@@ -57,7 +57,7 @@ export const skillsData: Skill[] = [
   {
     name: "React",
     src: "/assets/logos/skills/React_logo.svg",
-    alt: "React logo",
+    alt: "React",
     fontColor: "#61DAFB",
     description: [
       "· 재사용을 고려한 컴포넌트 기반 UI개발을 지향합니다.",
@@ -70,7 +70,7 @@ export const skillsData: Skill[] = [
   {
     name: "Next.js",
     src: "/assets/logos/skills/Next_js_logo.svg",
-    alt: "Next.js logo",
+    alt: "Next.js",
     fontColor: "#000000",
     description: [
       "· App Router 기반의 Next.js 팀 프로젝트 경험이 3 번있습니다.",

@@ -24,6 +24,7 @@ export default function Skills() {
             <button
               className={styles["btn-logo"]}
               type="button"
+              aria-pressed={selected === skill.name ? "true" : "false"}
               key={skill.name}
               onClick={() => setSelected(skill.name)}
             >
@@ -49,13 +50,11 @@ export default function Skills() {
               {selectedSkill.name}
             </span>
             <ul className={styles["description-list"]}>
-              {selectedSkill.description.map(
-                (sentence: string, index: number) => (
-                  <li key={index} className={styles.sentence}>
-                    {sentence}
-                  </li>
-                )
-              )}
+              {selectedSkill.description.map((sentence: string) => (
+                <li key={sentence} className={styles.sentence}>
+                  {sentence}
+                </li>
+              ))}
             </ul>
           </div>
         )}

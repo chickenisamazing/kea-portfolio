@@ -167,6 +167,9 @@ export default function Navbar() {
               ? styles["active-navbar"]
               : styles["inactive-navbar"]
           }`}
+          aria-current={
+            scrollLocation === "about-me-title" ? "location" : undefined
+          }
         >
           About Me
         </button>
@@ -178,6 +181,9 @@ export default function Navbar() {
               ? styles["active-navbar"]
               : styles["inactive-navbar"]
           }`}
+          aria-current={
+            scrollLocation === "skills-title" ? "location" : undefined
+          }
         >
           Skills
         </button>
@@ -189,6 +195,9 @@ export default function Navbar() {
               ? styles["active-navbar"]
               : styles["inactive-navbar"]
           }`}
+          aria-current={
+            scrollLocation === "projects-title" ? "location" : undefined
+          }
         >
           Projects
         </button>

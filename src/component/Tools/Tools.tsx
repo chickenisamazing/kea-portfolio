@@ -22,6 +22,7 @@ export default function Tools() {
             <button
               className={styles["btn-logo"]}
               type="button"
+              aria-pressed={selected === tool.name ? "true" : "false"}
               key={tool.name}
               onClick={() => setSelected(tool.name)}
             >
@@ -47,13 +48,11 @@ export default function Tools() {
               {selectedTool.name}
             </span>
             <ul className={styles["description-list"]}>
-              {selectedTool.description.map(
-                (sentence: string, index: number) => (
-                  <li key={index} className={styles.sentence}>
-                    {sentence}
-                  </li>
-                )
-              )}
+              {selectedTool.description.map((sentence: string) => (
+                <li key={sentence} className={styles.sentence}>
+                  {sentence}
+                </li>
+              ))}
             </ul>
           </div>
         )}

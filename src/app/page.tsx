@@ -1,20 +1,21 @@
 import dynamic from "next/dynamic";
 
 import AboutMe from "@/component/AboutMe/AboutMe";
-// import Skills from "@/component/Skills/Skills";
-// import Tools from "@/component/Tools/Tools";
-// import Projects from "@/component/Projects/Projects";
 
-const Skills = dynamic(() => import("@/component/Skills/Skills"));
-const Tools = dynamic(() => import("@/component/Tools/Tools"));
+import { skillsData } from "@/data/skillsData";
+import { toolsData } from "@/data/toolsData";
+
+const Stacks = dynamic(() => import("@/component/Stacks/Stacks"));
 const Projects = dynamic(() => import("@/component/Projects/Projects"));
 
 export default function Home() {
   return (
     <div>
       <AboutMe />
-      <Skills />
-      <Tools />
+      {/* <Skills /> */}
+      {/* <Tools /> */}
+      <Stacks data={skillsData} />
+      <Stacks data={toolsData} />
       <Projects />
     </div>
   );

@@ -55,6 +55,9 @@
   grid-column: 2 / span 6;
 
   .project-name {
+    /* h3 기본 속성 삭제 */
+    margin: 0;
+
     margin-top: 2.5rem;
     width: auto;
     text-align: center;

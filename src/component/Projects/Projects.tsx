@@ -48,12 +48,12 @@ export default function Projects() {
         </h2>
         <div className={styles["project-container"]}>
           {projectsData.map((project: Project) => (
-            <div key={project.projectId} className={styles["project-card"]}>
+            <article key={project.projectId} className={styles["project-card"]}>
               {/* 프로젝트 내부 컨테이너 */}
               <div className={styles["project-inner-container"]}>
                 {/* 프로젝트명 */}
                 <div className={styles["project-name-container"]}>
-                  <span className={styles["project-name"]}>{project.name}</span>
+                  <h3 className={styles["project-name"]}>{project.name}</h3>
                 </div>
                 {/* 프로젝트 캡쳐 이미지 */}
                 <Image
@@ -138,7 +138,7 @@ export default function Projects() {
                   </span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

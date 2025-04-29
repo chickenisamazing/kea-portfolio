@@ -9,11 +9,10 @@
   column-gap: 1.5rem;
 }
 
-/* Tools의 소제목은 Skills보다 조금 작게 */
 .title {
   margin-top: 8rem;
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-style: italic;
   font-weight: 700;
   grid-column: 2 / span 8;
@@ -25,6 +24,7 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
+  /* scroll-margin-top: 10rem; */
 }
 
 .logo-container {
@@ -83,6 +83,11 @@
 
 .bold {
   font-weight: 700;
+}
+
+.list-styling {
+  /* li 태그 기본 스타일링 제거 */
+  list-style: none;
 }
 
 .description-list {
@@ -166,7 +171,7 @@
     padding: 0 1.5rem;
   }
 
-  /* 중첩 그리드 */
+  /* 중첩그리드 */
   .logo-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

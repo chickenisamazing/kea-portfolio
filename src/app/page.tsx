@@ -12,10 +12,8 @@ export default function Home() {
   return (
     <div>
       <AboutMe />
-      {/* <Skills /> */}
-      {/* <Tools /> */}
-      <Stacks data={skillsData} />
-      <Stacks data={toolsData} />
+      <Stacks title="Skills" data={skillsData} />
+      <Stacks title="Tools" data={toolsData} />
       <Projects />
     </div>
   );

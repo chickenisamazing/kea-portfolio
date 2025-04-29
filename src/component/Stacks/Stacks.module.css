@@ -24,7 +24,7 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
-  /* scroll-margin-top: 10rem; */
+  scroll-margin-top: 10rem;
 }
 
 .logo-container {

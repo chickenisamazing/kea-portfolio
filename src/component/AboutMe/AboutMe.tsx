@@ -4,7 +4,7 @@ import styles from "./AboutMe.module.css";
 
 export default function AboutMe() {
   return (
-    <div>
+    <section>
       <div className={styles.content}>
         <h2 id="about-me-title" className={styles.title}>
           About Me
@@ -88,6 +88,6 @@ export default function AboutMe() {
           </span>
         </p>
       </div>
-    </div>
+    </section>
   );
 }

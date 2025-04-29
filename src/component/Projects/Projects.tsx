@@ -41,7 +41,7 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
 
 export default function Projects() {
   return (
-    <div>
+    <section>
       <div className={styles.content}>
         <h2 id="projects-title" className={styles.title}>
           Projects
@@ -142,6 +142,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,5 +1,11 @@
 import LoadingSpinner from "@/component/LoadingSpinner/LoadingSpinner";
 
+import styles from "./loading.module.css";
+
 export default function Loading() {
-  return <LoadingSpinner />;
+  return (
+    <div className={styles.location}>
+      <LoadingSpinner />
+    </div>
+  );
 }

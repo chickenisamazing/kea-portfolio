@@ -119,13 +119,11 @@ export default function Projects() {
                   <div className={styles["feature-container"]}>
                     <span className={styles["feature-name"]}>구현 기능</span>
                     <div className={styles["feature-list"]}>
-                      {project.features.map(
-                        (feature: string, index: number) => (
-                          <span key={index} className={styles.feature}>
-                            {feature}
-                          </span>
-                        )
-                      )}{" "}
+                      {project.features.map((feature: string) => (
+                        <span key={feature} className={styles.feature}>
+                          {feature}
+                        </span>
+                      ))}{" "}
                     </div>
                   </div>
                 </div>

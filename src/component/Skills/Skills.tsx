@@ -49,13 +49,11 @@ export default function Skills() {
               {selectedSkill.name}
             </span>
             <ul className={styles["description-list"]}>
-              {selectedSkill.description.map(
-                (sentence: string, index: number) => (
-                  <li key={index} className={styles.sentence}>
-                    {sentence}
-                  </li>
-                )
-              )}
+              {selectedSkill.description.map((sentence: string) => (
+                <li key={sentence} className={styles.sentence}>
+                  {sentence}
+                </li>
+              ))}
             </ul>
           </div>
         )}

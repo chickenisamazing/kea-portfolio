@@ -1,5 +1,3 @@
-"use client";
-
 import { ComponentType } from "react";
 
 import Image from "next/image";
@@ -142,7 +140,11 @@ export default function Projects() {
 
                 {/* 프로젝트 링크 컨테이너 */}
                 <div className={styles["project-link-container"]}>
-                  <div>
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       className={styles["project-link-logo"]}
                       src="/assets/logos/tools/Github_logo.svg"
@@ -150,23 +152,35 @@ export default function Projects() {
                       width={48}
                       height={48}
                     />
-                  </div>
-                  <div>
+                  </a>
+                  <a
+                    // href={project.links.domain}
+                    // 나중에 수정
+                    href="https://kea-portfolio.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
-                      src={project.links.domain.logo}
+                      src={project.logo}
                       alt="배포된 도메인"
                       width={48}
                       height={48}
                     />
-                  </div>
-                  <div>
+                  </a>
+                  <a
+                    // href={project.links.github}
+                    // 나중에 수정
+                    href="https://unhandled.tistory.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src="/assets/logos/others/Tistory_logo.svg"
                       alt="해당 프로젝트 블로그 포스팅"
                       width={48}
                       height={48}
                     />
-                  </div>
+                  </a>
                 </div>
               </div>
             </article>

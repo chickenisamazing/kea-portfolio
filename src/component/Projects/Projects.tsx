@@ -154,9 +154,7 @@ export default function Projects() {
                     />
                   </a>
                   <a
-                    // href={project.links.domain}
-                    // 나중에 수정
-                    href="https://kea-portfolio.com"
+                    href={project.links.domain}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -169,9 +167,7 @@ export default function Projects() {
                     />
                   </a>
                   <a
-                    // href={project.links.github}
-                    // 나중에 수정
-                    href="https://unhandled.tistory.com"
+                    href={project.links.blogPost}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

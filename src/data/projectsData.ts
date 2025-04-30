@@ -68,7 +68,7 @@ export const projectsData: Project[] = [
     links: {
       github: "https://github.com/chickenisamazing/kea-portfolio",
       domain: "https://kea-portfolio.com/",
-      blogPost: "블로그 주소",
+      blogPost: "https://unhandled.tistory.com",
     },
   },
   {
@@ -125,7 +125,7 @@ export const projectsData: Project[] = [
     links: {
       github: "https://github.com/chickenisamazing/DALKAK",
       domain: "https://kea-portfolio.com/",
-      blogPost: "블로그 주소",
+      blogPost: "https://unhandled.tistory.com",
     },
   },
   {
@@ -184,7 +184,7 @@ export const projectsData: Project[] = [
     links: {
       github: "https://github.com/chickenisamazing/AIN",
       domain: "https://kea-portfolio.com/",
-      blogPost: "블로그 주소",
+      blogPost: "https://unhandled.tistory.com",
     },
   },
   {
@@ -242,9 +242,9 @@ export const projectsData: Project[] = [
     ],
     logo: "/assets/logos/others/domain_mogul_logo.png",
     links: {
-      github: "깃헙 주소",
+      github: "https://github.com/chickenisamazing",
       domain: "https://kea-portfolio.com/",
-      blogPost: "블로그 주소",
+      blogPost: "https://unhandled.tistory.com",
     },
   },
 ];

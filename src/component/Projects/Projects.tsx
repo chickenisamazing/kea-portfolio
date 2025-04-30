@@ -161,6 +161,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                   >
                     <Image
+                      className={styles["project-link-logo"]}
                       src={project.logo}
                       alt="배포된 도메인"
                       width={48}
@@ -175,6 +176,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                   >
                     <Image
+                      className={styles["project-link-logo"]}
                       src="/assets/logos/others/Tistory_logo.svg"
                       alt="해당 프로젝트 블로그 포스팅"
                       width={48}

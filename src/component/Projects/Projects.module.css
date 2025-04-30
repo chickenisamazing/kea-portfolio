@@ -188,6 +188,13 @@
 
   .project-link-logo {
     gap: 1rem;
+    cursor: pointer;
+  }
+
+  .project-link-logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
   }
 }
 

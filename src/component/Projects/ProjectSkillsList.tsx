@@ -2,6 +2,8 @@ import { ComponentType } from "react";
 
 import styles from "./ProjectSkillsList.module.css";
 
+import type { Stack, IconProps, ProjectSkillsProps } from "@/types/project";
+
 import HTMLIcon from "../icons/HTMLIcon";
 import CSSIcon from "../icons/CSSIcon";
 import CSSModulesIcon from "../icons/CSSModulesIcon";
@@ -12,43 +14,6 @@ import NextIcon from "../icons/NextIcon";
 import TailwindCSSIcon from "../icons/TailwindCSSIcon";
 import PWAIcon from "../icons/PWAIcon";
 import ZustandIcon from "../icons/ZustandIcon";
-
-export interface Stack {
-  stack: string;
-  fontColor: string;
-}
-
-interface IconProps {
-  size?: number;
-  color?: string;
-  className?: string;
-  [key: string]: unknown;
-}
-
-interface Project {
-  projectId: number;
-  name: string;
-  type: string;
-  duration: string;
-  role: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  description: string;
-  skills: Stack[];
-  features: string[];
-  logo: string;
-  links: {
-    github: string;
-    domain: string;
-    blogPost: string;
-  };
-}
-
-interface ProjectSkillsProps {
-  project: Project;
-}
 
 const iconComponents: { [key: string]: ComponentType<IconProps> } = {
   HTML: HTMLIcon,

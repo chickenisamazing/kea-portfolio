@@ -1,38 +1,8 @@
 import Image from "next/image";
-
 import styles from "./ProjectCard.module.css";
-
 import ProjectSkillsList from "./ProjectSkillsList";
 
-export interface Stack {
-  stack: string;
-  fontColor: string;
-}
-
-interface Project {
-  projectId: number;
-  name: string;
-  type: string;
-  duration: string;
-  role: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  description: string;
-  skills: Stack[];
-  features: string[];
-  logo: string;
-  links: {
-    github: string;
-    domain: string;
-    blogPost: string;
-  };
-}
-
-interface ProjectCardProps {
-  project: Project;
-}
+import type { ProjectCardProps } from "@/types/project";
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (

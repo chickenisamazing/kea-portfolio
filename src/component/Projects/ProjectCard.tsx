@@ -1,43 +1,13 @@
 import Image from "next/image";
-
 import styles from "./ProjectCard.module.css";
-
 import ProjectSkillsList from "./ProjectSkillsList";
 
-export interface Stack {
-  stack: string;
-  fontColor: string;
-}
-
-interface Project {
-  projectId: number;
-  name: string;
-  type: string;
-  duration: string;
-  role: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  description: string;
-  skills: Stack[];
-  features: string[];
-  logo: string;
-  links: {
-    github: string;
-    domain: string;
-    blogPost: string;
-  };
-}
-
-interface ProjectCardProps {
-  project: Project;
-}
+import type { ProjectCardProps } from "@/types/project";
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <>
-      <article key={project.projectId} className={styles["project-card"]}>
+      <article className={styles["project-card"]}>
         {/* 프로젝트 내부 컨테이너 */}
         <div className={styles["project-inner-container"]}>
           {/* 프로젝트명 */}
@@ -101,11 +71,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${project.name} 깃허브 레포지토리 보러가기`}
             >
               <Image
                 className={styles["project-link-logo"]}
                 src="/assets/logos/tools/Github_logo.svg"
-                alt="github repository"
+                alt="깃허브"
                 width={48}
                 height={48}
               />
@@ -114,6 +85,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.links.domain}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${project.name} 프로젝트의 배포된 웹사이트 보러가기`}
             >
               <Image
                 className={styles["project-link-logo"]}
@@ -127,6 +99,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.links.blogPost}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${project.name} 프로젝트 블로그 회고 보러가기`}
             >
               <Image
                 className={styles["project-link-logo"]}

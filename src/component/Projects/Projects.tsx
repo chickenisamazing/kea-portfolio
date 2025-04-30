@@ -100,13 +100,13 @@ export default function Projects() {
                 {/* 기술 스택 */}
                 <div className={styles["skills-container"]}>
                   <span className={styles["project-label"]}>Skills</span>
-                  <div className={styles["skill-list"]}>
+                  <ul className={styles["skill-list"]}>
                     {project.skills.map((stack: Stack) => {
                       const specificIconComponent = iconComponents[stack.stack];
 
                       const IconToRender = specificIconComponent || ReactIcon;
                       return (
-                        <span
+                        <li
                           style={{ background: stack.fontColor }}
                           className={styles["skill"]}
                           key={stack.stack}
@@ -120,22 +120,22 @@ export default function Projects() {
                             ) : null}
                             {stack.stack}
                           </span>
-                        </span>
+                        </li>
                       );
                     })}
-                  </div>
+                  </ul>
                 </div>
 
                 {/* 구현 기능 */}
                 <div className={styles["feature-container"]}>
                   <span className={styles["project-label"]}>구현 기능</span>
-                  <div className={styles["feature-list"]}>
+                  <ul className={styles["feature-list"]}>
                     {project.features.map((feature: string) => (
-                      <span key={feature} className={styles.feature}>
+                      <li key={feature} className={styles.feature}>
                         {feature}
-                      </span>
+                      </li>
                     ))}{" "}
-                  </div>
+                  </ul>
                 </div>
 
                 {/* 프로젝트 링크 컨테이너 */}

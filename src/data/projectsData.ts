@@ -16,12 +16,10 @@ export interface Project {
   description: string;
   skills: Stack[];
   features: string[];
+  logo: string;
   links: {
     github: string;
-    domain: {
-      domainLink: string;
-      logo: string;
-    };
+    domain: string;
     blogPost: string;
   };
 }
@@ -66,12 +64,10 @@ export const projectsData: Project[] = [
       },
     ],
     features: ["소개 페이지 구현", "사용자 인터렉션 요소 구현"],
+    logo: "/assets/profile_image_penrose.svg",
     links: {
       github: "https://github.com/chickenisamazing/kea-portfolio",
-      domain: {
-        logo: "/assets/profile_image_penrose.svg",
-        domainLink: "https://kea-portfolio.com/",
-      },
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },
@@ -119,6 +115,7 @@ export const projectsData: Project[] = [
         fontColor: "#5C5149",
       },
     ],
+    logo: "/assets/logos/others/domain_dalkak_logo.png",
     features: [
       "네비게이션 바",
       "칵테일 레시피 상세 조회",
@@ -127,10 +124,7 @@ export const projectsData: Project[] = [
     ],
     links: {
       github: "https://github.com/chickenisamazing/DALKAK",
-      domain: {
-        logo: "/assets/logos/others/domain_dalkak_logo.png",
-        domainLink: "https://kea-portfolio.com/",
-      },
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },
@@ -186,12 +180,10 @@ export const projectsData: Project[] = [
       "이상형 상세 모달 CRUD",
       "네비게이션 바",
     ],
+    logo: "/assets/logos/others/domain_ain_logo.png",
     links: {
       github: "https://github.com/chickenisamazing/AIN",
-      domain: {
-        logo: "/assets/logos/others/domain_ain_logo.png",
-        domainLink: "https://kea-portfolio.com/",
-      },
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },
@@ -248,12 +240,10 @@ export const projectsData: Project[] = [
       "자유게시판 CRUD/페이지네이션",
       "댓글,대댓글 작성/삭제",
     ],
+    logo: "/assets/logos/others/domain_mogul_logo.png",
     links: {
       github: "깃헙 주소",
-      domain: {
-        logo: "/assets/logos/others/domain_mogul_logo.png",
-        domainLink: "https://kea-portfolio.com/",
-      },
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },

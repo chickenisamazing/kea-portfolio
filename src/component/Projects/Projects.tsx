@@ -66,75 +66,73 @@ export default function Projects() {
 
                 {/* 프로젝트 유형 */}
                 <dl className={styles["dl-style"]}>
-                  <dt className={styles["dt-style"]}>
+                  <dt className={styles["project-label"]}>
                     <span className={styles["dt-span-style"]}>유형</span>
                   </dt>
                   <dd className={styles["dd-style"]}>{project.type}</dd>
 
-                  <dt className={styles["dt-style"]}>
+                  <dt className={styles["project-label"]}>
                     <span className={styles["dt-span-style"]}>기간</span>
                   </dt>
                   <dd className={styles["dd-style"]}>{project.duration}</dd>
 
-                  <dt className={styles["dt-style"]}>
+                  <dt className={styles["project-label"]}>
                     <span className={styles["dt-span-style"]}>역할</span>
                   </dt>
                   <dd className={styles["dd-style"]}>{project.role}</dd>
                 </dl>
 
-                {/* 기술 스택 + 구현 기능 컨테이너 */}
-                <div className={styles["skills-feature-container"]}>
-                  {/* 기술 스택 */}
-                  <div className={styles["skills-container"]}>
-                    <span className={styles["skill-list-name"]}>Skills</span>
-                    <div className={styles["skill-list"]}>
-                      {project.skills.map((stack: Stack) => {
-                        const specificIconComponent =
-                          iconComponents[stack.stack];
-
-                        const IconToRender = specificIconComponent || ReactIcon;
-                        return (
-                          <span
-                            style={{ background: stack.fontColor }}
-                            className={styles["skill"]}
-                            key={stack.stack}
-                          >
-                            <span className={styles["icon-align"]}>
-                              {IconToRender ? (
-                                <IconToRender
-                                  className={styles.icon}
-                                  color="white"
-                                />
-                              ) : null}
-                              {stack.stack}
-                            </span>
-                          </span>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* 구현 기능 */}
-                  <div className={styles["feature-container"]}>
-                    <span className={styles["feature-name"]}>구현 기능</span>
-                    <div className={styles["feature-list"]}>
-                      {project.features.map((feature: string) => (
-                        <span key={feature} className={styles.feature}>
-                          {feature}
-                        </span>
-                      ))}{" "}
-                    </div>
-                  </div>
-                </div>
-
                 {/* 프로젝트 개요 */}
                 <div className={styles["description-container"]}>
-                  <span className={styles["description-name"]}>
-                    프로젝트 개요
-                  </span>
+                  <div>
+                    <span className={styles["project-label"]}>
+                      프로젝트 개요
+                    </span>
+                  </div>
                   <span className={styles.description}>
                     {project.description}
                   </span>
+                </div>
+
+                {/* 기술 스택 */}
+                <div className={styles["skills-container"]}>
+                  <span className={styles["project-label"]}>Skills</span>
+                  <div className={styles["skill-list"]}>
+                    {project.skills.map((stack: Stack) => {
+                      const specificIconComponent = iconComponents[stack.stack];
+
+                      const IconToRender = specificIconComponent || ReactIcon;
+                      return (
+                        <span
+                          style={{ background: stack.fontColor }}
+                          className={styles["skill"]}
+                          key={stack.stack}
+                        >
+                          <span className={styles["icon-align"]}>
+                            {IconToRender ? (
+                              <IconToRender
+                                className={styles.icon}
+                                color="white"
+                              />
+                            ) : null}
+                            {stack.stack}
+                          </span>
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* 구현 기능 */}
+                <div className={styles["feature-container"]}>
+                  <span className={styles["project-label"]}>구현 기능</span>
+                  <div className={styles["feature-list"]}>
+                    {project.features.map((feature: string) => (
+                      <span key={feature} className={styles.feature}>
+                        {feature}
+                      </span>
+                    ))}{" "}
+                  </div>
                 </div>
               </div>
             </article>

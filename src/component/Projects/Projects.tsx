@@ -2,7 +2,6 @@
 
 import { ComponentType } from "react";
 
-// import { useState } from "react";
 import Image from "next/image";
 import { projectsData, type Project, type Stack } from "@/data/projectsData";
 
@@ -57,7 +56,7 @@ export default function Projects() {
                 </div>
                 {/* 프로젝트 캡쳐 이미지 */}
                 <Image
-                  className={styles["browser-image"]}
+                  className={styles["project-image"]}
                   src={project.image.src}
                   alt={project.image.alt}
                   width={700}

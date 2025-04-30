@@ -72,75 +72,14 @@
 }
 
 /* 프로젝트 이미지 */
-.browser-image {
+.project-image {
   grid-column: 2 / span 6;
   width: 100%;
   height: auto;
   border-radius: 0.75rem;
 }
 
-/* 프로젝트 유형/기간/역할 */
-.project-detail-list {
-  grid-column: 8 / span 3;
-
-  /* dl 태그 기본 마진 제거 */
-  margin: 0;
-  margin-top: 0.5rem;
-
-  .project-detail-value {
-    margin: 0;
-    /* margin-top: 0.25rem; */
-    font-size: 1.125rem;
-    padding: 0.25rem 0rem;
-    margin-bottom: 0.75rem;
-  }
-}
-
-/* 기술 스택 */
-.skills-container {
-  grid-column: 2 / span 6;
-
-  .skill-list-name {
-    display: inline-block;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    font-weight: 550;
-    background-color: black;
-    padding: 0.25rem 1rem;
-    border-radius: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .skill-list {
-    gap: 1rem;
-    margin-top: 0.25rem;
-    margin-bottom: 2rem;
-  }
-
-  .skill {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.875rem;
-    color: white;
-    border-radius: 0.5rem;
-    padding: 0.125rem 0.75rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.25rem;
-    /* text-shadow: 1px 1px 1px black; */
-    text-shadow: -0.7px 0px black, 0px 0.7px black, 0.7px 0px black,
-      0px -0.7px black;
-  }
-
-  .icon-align {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-}
-
-/* 그..까만버튼.. */
+/* 소제목 라벨 */
 .project-label {
   display: inline-block;
   text-align: center;
@@ -153,21 +92,22 @@
   margin-bottom: 0.5rem;
 }
 
-/* 구현 기능 */
-.feature-container {
-  grid-column: 2 / span 10;
-  margin-bottom: 3rem;
+/* 프로젝트 유형/기간/역할 */
+.project-detail-list {
+  grid-column: 8 / span 3;
 
-  .feature-list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.25rem;
+  /* dl 태그 기본 마진 제거 */
+  margin: 0;
 
-    .feature {
-      display: inline-block;
-      font-size: 1.125rem;
-      line-height: 1.5;
-    }
+  margin-top: 0.5rem;
+
+  .project-detail-value {
+    /* dd 태그 기본 스타일 제거 */
+    margin: 0;
+    padding: 0.25rem;
+
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -176,11 +116,63 @@
   grid-column: 2 / span 10;
 
   .description {
+    padding: 0.25rem;
     margin-top: 0.25rem;
     font-size: 1.125rem;
     display: inline-block;
     word-break: keep-all;
-    line-height: 1.5;
+    line-height: 1.75;
+  }
+}
+
+/* 기술 스택 */
+.skills-container {
+  grid-column: 2 / span 6;
+
+  .skill-list {
+    padding: 0.25rem;
+    gap: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .skill {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.125rem 0.75rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+
+    text-shadow: -0.7px 0px black, 0px 0.7px black, 0.7px 0px black,
+      0px -0.7px black;
+  }
+
+  .icon-align {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+/* 구현 기능 */
+.feature-container {
+  grid-column: 2 / span 10;
+  margin-bottom: 3rem;
+
+  .feature-list {
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.25rem;
+
+    .feature {
+      display: inline-block;
+      font-size: 1.125rem;
+      line-height: 1.75;
+    }
   }
 }
 
@@ -203,26 +195,47 @@
   }
 
   /* 프로젝트 이미지 */
-  .browser-image {
+  .project-image {
     grid-column: 2 / span 10;
     grid-row: 2;
   }
-  .skills-feature-container {
-    /* 구현 기능 */
-    .feature-container {
-      margin-bottom: 0;
-    }
-  }
 
+  /* 프로젝트 상세 유형/기간/역할 */
   .project-detail-list {
-    margin: 0;
-    grid-column: 8/-1;
-    grid-row: 3;
+    /* 중첩그리드 */
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .project-label {
+      grid-row: 1;
+      justify-self: left;
+      padding: 0 0;
+
+      .project-detail-term {
+        display: inline-block;
+        padding: 0.25rem 1rem;
+      }
+    }
+
+    .project-detail-value {
+      /* grid-row: 1; */
+      margin: 0;
+      margin-top: 0.25rem;
+    }
   }
 
   .description-container {
     grid-column: 2 / span 10;
-    margin-bottom: 2rem;
+    /* margin-bottom: 1rem; */
+  }
+
+  .skills-container {
+    grid-column: 2 / span 10;
+  }
+
+  .feature-container {
+    grid-column: 2 / span 10;
   }
 }
 
@@ -246,42 +259,23 @@
     grid-column: 1/-1;
   }
 
-  /* 프로젝트 상세 유형/기간/역할 */
-  .project-detail-list {
-    /* 중첩그리드 */
-    grid-column: 2 / span 10;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    .project-label {
-      grid-row: 1;
-      justify-self: left;
-      padding: 0 0;
-
-      .project-detail-term {
-        display: inline-block;
-        padding: 0.25rem 1rem;
-      }
-    }
-
-    .project-detail-value {
-      margin: 0;
-      margin-top: 0.25rem;
-    }
-  }
   /* 기술 스택 + 구현 기능 */
-  .skills-feature-container {
-    grid-column: 2 / span 8;
+  .skills-container {
+    grid-column: 2 / span 10;
+  }
+
+  .feature-container {
+    grid-column: 2 / span 10;
   }
 
   .description-container {
-    margin-bottom: 3rem;
+    /* margin-bottom: 0.25rem; */
   }
 }
 
 /* 반응형 - 더 작은 화면 (576px) */
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .content {
     padding: 0 1.5rem;
   }
-}
+} */

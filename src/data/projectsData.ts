@@ -16,6 +16,7 @@ export interface Project {
   description: string;
   skills: Stack[];
   features: string[];
+  logo: string;
   links: {
     github: string;
     domain: string;
@@ -63,9 +64,10 @@ export const projectsData: Project[] = [
       },
     ],
     features: ["소개 페이지 구현", "사용자 인터렉션 요소 구현"],
+    logo: "/assets/profile_image_penrose.svg",
     links: {
       github: "https://github.com/chickenisamazing/kea-portfolio",
-      domain: "https://kea-portfolio-lovat.vercel.app/",
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },
@@ -73,14 +75,16 @@ export const projectsData: Project[] = [
     projectId: 2,
     name: "달칵",
     type: "팀 프로젝트(6인)",
-    duration: "2025.03 ~ ing",
+    duration: "2024.02 ~ 2024.03 (6주)",
     role: "FE(팀원)",
     image: {
       src: "/assets/temp_browser_image.png",
       alt: "프로젝트 이미지",
     },
+    // description:
+    //   "홈텐딩 유저들을 위한 칵테일 레시피 열람 및 커스텀 칵테일 레시피를 공유할 수 있는 서비스. 개인의 취향 또는 냉장고에 있는 재료를 기반으로 칵테일 레시피를 추천받을 수 있습니다.",
     description:
-      "홈텐딩 유저들을 위한 칵테일 레시피 열람 및 커스텀 칵테일 레시피를 공유할 수 있는 서비스. 개인의 취향 또는 냉장고에 있는 재료를 기반으로 칵테일 레시피를 추천받을 수 있습니다.",
+      "홈텐딩 유저들을 위한 칵테일 레시피 제공 및 커스텀 레시피 공유 서비스, 칵테일 추천을 받을 수 있습니다.",
     skills: [
       {
         stack: "HTML",
@@ -111,6 +115,7 @@ export const projectsData: Project[] = [
         fontColor: "#5C5149",
       },
     ],
+    logo: "/assets/logos/others/domain_dalkak_logo.png",
     features: [
       "네비게이션 바",
       "칵테일 레시피 상세 조회",
@@ -119,7 +124,7 @@ export const projectsData: Project[] = [
     ],
     links: {
       github: "https://github.com/chickenisamazing/DALKAK",
-      domain: "도메인 주소",
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },
@@ -127,7 +132,7 @@ export const projectsData: Project[] = [
     projectId: 3,
     name: "아인",
     type: "팀 프로젝트(6인)",
-    duration: "2025.03 ~ ing",
+    duration: "2024.03 ~ 2024.05 (6주)",
     role: "FE(리드)",
     image: {
       src: "/assets/temp_browser_image.png",
@@ -175,9 +180,10 @@ export const projectsData: Project[] = [
       "이상형 상세 모달 CRUD",
       "네비게이션 바",
     ],
+    logo: "/assets/logos/others/domain_ain_logo.png",
     links: {
       github: "https://github.com/chickenisamazing/AIN",
-      domain: "도메인 주소",
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },
@@ -185,7 +191,7 @@ export const projectsData: Project[] = [
     projectId: 4,
     name: "모굴",
     type: "팀 프로젝트(6인)",
-    duration: "2025.03 ~ ing",
+    duration: "2024.01 ~ 2024.02 (6주)",
     role: "FE(리드)",
     image: {
       src: "/assets/temp_browser_image.png",
@@ -234,9 +240,10 @@ export const projectsData: Project[] = [
       "자유게시판 CRUD/페이지네이션",
       "댓글,대댓글 작성/삭제",
     ],
+    logo: "/assets/logos/others/domain_mogul_logo.png",
     links: {
       github: "깃헙 주소",
-      domain: "도메인 주소",
+      domain: "https://kea-portfolio.com/",
       blogPost: "블로그 주소",
     },
   },

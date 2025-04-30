@@ -65,21 +65,27 @@ export default function Projects() {
                 />
 
                 {/* 프로젝트 유형 */}
-                <dl className={styles["dl-style"]}>
+                <dl className={styles["project-detail-list"]}>
                   <dt className={styles["project-label"]}>
-                    <span className={styles["dt-span-style"]}>유형</span>
+                    <span className={styles["project-detail-term"]}>유형</span>
                   </dt>
-                  <dd className={styles["dd-style"]}>{project.type}</dd>
+                  <dd className={styles["project-detail-value"]}>
+                    {project.type}
+                  </dd>
 
                   <dt className={styles["project-label"]}>
-                    <span className={styles["dt-span-style"]}>기간</span>
+                    <span className={styles["project-detail-term"]}>기간</span>
                   </dt>
-                  <dd className={styles["dd-style"]}>{project.duration}</dd>
+                  <dd className={styles["project-detail-value"]}>
+                    {project.duration}
+                  </dd>
 
                   <dt className={styles["project-label"]}>
-                    <span className={styles["dt-span-style"]}>역할</span>
+                    <span className={styles["project-detail-term"]}>역할</span>
                   </dt>
-                  <dd className={styles["dd-style"]}>{project.role}</dd>
+                  <dd className={styles["project-detail-value"]}>
+                    {project.role}
+                  </dd>
                 </dl>
 
                 {/* 프로젝트 개요 */}

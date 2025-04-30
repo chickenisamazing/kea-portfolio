@@ -4,18 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./Stacks.module.css";
 
-export interface Stack {
-  name: string;
-  src: string;
-  alt: string;
-  fontColor: string;
-  description: string[];
-}
-
-interface StackProps {
-  title: string;
-  data: Stack[];
-}
+import type { Stack, StackProps } from "@/types/stacks";
 
 export default function Stacks({ title, data }: StackProps) {
   const [selected, setSelected] = useState<string>(data[0]?.name || "");

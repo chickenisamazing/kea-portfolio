@@ -1,53 +1,16 @@
-.content {
-  max-width: 90rem;
-  margin: 0 auto;
-  padding: 0 15rem;
+.project-card {
+  background-color: #ededed; /* 또는 원래 사용하던 배경색 */
+  border-radius: 0.75rem;
+  /* 필요하다면 다른 project-card 관련 스타일 추가 */
+}
 
-  /* 나중에 삭제 */
-  margin-bottom: 15rem;
-
-  /* 그리드 */
+.project-inner-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  column-gap: 1.5rem;
-}
-
-.title {
-  margin-top: 8rem;
-  padding: 1rem;
-  font-size: 3.5rem;
-  font-style: italic;
-  font-weight: 700;
-  grid-column: 2 / span 8;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    to right bottom,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  scroll-margin-top: 10rem;
-}
-
-.project-container {
-  grid-column: 2 / span 10;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-
-  .project-card {
-    background-color: #ededed;
-    border-radius: 0.75rem;
-
-    /* 중첩 그리드 */
-    .project-inner-container {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 2rem;
-      align-items: flex-start;
-    }
-  }
+  gap: 2rem; /* 또는 원래 사용하던 gap */
+  align-items: flex-start; /* 또는 원래 설정 */
+  /* 내부 컨테이너에 적용했던 다른 스타일 (패딩 등)이 있다면 추가 */
+  padding: 2rem; /* 예시: 내부 여백이 있었다면 추가 */
 }
 
 /* 프로젝트명 */
@@ -210,17 +173,10 @@
 
 /* 반응형 - 데스크탑(작은 모니터) (1440px) */
 @media (max-width: 1440px) {
-  .content {
-    padding: 0 10rem;
-  }
 }
 
 /* 반응형 - 태블릿 (1024px) */
 @media (max-width: 1024px) {
-  .content {
-    padding: 0 5rem;
-  }
-
   /* 프로젝트명 */
   .project-name-container {
     grid-column: 2 / span 7;
@@ -273,24 +229,6 @@
 
 /* 반응형 - 모바일 (768px) */
 @media (max-width: 768px) {
-  .content {
-    padding: 0 1.5rem;
-  }
-
-  .project-container {
-    grid-column: 1/-1;
-
-    .project-card {
-      .project-inner-container {
-        gap: 1.5rem;
-      }
-    }
-  }
-
-  .title {
-    grid-column: 1/-1;
-  }
-
   /* 기술 스택 + 구현 기능 */
   .skills-container {
     grid-column: 2 / span 10;
@@ -299,10 +237,6 @@
   .feature-container {
     grid-column: 2 / span 10;
   }
-
-  /* .description-container { */
-  /* margin-bottom: 0.25rem/; */
-  /* } */
 }
 
 /* 반응형 - 더 작은 화면 (576px) */

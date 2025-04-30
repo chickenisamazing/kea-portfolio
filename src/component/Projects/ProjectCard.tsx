@@ -2,7 +2,7 @@ import { ComponentType } from "react";
 
 import Image from "next/image";
 
-import styles from "./Projects.module.css";
+import styles from "./ProjectCard.module.css";
 
 import HTMLIcon from "../icons/HTMLIcon";
 import CSSIcon from "../icons/CSSIcon";

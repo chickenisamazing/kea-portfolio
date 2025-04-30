@@ -139,6 +139,35 @@ export default function Projects() {
                     ))}{" "}
                   </div>
                 </div>
+
+                {/* 프로젝트 링크 컨테이너 */}
+                <div className={styles["project-link-container"]}>
+                  <div>
+                    <Image
+                      className={styles["project-link-logo"]}
+                      src="/assets/logos/tools/Github_logo.svg"
+                      alt="github repository"
+                      width={48}
+                      height={48}
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src={project.links.domain.logo}
+                      alt="배포된 도메인"
+                      width={48}
+                      height={48}
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src="/assets/logos/others/Tistory_logo.svg"
+                      alt="해당 프로젝트 블로그 포스팅"
+                      width={48}
+                      height={48}
+                    />
+                  </div>
+                </div>
               </div>
             </article>
           ))}

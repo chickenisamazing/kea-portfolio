@@ -18,56 +18,39 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.5rem;
   align-items: center;
-}
 
-.active-navbar {
-  /* 버튼 기본 CSS 제거 */
-  background: transparent;
-  border: 0;
+  .btn {
+    grid-column: span 4;
+    cursor: pointer;
 
-  height: 4rem;
-  line-height: 4rem;
-  grid-column: span 4;
-  font-size: 1.75rem;
-  font-style: italic;
-  font-weight: 700;
-  text-align: center;
+    /* 버튼 기본 CSS 제거 */
+    background: transparent;
+    border: 0;
 
-  /* 탭 활성화 상태 */
-  color: black;
-  border: 1px solid black;
-  border-bottom: none;
-  background-color: white;
+    height: 4rem;
+    color: white;
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 0.25rem + 2.5vw, 1.75rem);
+  }
 
-  font-size: clamp(1.5rem, 0.25rem + 2.5vw, 1.75rem);
-  cursor: pointer;
-}
+  .btn:focus-visible {
+    outline: 4px solid black;
+    outline-offset: -4px;
+  }
 
-.active-navbar:focus-visible {
-  outline: 4px solid black;
-  outline-offset: -4px;
-}
+  /* 선택된 탭 상태 */
+  .btn-selected {
+    color: black;
+    border: 1px solid black;
+    border-bottom: none;
+    background-color: white;
+  }
 
-.inactive-navbar {
-  /* 버튼 기본 CSS 제거 */
-  background: transparent;
-  border: 0;
-
-  height: 4rem;
-  line-height: 4rem;
-  font-size: 1.75rem;
-  grid-column: span 4;
-  text-align: center;
-  color: white;
-  font-style: italic;
-  font-weight: 700;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  cursor: pointer;
-}
-
-.inactive-navbar:focus-visible {
-  outline: 4px solid black;
-  outline-offset: -4px;
+  /* 선택되지않은 탭 상태 */
+  .btn-unselected {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
 }
 
 /* 반응형 - 태블릿 (1024px) */
@@ -83,16 +66,25 @@
     max-width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0rem;
 
     /* 중첩 그리드 */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    column-gap: 1.5rem;
-    align-items: center;
+
+    /* 모바일에서는 버튼 간격 제거 */
+    column-gap: 0;
 
     .about-me {
       border-left: none;
     }
+  }
+
+  /* 모바일에서 내브바 버튼 폰트 크기 줄이기 */
+  .btn {
+    height: 4rem;
+    font-size: clamp(1.375rem, 0.25rem + 2.5vw, 1.75rem);
+    font-style: italic;
+    font-weight: 700;
   }
 }

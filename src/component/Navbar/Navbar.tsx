@@ -162,10 +162,10 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => scrollToSection("about-me-title")}
-          className={`${
+          className={`${styles.btn} ${
             scrollLocation === "about-me-title"
-              ? styles["active-navbar"]
-              : styles["inactive-navbar"]
+              ? styles["btn-selected"]
+              : styles["btn-unselected"]
           }`}
           aria-current={
             scrollLocation === "about-me-title" ? "location" : undefined
@@ -176,10 +176,10 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => scrollToSection("skills-title")}
-          className={` ${
+          className={`${styles.btn} ${
             scrollLocation === "skills-title"
-              ? styles["active-navbar"]
-              : styles["inactive-navbar"]
+              ? styles["btn-selected"]
+              : styles["btn-unselected"]
           }`}
           aria-current={
             scrollLocation === "skills-title" ? "location" : undefined
@@ -190,10 +190,10 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => scrollToSection("projects-title")}
-          className={`${
+          className={`${styles.btn} ${
             scrollLocation === "projects-title"
-              ? styles["active-navbar"]
-              : styles["inactive-navbar"]
+              ? styles["btn-selected"]
+              : styles["btn-unselected"]
           }`}
           aria-current={
             scrollLocation === "projects-title" ? "location" : undefined

@@ -214,4 +214,16 @@
     grid-column: 1 / span 12;
     /* justify-self: center; */
   }
+
+  .slogan {
+    grid-column: 1 / span 12;
+  }
+
+  .values {
+    grid-column: 1 / span 12;
+  }
+
+  .education-container {
+    grid-column: 1 / span 12;
+  }
 }

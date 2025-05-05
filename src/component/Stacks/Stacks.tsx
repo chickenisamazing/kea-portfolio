@@ -48,7 +48,8 @@ export default function Stacks({ title, data }: StackProps) {
             >
               {selectedStack.name}
             </span>
-            <ul className={styles["description-list"]}>
+            {/* <ul className={styles["description-list"]}> */}
+            <ul>
               {selectedStack.description.map((sentence: string) => (
                 <li key={sentence} className={styles.sentence}>
                   {sentence}

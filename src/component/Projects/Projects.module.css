@@ -14,6 +14,7 @@
 
 .title {
   margin-top: 8rem;
+  margin-bottom: 4rem;
   padding: 1rem;
   font-size: 3.5rem;
   font-style: italic;
@@ -63,6 +64,8 @@
 
   .title {
     grid-column: 1/-1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 

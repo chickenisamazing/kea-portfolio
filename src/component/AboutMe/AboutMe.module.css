@@ -199,7 +199,7 @@
 
   .profile-image {
     grid-column: 1 / -1;
-    margin-top: 0;
+    margin-top: 2rem;
     justify-self: center;
   }
 
@@ -217,13 +217,24 @@
 
   .slogan {
     grid-column: 1 / span 12;
+
+    margin-top: 2rem;
+    font-size: 2.25rem;
   }
 
   .values {
     grid-column: 1 / span 12;
+
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
   }
 
   .education-container {
     grid-column: 1 / span 12;
+    margin-top: 1.75rem;
+
+    .education-title {
+      margin-bottom: 2rem;
+    }
   }
 }

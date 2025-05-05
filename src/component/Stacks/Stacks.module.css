@@ -133,12 +133,25 @@
     padding: 0 5rem;
   }
 
+  .title {
+    margin-top: 6rem;
+  }
+
   .logo-container {
     gap: 1.25rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   .logo-icon {
     transform: scale(0.95);
+  }
+  .description {
+    margin-top: 3rem;
+
+    .selected-skill-name {
+      margin-bottom: 3rem;
+    }
   }
 }
 

@@ -52,7 +52,7 @@
   margin-bottom: 0.25rem;
 }
 
-.link-link-group {
+.link-item {
   margin-top: 0.5rem;
   font-size: 1.25rem;
   font-style: italic;
@@ -60,23 +60,23 @@
   word-break: break-all;
   margin-bottom: 0.75rem;
 
-  .link {
+  .link-sentence {
     text-decoration: none;
     color: inherit;
   }
 
-  .link:hover {
+  .link-sentence:hover {
     text-decoration: underline;
     color: var(--color-primary);
   }
 
-  .link:focus-visible {
+  .link-sentence:focus-visible {
     outline: 4px solid var(--color-primary);
     outline-offset: 2px;
   }
 }
 
-.description {
+.slogan {
   grid-column: 2 / span 10;
   margin-top: 4rem;
   padding: 1rem;
@@ -105,14 +105,14 @@
   }
 }
 
-.description-2 {
+.values {
   grid-column: 2 / span 10;
   margin-top: 1.75rem;
   padding: 1rem;
   font-size: 1.75rem;
   word-break: keep-all;
 
-  .sentence-2 {
+  .values-sentence {
     margin-bottom: 0.5rem;
     display: block;
     /* 줄 간격 */
@@ -120,7 +120,14 @@
   }
 }
 
+/* 교육사항 */
 .education-container {
+  grid-column: 2 / span 10;
+  margin-top: 1.75rem;
+  padding: 1rem;
+  font-size: 1.75rem;
+  word-break: keep-all;
+
   display: flex;
   flex-direction: column;
 
@@ -140,15 +147,21 @@
     background-clip: text;
   }
 
-  .education-sentence {
+  .education-list {
+    display: flex;
+    flex-direction: column;
     font-size: 1.25rem;
-    /* font-weight: 500; */
     line-height: 1.5;
-  }
-  .education-sentence-2 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 1.5;
+
+    .education-term {
+      order: 2;
+    }
+
+    .education-sentence {
+      /* dd 기본 스타일링 제거 */
+      margin: 0;
+      order: 1;
+    }
   }
 }
 
@@ -180,8 +193,13 @@
     grid-column: 1 / -1;
   }
 
+  .title {
+    margin-top: 4rem;
+  }
+
   .profile-image {
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
+    margin-top: 0;
     justify-self: center;
   }
 
@@ -192,6 +210,7 @@
   }
 
   .link-container {
+    margin-top: 2rem;
     grid-column: 1 / span 12;
     /* justify-self: center; */
   }

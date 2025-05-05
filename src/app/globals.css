@@ -18,6 +18,7 @@
 
 body {
   margin-top: 4rem;
+  /* margin: 0; */
   /* font-family: "pretendard", sans-serif; */
   background-color: white;
   font-display: swap;
@@ -26,6 +27,8 @@ body {
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 

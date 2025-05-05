@@ -191,8 +191,31 @@
 @media (max-width: 768px) {
   /* 기술 스택 + 구현 기능 */
 
+  .project-name-container {
+    grid-column: 1 / span 10;
+  }
+
+  .project-image {
+    grid-column: 1 / span 10;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+  }
+
+  .project-detail-list {
+    grid-column: 1 / span 10;
+  }
+
+  .description-container {
+    grid-column: 1 / span 10;
+  }
+
   .feature-container {
-    grid-column: 2 / span 10;
+    grid-column: 1 / span 10;
+  }
+
+  .project-link-container {
+    grid-column: 7 / span 3;
   }
 }
 

@@ -7,9 +7,11 @@ import styles from "./Stacks.module.css";
 import type { Stack, StackProps } from "@/types/stacks";
 
 export default function Stacks({ title, data }: StackProps) {
-  const [selected, setSelected] = useState<string>(data[0]?.name || "");
+  const [selected, setSelected] = useState<string>(data[0]?.stack_name || "");
 
-  const selectedStack = data.find((stack: Stack) => stack.name === selected);
+  const selectedStack = data.find(
+    (stack: Stack) => stack.stack_name === selected
+  );
 
   return (
     <section>
@@ -18,20 +20,20 @@ export default function Stacks({ title, data }: StackProps) {
           {title}
         </h2>
         <ul className={styles["logo-container"]}>
-          {data.map((stack: Stack) => (
-            <li key={stack.name} className={styles["list-styling"]}>
+          {data.slice(0, 6).map((stack: Stack) => (
+            <li key={stack.stack_id} className={styles["list-styling"]}>
               <button
                 className={styles["btn-logo"]}
                 type="button"
-                aria-pressed={selected === stack.name ? "true" : "false"}
-                onClick={() => setSelected(stack.name)}
+                aria-pressed={selected === stack.stack_name ? "true" : "false"}
+                onClick={() => setSelected(stack.stack_name)}
               >
                 <Image
                   className={`${styles["logo-icon"]} ${
-                    selected === stack.name ? styles.selected : ""
+                    selected === stack.stack_name ? styles.selected : ""
                   }`}
-                  src={stack.src}
-                  alt={stack.alt}
+                  src={stack.stack_image_url}
+                  alt={stack.stack_name}
                   width={64}
                   height={64}
                 />
@@ -43,14 +45,14 @@ export default function Stacks({ title, data }: StackProps) {
         {selectedStack && (
           <div className={styles.description}>
             <span
-              style={{ color: selectedStack.fontColor }}
+              style={{ color: selectedStack.stack_color }}
               className={styles["selected-skill-name"]}
             >
-              {selectedStack.name}
+              {selectedStack.stack_name}
             </span>
             {/* <ul className={styles["description-list"]}> */}
             <ul>
-              {selectedStack.description.map((sentence: string) => (
+              {selectedStack.stack_description.map((sentence: string) => (
                 <li key={sentence} className={styles.sentence}>
                   {sentence}
                 </li>

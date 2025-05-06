@@ -28,25 +28,28 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
   Zustand: ZustandIcon,
 };
 
-export default function ProjectSkillsList({ project }: ProjectSkillsProps) {
+export default async function ProjectSkillsList({
+  project,
+}: ProjectSkillsProps) {
+  // console.log(project);
   return (
     <div className={styles["skills-container"]}>
       <span className={styles["project-label"]}>Skills</span>
       <ul className={styles["skill-list"]}>
-        {project.skills.map((stack: Stack) => {
-          const specificIconComponent = iconComponents[stack.stack];
+        {project.stacks?.map((stack: Stack) => {
+          const specificIconComponent = iconComponents[stack.stack_name];
           const IconToRender = specificIconComponent || ReactIcon;
           return (
             <li
-              style={{ background: stack.fontColor }}
+              style={{ background: stack.stack_color }}
               className={styles.skill}
-              key={stack.stack}
+              key={stack.stack_id}
             >
               <span className={styles["icon-align"]}>
                 {IconToRender ? (
                   <IconToRender className={styles.icon} color="white" />
                 ) : null}
-                {stack.stack}
+                {stack.stack_name}
               </span>
             </li>
           );

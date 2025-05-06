@@ -15,14 +15,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <h3 className={styles["project-name"]}>{project.project_name}</h3>
           </div>
           {/* 프로젝트 캡쳐 이미지 */}
-          {/* <Image
+          <Image
             className={styles["project-image"]}
-            src={project.image.src}
-            alt={project.image.alt}
+            src="/assets/temp_browser_image.png"
+            alt="프로젝트 이미지"
             width={700}
             height={350}
-          /> */}
-
+          />
           {/* 프로젝트 유형 */}
           <dl className={styles["project-detail-list"]}>
             <dt className={styles["project-label"]}>
@@ -82,8 +81,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {project.project_logo && (
                 <Image
                   className={styles["project-link-logo"]}
-                  // src="/assets/logos/tools/Github_logo.svg"
-                  src={project.project_logo}
+                  src="/assets/logos/others/Github_logo.svg"
+                  // src={project.project_logo}
                   alt="깃허브"
                   width={48}
                   height={48}

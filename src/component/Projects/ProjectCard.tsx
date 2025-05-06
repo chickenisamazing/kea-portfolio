@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./ProjectCard.module.css";
-// import ProjectSkillsList from "./ProjectSkillsList";
+import ProjectSkillsList from "./ProjectSkillsList";
 
 import type { ProjectCardProps } from "@/types/project";
 
@@ -56,7 +56,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </span>
           </div>
 
-          {/* <ProjectSkillsList project={project} /> */}
+          <ProjectSkillsList project={project} />
 
           {/* 구현 기능 */}
           <div className={styles["feature-container"]}>

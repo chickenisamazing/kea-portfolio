@@ -1,6 +1,10 @@
 export interface Stack {
-  stack: string;
-  fontColor: string;
+  stack_id: number;
+  stack_name: string;
+  stack_image_url: string;
+  stack_category: string;
+  stack_color: string;
+  stack_description: string[];
 }
 
 export interface Project {
@@ -9,6 +13,7 @@ export interface Project {
   project_type: string;
   project_duration: string;
   project_role: string;
+  stacks: Stack[];
   project_description: string;
   project_features: string[];
   project_github_link: string;

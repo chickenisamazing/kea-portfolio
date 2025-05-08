@@ -19,6 +19,8 @@ export default async function Page({
   // console.log("resolvedParams.id :", resolvedParams.id);
   // console.log("id :", id);
 
+  const currentTime = new Date().toISOString();
+
   const { data: projectData, error } = await getOneSupabaseProjectData(id);
 
   if (error || !projectData) {
@@ -30,6 +32,7 @@ export default async function Page({
 
   return (
     <div>
+      <p>이 페이지는 {currentTime}에 생성되었습니다. </p>
       <OneProject {...projectData} />
     </div>
   );

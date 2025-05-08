@@ -1,9 +1,24 @@
 // export const dynamic = "force-dynamic";
 
+import getSupabaseProjectData from "@/services/getSupabaseProjectData";
+
 import getOneSupabaseProjectData from "@/services/getOneSupabaseProjectData";
 import OneProject from "@/component/OneProject/OneProject";
 
 // import type { Project } from "@/types/project";
+
+// 서버 컴포넌트 다이나믹 라우팅에서는 디폴트가 설마 SSR인가? SSG를 하려면..
+export async function generateStaticParams() {
+  const { data: projectListData } = await getSupabaseProjectData();
+
+  return (
+    projectListData?.map((post) => ({
+      id: String(post.project_id),
+    })) || []
+  );
+
+  // const { data: projectData, error } = await getOneSupabaseProjectData(id);
+}
 
 export default async function Page({
   params,

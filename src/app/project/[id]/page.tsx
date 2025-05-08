@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import getOneSupabaseProjectData from "@/services/getOneSupabaseProjectData";
 import OneProject from "@/component/OneProject/OneProject";
 

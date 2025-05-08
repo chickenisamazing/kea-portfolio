@@ -8,9 +8,16 @@ import OneProject from "@/component/OneProject/OneProject";
 export default async function Page({
   params,
 }: {
-  params: Promise<{ id: number }>;
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = await params;
+  const resolvedParams = await params;
+
+  // parseInt는 동기함수
+  const id = parseInt(resolvedParams.id);
+
+  // console.log("resolvedParams :", resolvedParams);
+  // console.log("resolvedParams.id :", resolvedParams.id);
+  // console.log("id :", id);
 
   const { data: projectData, error } = await getOneSupabaseProjectData(id);
 

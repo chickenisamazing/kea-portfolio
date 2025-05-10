@@ -1,5 +1,5 @@
 // SSG -> SSR TEST
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 // Lazy loading (자식 컴포넌트)
 import dynamicImport from "next/dynamic";

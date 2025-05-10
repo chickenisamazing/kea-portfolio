@@ -4,7 +4,7 @@
 // 배포 환경 - SSR
 
 // 동적 렌더링 강제
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 import getSupabaseProjectData from "@/services/getSupabaseProjectData";
 

@@ -53,19 +53,27 @@
 - [ ] CSS 개선
 - [ ] 리팩토링
 
-### 6. 검색 엔진 최적화(SEO)
+### 6. Project 상세 페이지
+
+- [x] HTML 마크업 & CSS 스타일링
+- [x] 시맨틱 태그 적용
+- [x] 반응형 웹 구현
+- [ ] CSS 개선
+- [ ] 리팩토링
+
+### 7. 검색 엔진 최적화(SEO)
 
 - [ ] SEO 개선
 
-### 7. 배포(Deployment)
+### 8. 배포(Deployment)
 
 - [x] 배포 플랫폼 설정
 - [x] 도메인 연결
 
-### 8. 성능(Performance)
+### 9. 성능(Performance)
 
 - [x] 폰트 최적화
 
-### 8. 웹 접근성(Accessibility)
+### 10. 웹 접근성(Accessibility)
 
 - [x] 웹 접근성 점수 개선

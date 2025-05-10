@@ -1,9 +1,10 @@
-// GenerateStaticParams 사용 + force-dynamic 미사용
-// (예상 결과)
+// GenerateStaticParams 사용 + force-dynamic 사용
+/// (예상 결과)
 // 로컬 개발 환경 - SSR과 유사 (o)
-// 배포 환경 - SSG
+// 배포 환경 - SSR
 
-// export const dynamic = "force-dynamic";
+// 동적 렌더링 강제
+export const dynamic = "force-dynamic";
 
 import getSupabaseProjectData from "@/services/getSupabaseProjectData";
 
@@ -52,7 +53,7 @@ export default async function Page({
 
   return (
     <div>
-      <p>GenerateStaticParams 사용 + force-dynamic 미사용</p>
+      <p>GenerateStaticParams 사용 + force-dynamic 사용</p>
       <p>이 페이지는 {currentTime}에 생성되었습니다. </p>
       <OneProject {...projectData} />
     </div>

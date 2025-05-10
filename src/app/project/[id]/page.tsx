@@ -1,13 +1,13 @@
 // 로컬 개발 환경 - SSR과 유사
 // 배포 환경 - SSG
 
-import getSupabaseProjectData from "@/services/getSupabaseProjectData";
+import getAllSupabaseProjectData from "@/services/getAllSupabaseProjectData";
 
 import getOneSupabaseProjectData from "@/services/getOneSupabaseProjectData";
 import OneProject from "@/component/OneProject/OneProject";
 
 export async function generateStaticParams() {
-  const { data: projectListData } = await getSupabaseProjectData();
+  const { data: projectListData } = await getAllSupabaseProjectData();
 
   return (
     projectListData?.map((post) => ({

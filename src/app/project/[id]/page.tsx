@@ -1,18 +1,11 @@
-// GenerateStaticParams 사용 + force-dynamic 미사용
-// (예상 결과)
-// 로컬 개발 환경 - SSR과 유사 (o)
+// 로컬 개발 환경 - SSR과 유사
 // 배포 환경 - SSG
-
-// export const dynamic = "force-dynamic";
 
 import getSupabaseProjectData from "@/services/getSupabaseProjectData";
 
 import getOneSupabaseProjectData from "@/services/getOneSupabaseProjectData";
 import OneProject from "@/component/OneProject/OneProject";
 
-// import type { Project } from "@/types/project";
-
-// 서버 컴포넌트 다이나믹 라우팅에서는 디폴트가 설마 SSR인가? SSG를 하려면..
 export async function generateStaticParams() {
   const { data: projectListData } = await getSupabaseProjectData();
 
@@ -21,8 +14,6 @@ export async function generateStaticParams() {
       id: String(post.project_id),
     })) || []
   );
-
-  // const { data: projectData, error } = await getOneSupabaseProjectData(id);
 }
 
 export default async function Page({
@@ -34,10 +25,6 @@ export default async function Page({
 
   // parseInt는 동기함수
   const id = parseInt(resolvedParams.id);
-
-  // console.log("resolvedParams :", resolvedParams);
-  // console.log("resolvedParams.id :", resolvedParams.id);
-  // console.log("id :", id);
 
   const currentTime = new Date().toISOString();
 

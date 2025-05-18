@@ -1,5 +1,3 @@
-// import { projectsData, type Project } from "@/data/projectsData";
-
 import { type Project } from "@/types/project";
 
 import getAllSupabaseProjectData from "@/services/getAllSupabaseProjectData";
@@ -17,11 +15,6 @@ export default async function Projects() {
         <h2 id="projects-title" className={styles.title}>
           Projects
         </h2>
-        {/* <div className={styles["project-container"]}>
-          {projectsData.map((project: Project) => (
-            <ProjectCard key={project.projectId} project={project} />
-          ))}
-        </div> */}
         <div className={styles["project-container"]}>
           {data?.map((project: Project) => (
             <ProjectCard key={project.project_id} project={project} />

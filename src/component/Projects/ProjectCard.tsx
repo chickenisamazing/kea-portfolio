@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./ProjectCard.module.css";
 import ProjectSkillsList from "./ProjectSkillsList";
@@ -72,6 +73,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
           {/* 프로젝트 링크 컨테이너 */}
           <div className={styles["project-link-container"]}>
+            <Link
+              href={`/project/${project.project_id}`}
+              // target="_blank"
+              // rel="noopener noreferrer"
+              // prefetch={true}
+              aria-label={`${project.project_name} 프로젝트 상세 페이지로 이동`}
+            >
+              {project.project_logo && (
+                <Image
+                  className={styles["project-link-logo"]}
+                  src="/assets/navigate_to_project_detail.png"
+                  // src={project.project_logo}
+                  alt={`${project.project_name} 프로젝트 상세 이동 버튼`}
+                  width={48}
+                  height={48}
+                />
+              )}
+            </Link>
             <a
               href={project.project_github_link}
               target="_blank"

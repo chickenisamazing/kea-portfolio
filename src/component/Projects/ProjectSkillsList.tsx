@@ -31,7 +31,6 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
 export default async function ProjectSkillsList({
   project,
 }: ProjectSkillsProps) {
-  // console.log(project);
   return (
     <div className={styles["skills-container"]}>
       <span className={styles["project-label"]}>Skills</span>

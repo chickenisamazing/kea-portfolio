@@ -1,8 +1,4 @@
-// 로컬 개발 환경 - SSR과 유사
-// 배포 환경 - SSG
-
 import getAllSupabaseProjectData from "@/services/getAllSupabaseProjectData";
-
 import getOneSupabaseProjectData from "@/services/getOneSupabaseProjectData";
 import OneProject from "@/component/OneProject/OneProject";
 
@@ -25,9 +21,6 @@ export default async function Page({
 
   // parseInt는 동기함수
   const id = parseInt(resolvedParams.id);
-
-  const currentTime = new Date().toISOString();
-
   const { data: projectData, error } = await getOneSupabaseProjectData(id);
 
   if (error || !projectData) {
@@ -39,9 +32,7 @@ export default async function Page({
 
   return (
     <div>
-      <p>GenerateStaticParams 사용 + force-dynamic 미사용</p>
-      <p>이 페이지는 {currentTime}에 생성되었습니다. </p>
-      <OneProject {...projectData} />
+      <OneProject data={projectData} />
     </div>
   );
 }

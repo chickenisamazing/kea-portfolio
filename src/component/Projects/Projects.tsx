@@ -1,6 +1,6 @@
 import { type Project } from "@/types/project";
 
-import getAllSupabaseProjectData from "@/services/getAllSupabaseProjectData";
+import getAllSupabaseProjectData from "@/services/getAllProjectData";
 
 import styles from "./Projects.module.css";
 

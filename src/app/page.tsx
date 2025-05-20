@@ -8,18 +8,15 @@ import type { Stack } from "@/types/stacks";
 
 import AboutMe from "@/component/AboutMe/AboutMe";
 
-// import { skillsData } from "@/data/skillsData";
-// import { toolsData } from "@/data/toolsData";
-
-import getSupabaseSkillsData from "@/services/getSupabaseSkillsData";
-import getSupabaseToolsData from "@/services/getSupabaseToolsData";
+import getSkillsData from "@/services/getSkillsData";
+import getToolsData from "@/services/getToolsData";
 
 const Stacks = dynamicImport(() => import("@/component/Stacks/Stacks"));
 const Projects = dynamicImport(() => import("@/component/Projects/Projects"));
 
 export default async function Home() {
-  const { data } = await getSupabaseSkillsData();
-  const { mappedData } = await getSupabaseToolsData();
+  const { data } = await getSkillsData();
+  const { mappedData } = await getToolsData();
 
   return (
     <div>

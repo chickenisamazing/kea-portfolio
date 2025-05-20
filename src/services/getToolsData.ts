@@ -1,6 +1,6 @@
 import supabase from "@/lib/supabase";
 
-export default async function getSupabaseToolsData() {
+export default async function getToolsData() {
   const { data, error } = await supabase.from("tools").select();
 
   // 컬럼명이 다르니 매핑하자

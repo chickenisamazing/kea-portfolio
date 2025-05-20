@@ -1,9 +1,9 @@
-import getAllSupabaseProjectData from "@/services/getAllSupabaseProjectData";
-import getOneSupabaseProjectData from "@/services/getOneSupabaseProjectData";
+import getAllProjectData from "@/services/getAllProjectData";
+import getOneProjectData from "@/services/getOneProjectData";
 import OneProject from "@/component/OneProject/OneProject";
 
 export async function generateStaticParams() {
-  const { data: projectListData } = await getAllSupabaseProjectData();
+  const { data: projectListData } = await getAllProjectData();
 
   return (
     projectListData?.map((post) => ({
@@ -21,7 +21,7 @@ export default async function Page({
 
   // parseInt는 동기함수
   const id = parseInt(resolvedParams.id);
-  const { data: projectData, error } = await getOneSupabaseProjectData(id);
+  const { data: projectData, error } = await getOneProjectData(id);
 
   if (error || !projectData) {
     console.error("에러 발생", error);

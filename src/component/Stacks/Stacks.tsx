@@ -16,9 +16,7 @@ export default function Stacks({ title, data }: StackProps) {
   return (
     <section>
       <div className={styles.content}>
-        <h2 id="skills-title" className={styles.title}>
-          {title}
-        </h2>
+        <h2 className={styles.title}>{title}</h2>
         <ul className={styles["logo-container"]}>
           {data.slice(0, 6).map((stack: Stack) => (
             <li key={stack.stack_id} className={styles["list-styling"]}>

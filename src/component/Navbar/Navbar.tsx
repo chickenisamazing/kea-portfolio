@@ -1,5 +1,6 @@
 "use client";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 import styles from "./Navbar.module.css";
 
@@ -7,6 +8,8 @@ const SECTION_ID_ARRAY = ["about-me-title", "skills-title", "projects-title"];
 // const SCROLL_ANIMATION_DURATION = 50;
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [activeSection, setActiveSection] = useState("about-me-title");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -14,7 +17,7 @@ export default function Navbar() {
 
   const doNotChangeRef = useRef(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     SECTION_ID_ARRAY.forEach((id) => {
       sectionRefs.current[id] = document.getElementById(id);
     });
@@ -58,7 +61,7 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   const scrollTo = (id: string) => {
     // setDoNotChange(true);

@@ -1,6 +1,6 @@
 import supabase from "@/lib/supabase";
 
-export default async function getOneSupabaseProjectData(projectId: number) {
+export default async function getOneProjectData(projectId: number) {
   const { data, error } = await supabase
     .from("project_with_stacks")
     .select("*")

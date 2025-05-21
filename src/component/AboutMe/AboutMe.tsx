@@ -4,12 +4,10 @@ import styles from "./AboutMe.module.css";
 
 export default function AboutMe() {
   return (
-    <section>
+    <section id="about-me-title">
       <div className={styles.content}>
         {/* 타이틀 */}
-        <h2 id="about-me-title" className={styles.title}>
-          About Me
-        </h2>
+        <h2 className={styles.title}>About Me</h2>
 
         {/* 프로필 이미지 */}
         <Image

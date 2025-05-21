@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import styles from "./Navbar.module.css";
 
@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const doNotChangeRef = useRef(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     SECTION_ID_ARRAY.forEach((id) => {
       sectionRefs.current[id] = document.getElementById(id);
     });

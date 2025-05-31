@@ -1,13 +1,13 @@
 import { type Project } from "@/types/project";
 
-import getAllSupabaseProjectData from "@/services/getAllProjectData";
+import getAllProjectData from "@/services/getAllProjectData";
 
 import styles from "./Projects.module.css";
 
 import ProjectCard from "./ProjectCard";
 
 export default async function Projects() {
-  const { data } = await getAllSupabaseProjectData();
+  const { data } = await getAllProjectData();
 
   return (
     <section id="projects-title">

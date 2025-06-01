@@ -31,14 +31,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="ko">
       <body className={`${pretendard.className}`}>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          {children}
+          {modal}
+        </main>
         <Analytics />
       </body>
     </html>

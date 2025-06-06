@@ -36,7 +36,7 @@ export default async function ProjectModal({
 
   return (
     <Modal>
-      <OneProject data={projectData} />
+      <OneProject data={projectData} showTitle={false} />
     </Modal>
   );
 }

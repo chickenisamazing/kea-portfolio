@@ -4,14 +4,21 @@ import { type Project } from "@/types/project";
 import styles from "./OneProject.module.css";
 
 import OneProjectCard from "./OneProjectCard";
+import SectionTitle from "../common/SectionTitle";
 
-export default function OneProject({ data }: { data: Project }) {
+interface OneProjectProps {
+  data: Project;
+  showTitle?: boolean;
+}
+
+export default function OneProject({
+  data,
+  showTitle = true,
+}: OneProjectProps) {
   return (
-    <section>
+    <section id="projects-title">
       <div className={styles.content}>
-        <h2 id="projects-title" className={styles.title}>
-          Projects
-        </h2>
+        {showTitle && <SectionTitle title="Projects" />}
         <div className={styles["project-container"]}>
           <OneProjectCard data={data} />
         </div>

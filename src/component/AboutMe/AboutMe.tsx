@@ -1,13 +1,14 @@
 import Image from "next/image";
 
 import styles from "./AboutMe.module.css";
+import SectionTitle from "../common/SectionTitle";
 
 export default function AboutMe() {
   return (
     <section id="about-me-title">
       <div className={styles.content}>
         {/* 타이틀 */}
-        <h2 className={styles.title}>About Me</h2>
+        <SectionTitle title="About Me" />
 
         {/* 프로필 이미지 */}
         <Image

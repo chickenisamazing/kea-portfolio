@@ -12,25 +12,6 @@
   column-gap: 1.5rem;
 }
 
-.title {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-  padding: 1rem;
-  font-size: 3.5rem;
-  font-style: italic;
-  font-weight: 700;
-  grid-column: 2 / span 8;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    to right bottom,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  scroll-margin-top: 10rem;
-}
-
 .project-container {
   grid-column: 2 / span 10;
   display: flex;

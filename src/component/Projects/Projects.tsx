@@ -5,6 +5,7 @@ import getAllProjectData from "@/services/getAllProjectData";
 import styles from "./Projects.module.css";
 
 import ProjectCard from "./ProjectCard";
+import SectionTitle from "../common/SectionTitle";
 
 export default async function Projects() {
   const { data } = await getAllProjectData();
@@ -12,7 +13,7 @@ export default async function Projects() {
   return (
     <section id="projects-title">
       <div className={styles.content}>
-        <h2 className={styles.title}>Projects</h2>
+        <SectionTitle title="Projects" />
         <div className={styles["project-container"]}>
           {data?.map((project: Project) => (
             <ProjectCard key={project.project_id} project={project} />

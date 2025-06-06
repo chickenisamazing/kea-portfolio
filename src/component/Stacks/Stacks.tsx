@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./Stacks.module.css";
 
 import type { Stack, StackProps } from "@/types/stacks";
+import SectionTitle from "../common/SectionTitle";
 
 export default function Stacks({ title, data }: StackProps) {
   const [selected, setSelected] = useState<string>(data[0]?.stack_name || "");
@@ -16,7 +17,7 @@ export default function Stacks({ title, data }: StackProps) {
   return (
     <section>
       <div className={styles.content}>
-        <h2 className={styles.title}>{title}</h2>
+        <SectionTitle title={title} />
         <ul className={styles["logo-container"]}>
           {data.slice(0, 6).map((stack: Stack) => (
             <li key={stack.stack_id} className={styles["list-styling"]}>

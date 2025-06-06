@@ -9,24 +9,6 @@
   column-gap: 1.5rem;
 }
 
-.title {
-  margin-top: 8rem;
-  padding: 1rem;
-  font-size: 3.5rem;
-  font-style: italic;
-  font-weight: 700;
-  grid-column: 2 / span 8;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    to right bottom,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  scroll-margin-top: 10rem;
-}
-
 .logo-container {
   margin-top: 4rem;
   margin-bottom: 2rem;

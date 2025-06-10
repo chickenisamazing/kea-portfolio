@@ -2,7 +2,7 @@ import { ComponentType } from "react";
 
 import styles from "./ProjectSkillsList.module.css";
 
-import type { Stack, IconProps, ProjectSkillsProps } from "@/types/project";
+import type { Stack, IconProps, ProjectCardProps } from "@/types/project";
 
 import HTMLIcon from "../icons/HTMLIcon";
 import CSSIcon from "../icons/CSSIcon";
@@ -28,9 +28,7 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
   Zustand: ZustandIcon,
 };
 
-export default async function ProjectSkillsList({
-  project,
-}: ProjectSkillsProps) {
+export default async function ProjectSkillsList({ project }: ProjectCardProps) {
   return (
     <div className={styles["skills-container"]}>
       <span className={styles["project-label"]}>Skills</span>

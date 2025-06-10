@@ -2,13 +2,13 @@ import styles from "./ProjectCard.module.css";
 
 import type { ProjectCardProps } from "@/types/project";
 
+import ProjectName from "./ProjectName";
 import ProjectImage from "./ProjectImage";
 import ProjectDetailContainer from "./ProjectDetailContainer";
 import ProjectDescription from "./ProjectDescription";
 import ProjectSkillsList from "./ProjectSkillsList";
 import ProjectFeatures from "./ProjectFeatures";
 import ProjectLinkContainer from "./ProjectLinkContainer";
-import ProjectName from "./ProjectName";
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (

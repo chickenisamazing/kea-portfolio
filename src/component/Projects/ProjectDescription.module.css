@@ -1,0 +1,26 @@
+/* 프로젝트 개요 */
+.description-container {
+  grid-column: 2 / span 10;
+
+  .description {
+    padding: 0.25rem;
+    margin-top: 0.25rem;
+    font-size: 1.125rem;
+    display: inline-block;
+    word-break: keep-all;
+    line-height: 1.75;
+  }
+}
+
+/* 소제목 라벨 */
+.project-label {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 550;
+  background-color: black;
+  padding: 0.25rem 1rem;
+  border-radius: 1.25rem;
+  margin-bottom: 0.5rem;
+}

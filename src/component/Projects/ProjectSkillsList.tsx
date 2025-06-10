@@ -2,7 +2,9 @@ import { ComponentType } from "react";
 
 import styles from "./ProjectSkillsList.module.css";
 
-import type { Stack, IconProps, ProjectSkillsProps } from "@/types/project";
+import type { Stack, IconProps, ProjectCardProps } from "@/types/project";
+
+import ProjectSectionLabel from "./ProjectSectionLabel";
 
 import HTMLIcon from "../icons/HTMLIcon";
 import CSSIcon from "../icons/CSSIcon";
@@ -28,12 +30,10 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
   Zustand: ZustandIcon,
 };
 
-export default async function ProjectSkillsList({
-  project,
-}: ProjectSkillsProps) {
+export default async function ProjectSkillsList({ project }: ProjectCardProps) {
   return (
     <div className={styles["skills-container"]}>
-      <span className={styles["project-label"]}>Skills</span>
+      <ProjectSectionLabel label="Skills" />
       <ul className={styles["skill-list"]}>
         {project.stacks?.map((stack: Stack) => {
           const specificIconComponent = iconComponents[stack.stack_name];

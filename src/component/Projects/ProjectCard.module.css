@@ -78,28 +78,6 @@
   }
 }
 
-/* 구현 기능 */
-.feature-container {
-  grid-column: 2 / span 6;
-  margin-bottom: 3rem;
-
-  .feature-list {
-    /* ul 태그 기본 스타일링 제거 */
-    margin: 0;
-
-    padding: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.25rem;
-
-    .feature {
-      display: inline-block;
-      font-size: 1.125rem;
-      line-height: 1.75;
-    }
-  }
-}
-
 /* 프로젝트 링크 컨테이너 (깃헙/도메인/블로그)*/
 .project-link-container {
   grid-column: 9 / span 3;

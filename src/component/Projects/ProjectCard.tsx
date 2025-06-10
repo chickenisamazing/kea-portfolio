@@ -7,6 +7,7 @@ import ProjectDescription from "./ProjectDescription";
 import ProjectSkillsList from "./ProjectSkillsList";
 
 import type { ProjectCardProps } from "@/types/project";
+import ProjectFeatures from "./ProjectFeatures";
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -52,19 +53,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {/* 프로젝트 개요 */}
         <ProjectDescription description={project.project_description} />
 
+        {/* 프로젝트 기술 스택 리스트 */}
         <ProjectSkillsList project={project} />
 
         {/* 구현 기능 */}
-        <div className={styles["feature-container"]}>
-          <span className={styles["project-label"]}>구현 기능</span>
-          <ul className={styles["feature-list"]}>
-            {project.project_features?.map((feature: string) => (
-              <li key={feature} className={styles.feature}>
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ProjectFeatures features={project.project_features} />
 
         {/* 프로젝트 링크 컨테이너 */}
         <div className={styles["project-link-container"]}>

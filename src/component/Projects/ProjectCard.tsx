@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {/* 프로젝트 캡쳐 이미지 */}
         <Image
           className={styles["project-image"]}
-          src="/assets/temp_browser_image.png"
+          src={project.project_image}
           alt="프로젝트 이미지"
           width={700}
           height={350}

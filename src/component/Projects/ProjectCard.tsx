@@ -1,13 +1,13 @@
-import Image from "next/image";
 import styles from "./ProjectCard.module.css";
 
 import type { ProjectCardProps } from "@/types/project";
 
+import ProjectImage from "./ProjectImage";
+import ProjectDetailContainer from "./ProjectDetailContainer";
 import ProjectDescription from "./ProjectDescription";
 import ProjectSkillsList from "./ProjectSkillsList";
 import ProjectFeatures from "./ProjectFeatures";
 import ProjectLinkContainer from "./ProjectLinkContainer";
-import ProjectDetailContainer from "./ProjectDetailContainer";
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -18,14 +18,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className={styles["project-name-container"]}>
           <h3 className={styles["project-name"]}>{project.project_name}</h3>
         </div>
+
         {/* 프로젝트 캡쳐 이미지 */}
-        <Image
-          className={styles["project-image"]}
-          src={project.project_image}
-          alt="프로젝트 이미지"
-          width={700}
-          height={350}
-        />
+        <ProjectImage image={project.project_image} />
+
         {/* 프로젝트 유형 */}
         <ProjectDetailContainer project={project} />
 

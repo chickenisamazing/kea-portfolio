@@ -35,13 +35,12 @@
 }
 
 /* 프로젝트 이미지 */
-.project-image {
+/* .project-image {
   grid-column: 2 / span 6;
   width: 100%;
   height: auto;
-  /* border-radius: 0.75rem; */
   border: 1px solid rgb(211, 210, 210);
-}
+} */
 
 /* 소제목 라벨 */
 .project-label {

@@ -19,16 +19,17 @@
     }
   }
 }
+/* 반응형 - 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  .feature-container {
+    grid-column: 2 / span 10;
+  }
+}
 
-/* 소제목 라벨 */
-.project-label {
-  display: inline-block;
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-  font-weight: 550;
-  background-color: black;
-  padding: 0.25rem 1rem;
-  border-radius: 1.25rem;
-  margin-bottom: 0.5rem;
+/* 반응형 - 모바일 (768px) */
+@media (max-width: 768px) {
+  .feature-container {
+    grid-column: 1 / span 10;
+    margin-bottom: 2rem;
+  }
 }

@@ -1,26 +1,32 @@
 /* 프로젝트 유형/기간/역할 */
 .project-detail-list {
   grid-column: 8 / span 4;
-
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
 
   .project-detail-value {
     padding: 0.25rem;
-
     font-size: 1.125rem;
     margin-bottom: 0.75rem;
   }
 }
 
-/* 소제목 라벨 */
-.project-label {
-  display: inline-block;
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-  font-weight: 550;
-  background-color: black;
-  padding: 0.25rem 1rem;
-  border-radius: 1.25rem;
-  margin-bottom: 0.5rem;
+/* 반응형 - 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  .project-detail-list {
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .project-array {
+      grid-row: 1;
+      justify-self: left;
+    }
+  }
+}
+
+/* 반응형 - 모바일 (768px) */
+@media (max-width: 768px) {
+  .project-detail-list {
+    grid-column: 1 / span 10;
+  }
 }

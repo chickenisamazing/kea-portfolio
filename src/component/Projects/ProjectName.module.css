@@ -18,3 +18,24 @@
     border-radius: 1.25rem;
   }
 }
+
+/* 반응형 - 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  /* 프로젝트명 */
+  .project-name-container {
+    grid-column: 2 / span 7;
+  }
+}
+
+/* 반응형 - 모바일 (768px) */
+@media (max-width: 768px) {
+  /* 기술 스택 + 구현 기능 */
+
+  .project-name-container {
+    grid-column: 1 / span 10;
+
+    .project-name {
+      margin-top: 1rem;
+    }
+  }
+}

@@ -11,7 +11,7 @@ export default async function Projects() {
   const { data } = await getAllProjectData();
 
   return (
-    <section id="projects-title">
+    <section>
       <div className={styles.content}>
         <SectionTitle title="Projects" />
         <div className={styles["project-container"]}>

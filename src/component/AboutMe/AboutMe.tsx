@@ -5,7 +5,7 @@ import SectionTitle from "../common/SectionTitle";
 
 export default function AboutMe() {
   return (
-    <section id="about-me-title">
+    <section>
       <div className={styles.content}>
         {/* 타이틀 */}
         <SectionTitle title="About Me" />

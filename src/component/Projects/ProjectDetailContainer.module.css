@@ -24,3 +24,48 @@
   border-radius: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
+/* 반응형 - 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  /* 프로젝트 상세 유형/기간/역할 */
+  .project-detail-list {
+    /* 중첩그리드 */
+    grid-column: 2 / span 10;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .project-label {
+      grid-row: 1;
+      justify-self: left;
+      padding: 0 0;
+
+      .project-detail-term {
+        display: inline-block;
+        padding: 0.25rem 1rem;
+      }
+    }
+
+    .project-detail-value {
+      /* grid-row: 1; */
+      margin: 0;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+/* 반응형 - 모바일 (768px) */
+@media (max-width: 768px) {
+  .project-detail-list {
+    grid-column: 1 / span 10;
+
+    margin-top: 0.25rem;
+
+    .project-detail-value {
+      /* dd 태그 기본 스타일 제거 */
+      /* margin: 0; */
+      padding: 0.25rem;
+
+      font-size: 1rem;
+    }
+  }
+}

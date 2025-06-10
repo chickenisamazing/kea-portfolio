@@ -2,23 +2,25 @@ import styles from "./ProjectDetailContainer.module.css";
 
 import type { ProjectCardProps } from "@/types/project";
 
+import ProjectSectionLabel from "./ProjectSectionLabel";
+
 export default function ProjectDetailContainer({ project }: ProjectCardProps) {
   return (
     <dl className={styles["project-detail-list"]}>
-      <dt className={styles["project-label"]}>
-        <span className={styles["project-detail-term"]}>유형</span>
+      <dt className={styles["project-array"]}>
+        <ProjectSectionLabel label="유형" />
       </dt>
       <dd className={styles["project-detail-value"]}>{project.project_type}</dd>
 
-      <dt className={styles["project-label"]}>
-        <span className={styles["project-detail-term"]}>기간</span>
+      <dt className={styles["project-array"]}>
+        <ProjectSectionLabel label="기간" />
       </dt>
       <dd className={styles["project-detail-value"]}>
         {project.project_duration}
       </dd>
 
-      <dt className={styles["project-label"]}>
-        <span className={styles["project-detail-term"]}>역할</span>
+      <dt className={styles["project-array"]}>
+        <ProjectSectionLabel label="역할" />
       </dt>
       <dd className={styles["project-detail-value"]}>{project.project_role}</dd>
     </dl>

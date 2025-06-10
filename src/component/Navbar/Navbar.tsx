@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import styles from "./Navbar.module.css";
 
@@ -9,6 +9,7 @@ const SECTION_ID_ARRAY = ["about-me-title", "skills-title", "projects-title"];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
 
   const [activeSection, setActiveSection] = useState("");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
@@ -51,24 +52,48 @@ export default function Navbar() {
       console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
     });
 
+    // url 해시가 존재하는 경우
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash && SECTION_ID_ARRAY.includes(hash)) {
+      const checkAndScroll = (attempts = 0) => {
+        const element = document.getElementById(hash);
+
+        if (element) {
+          element?.scrollIntoView({ behavior: "smooth" });
+          setActiveSection(hash);
+          window.history.replaceState({}, "", "/");
+        } else if (attempts < 10) {
+          setTimeout(() => checkAndScroll(attempts + 1), 100);
+        } else {
+          console.log("요소를 찾을 수 없습니다.", hash);
+        }
+      };
+      checkAndScroll();
+    }
+
     return () => observer.disconnect();
   }, [pathname]);
 
   const scrollTo = (id: string) => {
-    doNotChangeRef.current = true;
+    if (pathname === "/") {
+      let target = sectionRefs.current[id];
 
-    let target = sectionRefs.current[id];
+      if (!target) {
+        target = document.getElementById(id);
+        sectionRefs.current[id] = target;
+      }
 
-    if (!target) {
-      target = document.getElementById(id);
-      sectionRefs.current[id] = target;
+      doNotChangeRef.current = true;
+
+      target?.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id);
+      setTimeout(() => {
+        doNotChangeRef.current = false;
+      }, 500);
+    } else {
+      router.push(`/#${id}`);
     }
-
-    target?.scrollIntoView({ behavior: "smooth" });
-    setActiveSection(id);
-    setTimeout(() => {
-      doNotChangeRef.current = false;
-    }, 500);
   };
 
   return (

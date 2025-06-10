@@ -8,6 +8,7 @@ import ProjectDescription from "./ProjectDescription";
 import ProjectSkillsList from "./ProjectSkillsList";
 import ProjectFeatures from "./ProjectFeatures";
 import ProjectLinkContainer from "./ProjectLinkContainer";
+import ProjectName from "./ProjectName";
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -15,9 +16,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {/* 프로젝트 내부 컨테이너 */}
       <div className={styles["project-inner-container"]}>
         {/* 프로젝트명 */}
-        <div className={styles["project-name-container"]}>
-          <h3 className={styles["project-name"]}>{project.project_name}</h3>
-        </div>
+        <ProjectName name={project.project_name} />
 
         {/* 프로젝트 캡쳐 이미지 */}
         <ProjectImage image={project.project_image} />

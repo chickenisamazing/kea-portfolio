@@ -1,17 +1,3 @@
-/* 프로젝트 유형/기간/역할 */
-.project-detail-list {
-  grid-column: 8 / span 4;
-
-  margin-top: 0.5rem;
-
-  .project-detail-value {
-    padding: 0.25rem;
-
-    font-size: 1.125rem;
-    margin-bottom: 0.75rem;
-  }
-}
-
 /* 소제목 라벨 */
 .project-label {
   display: inline-block;

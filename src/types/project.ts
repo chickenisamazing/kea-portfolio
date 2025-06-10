@@ -23,10 +23,6 @@ export interface Project {
   project_image: string;
 }
 
-export interface ProjectCardProps {
-  project: Project;
-}
-
 export interface IconProps {
   size?: number;
   color?: string;

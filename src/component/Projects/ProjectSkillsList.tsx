@@ -2,7 +2,7 @@ import { ComponentType } from "react";
 
 import styles from "./ProjectSkillsList.module.css";
 
-import type { Stack, IconProps, ProjectCardProps } from "@/types/project";
+import type { Stack, IconProps, Project } from "@/types/project";
 
 import ProjectSectionLabel from "./ProjectSectionLabel";
 
@@ -30,7 +30,11 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
   Zustand: ZustandIcon,
 };
 
-export default async function ProjectSkillsList({ project }: ProjectCardProps) {
+export default async function ProjectSkillsList({
+  project,
+}: {
+  project: Project;
+}) {
   return (
     <div className={styles["skills-container"]}>
       <ProjectSectionLabel label="Skills" />

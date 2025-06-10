@@ -1,6 +1,6 @@
 import styles from "./ProjectCard.module.css";
 
-import type { ProjectCardProps } from "@/types/project";
+import type { Project } from "@/types/project";
 
 import ProjectName from "./ProjectName";
 import ProjectImage from "./ProjectImage";
@@ -10,7 +10,7 @@ import ProjectSkillsList from "./ProjectSkillsList";
 import ProjectFeatures from "./ProjectFeatures";
 import ProjectLinkContainer from "./ProjectLinkContainer";
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className={styles["project-card"]}>
       {/* 프로젝트 내부 컨테이너 */}

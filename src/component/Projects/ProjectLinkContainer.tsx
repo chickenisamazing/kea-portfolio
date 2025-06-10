@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import type { ProjectCardProps } from "@/types/project";
+import type { Project } from "@/types/project";
 
 import styles from "./ProjectLinkContainer.module.css";
 
-export default function ProjectLinkContainer({ project }: ProjectCardProps) {
+export default function ProjectLinkContainer({
+  project,
+}: {
+  project: Project;
+}) {
   return (
     <div className={styles["project-link-container"]}>
       <Link

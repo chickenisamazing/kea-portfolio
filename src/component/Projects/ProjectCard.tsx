@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./ProjectCard.module.css";
+
+import ProjectDescription from "./ProjectDescription";
+
 import ProjectSkillsList from "./ProjectSkillsList";
 
 import type { ProjectCardProps } from "@/types/project";
@@ -47,14 +50,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </dl>
 
         {/* 프로젝트 개요 */}
-        <div className={styles["description-container"]}>
-          <div>
-            <span className={styles["project-label"]}>프로젝트 개요</span>
-          </div>
-          <span className={styles.description}>
-            {project.project_description}
-          </span>
-        </div>
+        <ProjectDescription description={project.project_description} />
 
         <ProjectSkillsList project={project} />
 

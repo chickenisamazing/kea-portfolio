@@ -11,7 +11,6 @@ export default function ProjectDescription({
     <div className={styles["description-container"]}>
       <div>
         <ProjectSectionLabel label="프로젝트 개요" />
-        {/* <span className={styles["project-label"]}>프로젝트 개요</span> */}
       </div>
       <span className={styles.description}>{description}</span>
     </div>

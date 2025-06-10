@@ -7,6 +7,7 @@ import ProjectDescription from "./ProjectDescription";
 import ProjectSkillsList from "./ProjectSkillsList";
 import ProjectFeatures from "./ProjectFeatures";
 import ProjectLinkContainer from "./ProjectLinkContainer";
+import ProjectDetailContainer from "./ProjectDetailContainer";
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
@@ -26,28 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           height={350}
         />
         {/* 프로젝트 유형 */}
-        <dl className={styles["project-detail-list"]}>
-          <dt className={styles["project-label"]}>
-            <span className={styles["project-detail-term"]}>유형</span>
-          </dt>
-          <dd className={styles["project-detail-value"]}>
-            {project.project_type}
-          </dd>
-
-          <dt className={styles["project-label"]}>
-            <span className={styles["project-detail-term"]}>기간</span>
-          </dt>
-          <dd className={styles["project-detail-value"]}>
-            {project.project_duration}
-          </dd>
-
-          <dt className={styles["project-label"]}>
-            <span className={styles["project-detail-term"]}>역할</span>
-          </dt>
-          <dd className={styles["project-detail-value"]}>
-            {project.project_role}
-          </dd>
-        </dl>
+        <ProjectDetailContainer project={project} />
 
         {/* 프로젝트 개요 */}
         <ProjectDescription description={project.project_description} />

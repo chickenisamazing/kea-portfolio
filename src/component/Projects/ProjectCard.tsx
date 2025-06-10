@@ -66,7 +66,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <li key={feature} className={styles.feature}>
                 {feature}
               </li>
-            ))}{" "}
+            ))}
           </ul>
         </div>
 
@@ -100,6 +100,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 alt="깃허브"
                 width={48}
                 height={48}
+                unoptimized
               />
             )}
           </a>
@@ -131,6 +132,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               alt="해당 프로젝트 블로그 포스팅"
               width={48}
               height={48}
+              unoptimized
             />
           </a>
         </div>

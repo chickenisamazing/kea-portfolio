@@ -17,6 +17,7 @@ export default function AboutMe() {
           alt="kea's profile image"
           width={288}
           height={288}
+          unoptimized
           priority
         />
 

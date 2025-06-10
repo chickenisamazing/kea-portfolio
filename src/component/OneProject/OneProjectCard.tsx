@@ -87,6 +87,7 @@ export default function OneProjectCard({ data }: { data: Project }) {
                   alt="깃허브"
                   width={48}
                   height={48}
+                  unoptimized
                 />
               )}
             </a>
@@ -118,6 +119,7 @@ export default function OneProjectCard({ data }: { data: Project }) {
                 alt="해당 프로젝트 블로그 포스팅"
                 width={48}
                 height={48}
+                unoptimized
               />
             </a>
           </div>

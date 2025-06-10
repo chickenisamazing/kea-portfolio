@@ -13,14 +13,92 @@
   padding: 2rem;
 }
 
+.project-name-seat {
+  grid-column: 2 / span 6;
+}
+
+.project-image-seat {
+  grid-column: 2 / span 6;
+}
+
+.project-detail-container-seat {
+  grid-column: 8 / span 4;
+}
+
+.project-description-seat {
+  grid-column: 2 / span 10;
+}
+
+.project-skills-list-seat {
+  grid-column: 2 / span 6;
+}
+
+.project-features-seat {
+  grid-column: 2 / span 6;
+}
+
+.project-link-container-seat {
+  grid-column: 9 / span 3;
+}
+
 /* 반응형 - 데스크탑(작은 모니터) (1440px) */
 @media (max-width: 1440px) {
 }
 
 /* 반응형 - 태블릿 (1024px) */
 @media (max-width: 1024px) {
+  .project-detail-container-seat {
+    grid-column: 2 / span 10;
+  }
+
+  .project-name-seat {
+    grid-column: 2 / span 7;
+  }
+
+  .project-image-seat {
+    grid-column: 2 / span 10;
+  }
+
+  .project-description-seat {
+    grid-column: 2 / span 10;
+  }
+
+  .project-skills-list-seat {
+    grid-column: 2 / span 10;
+  }
+
+  .project-features-seat {
+    grid-column: 2 / span 10;
+  }
 }
 
 /* 반응형 - 모바일 (768px) */
 @media (max-width: 768px) {
+  .project-detail-container-seat {
+    grid-column: 1 / span 10;
+  }
+
+  .project-name-seat {
+    grid-column: 1 / span 10;
+  }
+
+  .project-image-seat {
+    grid-column: 1 / span 10;
+  }
+
+  .project-description-seat {
+    grid-column: 1 / span 10;
+  }
+
+  .project-skills-list-seat {
+    grid-column: 1 / span 10;
+  }
+
+  .project-features-seat {
+    grid-column: 1 / span 10;
+  }
+
+  .project-link-container-seat {
+    grid-column: 7 / span 3;
+  }
 }

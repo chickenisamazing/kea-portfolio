@@ -1,6 +1,6 @@
 /* 프로젝트명 */
 .project-name-container {
-  grid-column: 2 / span 6;
+  /* grid-column: 2 / span 6; */
 
   .project-name {
     /* h3 기본 속성 삭제 */
@@ -22,9 +22,9 @@
 /* 반응형 - 태블릿 (1024px) */
 @media (max-width: 1024px) {
   /* 프로젝트명 */
-  .project-name-container {
+  /* .project-name-container {
     grid-column: 2 / span 7;
-  }
+  } */
 }
 
 /* 반응형 - 모바일 (768px) */

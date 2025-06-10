@@ -1,12 +1,8 @@
 /* 구현 기능 */
 .feature-container {
-  grid-column: 2 / span 6;
   margin-bottom: 3rem;
 
   .feature-list {
-    /* ul 태그 기본 스타일링 제거 */
-    margin: 0;
-
     padding: 0.25rem;
     display: flex;
     flex-direction: column;
@@ -21,15 +17,11 @@
 }
 /* 반응형 - 태블릿 (1024px) */
 @media (max-width: 1024px) {
-  .feature-container {
-    grid-column: 2 / span 10;
-  }
 }
 
 /* 반응형 - 모바일 (768px) */
 @media (max-width: 768px) {
   .feature-container {
-    grid-column: 1 / span 10;
     margin-bottom: 2rem;
   }
 }

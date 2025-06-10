@@ -1,7 +1,5 @@
 /* 프로젝트 개요 */
 .description-container {
-  grid-column: 2 / span 10;
-
   .description {
     padding: 0.25rem;
     margin-top: 0.25rem;
@@ -14,15 +12,8 @@
 
 /* 반응형 - 태블릿 (1024px) */
 @media (max-width: 1024px) {
-  .description-container {
-    grid-column: 2 / span 10;
-    /* margin-bottom: 1rem; */
-  }
 }
 
 /* 반응형 - 모바일 (768px) */
 @media (max-width: 768px) {
-  .description-container {
-    grid-column: 1 / span 10;
-  }
 }

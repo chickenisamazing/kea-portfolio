@@ -1,10 +1,14 @@
 import styles from "./ProjectDetailContainer.module.css";
 
-import type { ProjectCardProps } from "@/types/project";
+import type { Project } from "@/types/project";
 
 import ProjectSectionLabel from "./ProjectSectionLabel";
 
-export default function ProjectDetailContainer({ project }: ProjectCardProps) {
+export default function ProjectDetailContainer({
+  project,
+}: {
+  project: Project;
+}) {
   return (
     <dl className={styles["project-detail-list"]}>
       <dt className={styles["project-array"]}>

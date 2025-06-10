@@ -14,10 +14,14 @@ export function Modal({ children }: { children: React.ReactNode }) {
     if (!dialogRef.current?.open) {
       dialogRef.current?.showModal();
     }
+
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, []);
 
   function onDismiss() {
-    console.log("왜않됨");
     router.back();
   }
 
@@ -25,7 +29,6 @@ export function Modal({ children }: { children: React.ReactNode }) {
     <div className={styles["modal-backdrop"]} onClick={onDismiss}>
       <div onClick={(e) => e.stopPropagation} className={styles.modal}>
         {children}
-        {/* <button className={styles["close-button"]} onClick={onDismiss} /> */}
       </div>
     </div>
   );

@@ -18,6 +18,9 @@
   display: flex;
   margin-top: 5rem;
   justify-content: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+  margin: auto 1rem;
 }
 
 .modal::backdrop {

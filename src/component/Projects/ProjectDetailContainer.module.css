@@ -1,8 +1,5 @@
 /* 프로젝트 유형/기간/역할 */
 .project-detail-list {
-  grid-column: 8 / span 4;
-  /* margin-top: 0.5rem; */
-
   .project-detail-value {
     padding: 0.25rem;
     font-size: 1.125rem;
@@ -13,7 +10,6 @@
 /* 반응형 - 태블릿 (1024px) */
 @media (max-width: 1024px) {
   .project-detail-list {
-    grid-column: 2 / span 10;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -26,7 +22,4 @@
 
 /* 반응형 - 모바일 (768px) */
 @media (max-width: 768px) {
-  .project-detail-list {
-    grid-column: 1 / span 10;
-  }
 }

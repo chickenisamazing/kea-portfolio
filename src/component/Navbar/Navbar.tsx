@@ -10,7 +10,7 @@ const SECTION_ID_ARRAY = ["about-me-title", "skills-title", "projects-title"];
 export default function Navbar() {
   const pathname = usePathname();
 
-  const [activeSection, setActiveSection] = useState("about-me-title");
+  const [activeSection, setActiveSection] = useState("");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   // const [doNotChange, setDoNotChange] = useState<boolean>(false);
@@ -24,30 +24,16 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // 여기서부터 안된다는건? 옵저버가 감지할 조건을 충족하지 못했다?
-        // console.log("1번실행되냐", doNotChangeRef);
-        console.log("isIntersecting : ", entries[0].isIntersecting);
-
         entries.forEach((entry) => {
-          // console.log("2번실행되냐", doNotChangeRef);
           console.log(entry.isIntersecting, "????");
-          // 여기서부터 안된다는건. entry.isIntersecting이 거짓이다?
           if (entry.isIntersecting) {
-            // 이걸 추가하면 aboutme -> projects로 갈 때 skills 버튼 스타일이 순간 바뀌는건 사라지나 스크롤 위치를 인식해서 버튼 스타일 바뀌는건 안됨 -> 수정해야함
-            //설마 클로저라서 false 였을때만 기억하나 얘?
-            // console.log("3.doNotChange:", doNotChangeRef);
             if (!doNotChangeRef.current) {
               setActiveSection(entry.target.id);
             }
-
-            // if (doNotChange === false) {
-            //   setActiveSection(entry.target.id);
-            // }
           }
         });
       },
       {
-        // root: null이면 브라우저창
         root: null,
         threshold: 0.0,
       }
@@ -60,11 +46,15 @@ export default function Navbar() {
       }
     });
 
+    SECTION_ID_ARRAY.forEach((id) => {
+      const el = document.getElementById(id);
+      console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
+    });
+
     return () => observer.disconnect();
   }, [pathname]);
 
   const scrollTo = (id: string) => {
-    // setDoNotChange(true);
     doNotChangeRef.current = true;
 
     let target = sectionRefs.current[id];
@@ -77,9 +67,8 @@ export default function Navbar() {
     target?.scrollIntoView({ behavior: "smooth" });
     setActiveSection(id);
     setTimeout(() => {
-      // setDoNotChange(false);
       doNotChangeRef.current = false;
-    }, 700);
+    }, 500);
   };
 
   return (

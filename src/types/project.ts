@@ -20,24 +20,7 @@ export interface Project {
   project_domain_link: string;
   project_blog_post_link: string;
   project_logo: string;
-  // projectId: number;
-  // name: string;
-  // type: string;
-  // duration: string;
-  // role: string;
-  // image: {
-  //   src: string;
-  //   alt: string;
-  // };
-  // description: string;
-  // skills: Stack[];
-  // features: string[];
-  // logo: string;
-  // links: {
-  //   github: string;
-  //   domain: string;
-  //   blogPost: string;
-  // };
+  project_image: string;
 }
 
 export interface ProjectCardProps {

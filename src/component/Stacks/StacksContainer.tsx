@@ -16,7 +16,7 @@ export default function StacksContainer({ data }: { data: Stack[] }) {
   );
 
   return (
-    <div>
+    <div className={styles["logo-and-description"]}>
       <ul className={styles["logo-container"]}>
         {data.slice(0, 6).map((stack: Stack) => (
           <li key={stack.stack_id} className={styles["list-styling"]}>

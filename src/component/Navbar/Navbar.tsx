@@ -5,7 +5,6 @@ import { usePathname, useRouter } from "next/navigation";
 import styles from "./Navbar.module.css";
 
 const SECTION_ID_ARRAY = ["about-me-title", "skills-title", "projects-title"];
-// const SCROLL_ANIMATION_DURATION = 50;
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -14,47 +13,53 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-  // const [doNotChange, setDoNotChange] = useState<boolean>(false);
-
   const doNotChangeRef = useRef(false);
 
   useEffect(() => {
-    SECTION_ID_ARRAY.forEach((id) => {
-      sectionRefs.current[id] = document.getElementById(id);
-    });
+    if (pathname.startsWith("/project")) {
+      setActiveSection("projects-title");
+      return;
+    }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          console.log(entry.isIntersecting, "????");
-          if (entry.isIntersecting) {
-            if (!doNotChangeRef.current) {
-              setActiveSection(entry.target.id);
+    if (pathname === "/") {
+      SECTION_ID_ARRAY.forEach((id) => {
+        sectionRefs.current[id] = document.getElementById(id);
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            console.log(entry.isIntersecting, "????");
+            if (entry.isIntersecting) {
+              if (!doNotChangeRef.current) {
+                setActiveSection(entry.target.id);
+              }
             }
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "-64px 0px 0px 0px",
-        threshold: 0.0,
-      }
-    );
+          });
+        },
+        {
+          root: null,
+          rootMargin: "-64px 0px 0px 0px",
+          threshold: 0.0,
+        }
+      );
 
-    SECTION_ID_ARRAY.forEach((id) => {
-      const el = sectionRefs.current[id];
-      if (el) {
-        observer.observe(el);
-      }
-    });
+      SECTION_ID_ARRAY.forEach((id) => {
+        const el = sectionRefs.current[id];
+        if (el) {
+          observer.observe(el);
+        }
+      });
 
-    // 디버깅용 콘솔
-    SECTION_ID_ARRAY.forEach((id) => {
-      const el = document.getElementById(id);
-      console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
-    });
+      // 디버깅용 콘솔
+      SECTION_ID_ARRAY.forEach((id) => {
+        const el = document.getElementById(id);
+        console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
+      });
 
-    return () => observer.disconnect();
+      return () => observer.disconnect();
+    }
+    setActiveSection("");
   }, [pathname]);
 
   const scrollTo = (id: string) => {
@@ -75,7 +80,7 @@ export default function Navbar() {
       }, 500);
     } else {
       sessionStorage.setItem("section-id", id);
-      setActiveSection(id);
+      // setActiveSection(id);
       router.push(`/`);
     }
   };

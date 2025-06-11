@@ -1,9 +1,4 @@
 export interface Stack {
-  // name: string;
-  // src: string;
-  // alt: string;
-  // fontColor: string;
-  // description: string[];
   stack_id: number;
   stack_name: string;
   stack_image_url: string;

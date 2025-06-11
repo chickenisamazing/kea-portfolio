@@ -36,6 +36,7 @@ export default function Navbar() {
       },
       {
         root: null,
+        rootMargin: "-64px 0px 0px 0px",
         threshold: 0.0,
       }
     );

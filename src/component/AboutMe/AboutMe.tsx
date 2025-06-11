@@ -60,30 +60,30 @@ export default function AboutMe() {
         </dl>
 
         {/* 자기소개 슬로건 */}
-        <p className={styles.slogan}>
-          <span className={styles.sentence}>저는</span>
-          <span className={styles.sentence}>
-            <span className={styles.thinking}>객관적 이성</span>을 추구하는
-          </span>
-          <span className={styles.sentence}>
-            <span className={styles.feeling}>감정</span>이 있는
-          </span>
-          <span className={styles.sentence}>
+        <div className={styles.slogan}>
+          <p className={styles.sentence}>저는</p>
+          <p className={styles.sentence}>
+            <p className={styles.thinking}>객관적 이성</p>을 추구하는
+          </p>
+          <p className={styles.sentence}>
+            <p className={styles.feeling}>감정</p>이 있는
+          </p>
+          <p className={styles.sentence}>
             프론트엔드 개발자 <strong>케아</strong>입니다.
-          </span>
-        </p>
+          </p>
+        </div>
 
         {/* 가치관 */}
-        <p className={styles.values}>
-          <span className={styles["values-sentence"]}>저는</span>
-          <span className={styles["values-sentence"]}>
+        <div className={styles.values}>
+          <p>저는</p>
+          <p>
             <strong>어떻게(How)</strong>만큼의 <strong>왜(Why)</strong>를
             추구합니다.
-          </span>
-          <span className={styles["values-sentence"]}>
+          </p>
+          <p>
             <strong>개념적 명확성</strong>을 추구합니다.
-          </span>
-        </p>
+          </p>
+        </div>
 
         {/* 교육사항 */}
         <div className={styles["education-container"]}>

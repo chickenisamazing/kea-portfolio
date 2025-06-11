@@ -15,7 +15,7 @@ export default function StackDescription({ color, name, description }: Props) {
       <ul className={styles["sentence-list"]}>
         {description.map((sentence: string) => (
           <li key={sentence} className={styles.sentence}>
-            {sentence}
+            · {sentence}
           </li>
         ))}
       </ul>

@@ -1,0 +1,9 @@
+.stack-posting-container {
+  padding: 1rem;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}

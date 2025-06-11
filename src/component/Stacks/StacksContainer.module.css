@@ -1,3 +1,10 @@
+.logo-and-description {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .logo-container {
   /* margin-top: 4rem; */
   /* margin-bottom: 2rem; */
@@ -8,7 +15,7 @@
   align-items: center;
   background-color: #f5f5f5;
   border-radius: 0.75rem;
-  padding: 1rem;
+  padding: 1.25rem;
 }
 
 .btn-logo {

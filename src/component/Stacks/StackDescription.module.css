@@ -4,6 +4,10 @@
   padding: 1rem;
   word-break: keep-all;
 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
   .selected-skill-name {
     /* display: block; */
     font-size: 2rem;

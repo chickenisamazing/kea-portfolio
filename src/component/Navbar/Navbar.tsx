@@ -93,7 +93,9 @@ export default function Navbar() {
         doNotChangeRef.current = false;
       }, 500);
     } else {
-      router.push(`/#${id}`);
+      sessionStorage.setItem("section-id", id);
+      // router.push(`/#${id}`);
+      router.push(`/`);
     }
   };
 

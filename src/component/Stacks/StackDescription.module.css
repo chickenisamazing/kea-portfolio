@@ -12,7 +12,7 @@
     /* margin-bottom: 4rem; */
   }
 
-  ul {
+  .sentence-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;

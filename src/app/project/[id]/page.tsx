@@ -1,3 +1,5 @@
+import ScrollToTop from "@/component/scrollhandler/ScrollToTop";
+
 import getAllProjectData from "@/services/getAllProjectData";
 import getOneProjectData from "@/services/getOneProjectData";
 import OneProject from "@/component/OneProject/OneProject";
@@ -32,6 +34,7 @@ export default async function Page({
 
   return (
     <div>
+      <ScrollToTop />
       <OneProject data={projectData} />
     </div>
   );

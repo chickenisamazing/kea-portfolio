@@ -9,76 +9,52 @@
   column-gap: 1.5rem;
 }
 
-.title {
-  margin-top: 8rem;
-  padding: 1rem;
-  font-size: 3.5rem;
-  font-style: italic;
-  font-weight: 700;
-  grid-column: 2 / span 8;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    to right bottom,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  scroll-margin-top: 10rem;
-}
-
 .profile-image {
   grid-column: 2 / span 4;
   padding: 1rem;
-  margin-top: 4rem;
-}
-
-.profile-image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  /* margin-top: 4rem; */
 }
 
 .link-container {
   padding: 1rem;
   grid-column: 7 / span 6;
-  margin-top: 4rem;
-}
+  /* margin-top: 4rem; */
 
-.link-category {
-  font-size: 1.75rem;
-  font-style: italic;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.link-item {
-  margin-top: 0.5rem;
-  font-size: 1.25rem;
-  font-style: italic;
-  margin-inline-start: 0;
-  word-break: break-all;
-  margin-bottom: 0.75rem;
-
-  .link-sentence {
-    text-decoration: none;
-    color: inherit;
+  .link-category {
+    font-size: 1.75rem;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
   }
 
-  .link-sentence:hover {
-    text-decoration: underline;
-    color: var(--color-primary);
-  }
+  .link-item {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    font-style: italic;
+    /* margin-inline-start: 0; */
+    word-break: break-all;
+    margin-bottom: 0.75rem;
 
-  .link-sentence:focus-visible {
-    outline: 4px solid var(--color-primary);
-    outline-offset: 2px;
+    .link-sentence {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .link-sentence:hover {
+      text-decoration: underline;
+      color: var(--color-primary);
+    }
+
+    .link-sentence:focus-visible {
+      outline: 4px solid var(--color-primary);
+      outline-offset: 2px;
+    }
   }
 }
 
 .slogan {
   grid-column: 2 / span 10;
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   padding: 1rem;
   font-size: 2.5rem;
   word-break: keep-all;
@@ -107,23 +83,22 @@
 
 .values {
   grid-column: 2 / span 10;
-  margin-top: 1.75rem;
+  /* margin-top: 1.75rem; */
   padding: 1rem;
   font-size: 1.75rem;
-  word-break: keep-all;
+  /* word-break: keep-all; */
 
-  .values-sentence {
-    margin-bottom: 0.5rem;
-    display: block;
-    /* 줄 간격 */
-    line-height: 1.5;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  line-height: 1.5;
 }
 
 /* 교육사항 */
 .education-container {
   grid-column: 2 / span 10;
-  margin-top: 1.75rem;
+  /* margin-top: 1.75rem; */
   padding: 1rem;
   font-size: 1.75rem;
   word-break: keep-all;

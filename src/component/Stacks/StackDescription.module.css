@@ -1,22 +1,29 @@
 .description {
-  grid-column: 2 / span 10;
-  margin-top: 4rem;
+  /* grid-column: 2 / span 10; */
+  /* margin-top: 4rem; */
   padding: 1rem;
   word-break: keep-all;
 
   .selected-skill-name {
-    display: block;
+    /* display: block; */
     font-size: 2rem;
     font-weight: 700;
     color: #663399;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .sentence {
     font-size: 1.25rem;
-    margin-bottom: 1.5rem;
-    display: block;
 
-    line-height: 1.75;
+    line-height: 1.5;
+
+    /* 앞의 점 삭제 */
+    display: block;
   }
 }

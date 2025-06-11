@@ -12,7 +12,7 @@ export default function StackDescription({ color, name, description }: Props) {
       <span style={{ color: color }} className={styles["selected-skill-name"]}>
         {name}
       </span>
-      <ul>
+      <ul className={styles["sentence-list"]}>
         {description.map((sentence: string) => (
           <li key={sentence} className={styles.sentence}>
             {sentence}

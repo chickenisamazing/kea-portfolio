@@ -48,30 +48,11 @@ export default function Navbar() {
       }
     });
 
+    // 디버깅용 콘솔
     SECTION_ID_ARRAY.forEach((id) => {
       const el = document.getElementById(id);
       console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
     });
-
-    // url 해시가 존재하는 경우
-    const hash = window.location.hash.replace("#", "");
-
-    if (hash && SECTION_ID_ARRAY.includes(hash)) {
-      const checkAndScroll = (attempts = 0) => {
-        const element = document.getElementById(hash);
-
-        if (element) {
-          element?.scrollIntoView({ behavior: "smooth" });
-          setActiveSection(hash);
-          window.history.replaceState({}, "", "/");
-        } else if (attempts < 10) {
-          setTimeout(() => checkAndScroll(attempts + 1), 100);
-        } else {
-          console.log("요소를 찾을 수 없습니다.", hash);
-        }
-      };
-      checkAndScroll();
-    }
 
     return () => observer.disconnect();
   }, [pathname]);
@@ -94,7 +75,7 @@ export default function Navbar() {
       }, 500);
     } else {
       sessionStorage.setItem("section-id", id);
-      // router.push(`/#${id}`);
+      setActiveSection(id);
       router.push(`/`);
     }
   };

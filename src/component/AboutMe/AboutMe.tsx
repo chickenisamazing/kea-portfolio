@@ -63,10 +63,10 @@ export default function AboutMe() {
         <div className={styles.slogan}>
           <p className={styles.sentence}>저는</p>
           <p className={styles.sentence}>
-            <p className={styles.thinking}>객관적 이성</p>을 추구하는
+            <span className={styles.thinking}>객관적 이성</span>을 추구하는
           </p>
           <p className={styles.sentence}>
-            <p className={styles.feeling}>감정</p>이 있는
+            <span className={styles.feeling}>감정</span>이 있는
           </p>
           <p className={styles.sentence}>
             프론트엔드 개발자 <strong>케아</strong>입니다.

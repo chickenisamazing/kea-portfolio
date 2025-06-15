@@ -44,11 +44,47 @@ export default function Navbar() {
         }
       );
 
-      SECTION_ID_ARRAY.forEach((id) => {
-        const el = sectionRefs.current[id];
-        if (el) {
-          observer.observe(el);
+      function setIntersectionObserver() {
+        SECTION_ID_ARRAY.forEach((id) => {
+          const el = sectionRefs.current[id];
+          if (el) {
+            observer.observe(el);
+          }
+        });
+      }
+
+      setIntersectionObserver();
+
+      const mutationObserver = new MutationObserver((mutations) => {
+        const hasNewSections = mutations.some((mutation) => {
+          // console.log(mutation);
+          return Array.from(mutation.addedNodes).some((node) => {
+            if (node.nodeType === 1) {
+              const element = node as Element;
+              return SECTION_ID_ARRAY.some(
+                (id) => element.id === id || element.querySelector(`#${id}`)
+              );
+            }
+            return false;
+          });
+        });
+
+        if (hasNewSections) {
+          SECTION_ID_ARRAY.forEach((id) => {
+            if (!sectionRefs.current[id]) {
+              const element = document.getElementById(id);
+              if (element) {
+                sectionRefs.current[id] = element;
+              }
+            }
+          });
+          setIntersectionObserver();
         }
+      });
+
+      mutationObserver.observe(document.body, {
+        childList: true,
+        subtree: true,
       });
 
       // 디버깅용 콘솔
@@ -57,8 +93,12 @@ export default function Navbar() {
         console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
       });
 
-      return () => observer.disconnect();
+      return () => {
+        observer.disconnect();
+        mutationObserver.disconnect();
+      };
     }
+
     setActiveSection("");
   }, [pathname]);
 

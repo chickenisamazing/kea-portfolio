@@ -4,8 +4,6 @@ import OneProject from "@/component/OneProject/OneProject";
 
 import { Modal } from "./modal";
 
-export const revalidate = 20;
-
 export async function generateStaticParams() {
   const { data: projectListData } = await getAllProjectData();
 

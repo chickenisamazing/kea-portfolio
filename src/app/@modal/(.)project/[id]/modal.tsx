@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 import styles from "./modal.module.css";
@@ -19,7 +19,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  function onDismiss(e: React.MouseEvent) {
+  function onDismiss(e: React.MouseEvent<HTMLDivElement>) {
     // e.target은 클릭한 요소, e.currentTarget은 이벤트 리스너가 붙은 요소
     if (e.target === e.currentTarget) {
       router.back();
@@ -28,7 +28,10 @@ export function Modal({ children }: { children: React.ReactNode }) {
 
   return (
     <div className={styles["modal-backdrop"]} onClick={onDismiss}>
-      <div onClick={(e) => e.stopPropagation()} className={styles.modal}>
+      <div
+        onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
+        className={styles.modal}
+      >
         {children}
       </div>
     </div>

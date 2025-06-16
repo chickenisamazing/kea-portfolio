@@ -40,3 +40,8 @@
     border: 3px solid black;
   }
 }
+
+.btn-location {
+  display: flex;
+  justify-content: center;
+}

@@ -5,6 +5,7 @@ import { type BlogPost } from "@/types/blogPost";
 import styles from "./BlogPosts.module.css";
 
 import getBlogPostsData from "@/services/getBlogPostsData";
+import ScrollToTopPassive from "../scroll/ScrollToTopPassive";
 
 export default async function BlogPosts() {
   const { data } = await getBlogPostsData();
@@ -58,6 +59,8 @@ export default async function BlogPosts() {
           </div>
         </div>
       ))}
+
+      <ScrollToTopPassive />
     </div>
   );
 }

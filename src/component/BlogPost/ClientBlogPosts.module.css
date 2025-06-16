@@ -1,0 +1,23 @@
+.stack-posting-container {
+  /* padding: 0.5rem; */
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+
+  .thumbnail-image {
+    cursor: pointer;
+    width: 140px;
+    height: 140px;
+  }
+
+  .thumbnail-hover {
+    cursor: pointer;
+    background-color: grey;
+    width: 140px;
+    height: 140px;
+  }
+}

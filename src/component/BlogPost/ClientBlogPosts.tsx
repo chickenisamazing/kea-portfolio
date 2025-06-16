@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import { type BlogPost } from "../../types/blogPost";
-import styles from "./BlogPosts.module.css";
+import styles from "./ClientBlogPosts.module.css";
 
 import getClientBlogPostsData from "../../services/getClientBlogPostsData";
 

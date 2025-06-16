@@ -2,8 +2,8 @@ import React, { useState, useEffect, Suspense } from "react";
 
 import styles from "./StackDescription.module.css";
 
-const ClientBlogPost = React.lazy(
-  () => import("@/component/BlogPost/ClientBlogPost")
+const ClientBlogPosts = React.lazy(
+  () => import("@/component/BlogPost/ClientBlogPosts")
 );
 
 interface Props {
@@ -52,7 +52,7 @@ export default function StackDescription({
 
       {blogArea && (
         <Suspense fallback={null}>
-          <ClientBlogPost category={name} />
+          <ClientBlogPosts category={name} />
         </Suspense>
       )}
 

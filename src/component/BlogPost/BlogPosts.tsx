@@ -59,8 +59,9 @@ export default async function BlogPosts() {
           </div>
         </div>
       ))}
-
-      <ScrollToTopPassive />
+      <div className={styles["btn-location"]}>
+        <ScrollToTopPassive />
+      </div>
     </div>
   );
 }

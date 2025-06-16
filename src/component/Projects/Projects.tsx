@@ -13,8 +13,8 @@ export default async function Projects() {
   return (
     <section>
       <div className={styles.content}>
-        <SectionTitle title="Projects" />
         <div className={styles["project-container"]}>
+          <SectionTitle title="Projects" />
           {data?.map((project: Project) => (
             <ProjectCard key={project.project_id} project={project} />
           ))}

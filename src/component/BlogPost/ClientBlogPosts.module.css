@@ -16,8 +16,18 @@
 
   .thumbnail-hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: white;
     width: 140px;
     height: 140px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+
+    .link-text {
+      color: black;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
   }
 }

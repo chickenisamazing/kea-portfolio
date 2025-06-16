@@ -82,7 +82,11 @@ export default function ClientBlogPosts({ category }: { category: string }) {
                     onMouseOver={() => handleMouseOver(post.post_id)}
                     onMouseOut={() => handleMouseOut()}
                   >
-                    {post.post_title}
+                    <p className={styles["link-text"]}>
+                      {/* 블로그 포스팅 보러가기
+                       */}
+                      {post.post_title}
+                    </p>
                   </div>
                 )}
               </a>

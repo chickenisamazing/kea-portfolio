@@ -32,12 +32,13 @@ export default function StackDescription({ color, name, description }: Props) {
         >
           {name}
         </span>
+
         <button
           type="button"
           className={styles["open-blog-text"]}
           onClick={setBlogAreaState}
         >
-          블로그 포스팅 펼치기
+          블로그 포스팅 {blogArea ? "닫기" : "펼치기"}
         </button>
       </div>
 

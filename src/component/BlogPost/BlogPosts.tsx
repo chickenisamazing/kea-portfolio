@@ -28,11 +28,11 @@ export default async function BlogPosts() {
 
   return (
     <div className={styles["stack-posting-container"]}>
-      <p> 블로그 포스팅입니다.</p>
+      <p> 블로그 포스팅 클릭시 외부 링크(티스토리) 새창이 뜹니다.</p>
 
       {Object.entries(groupedByCategory).map(([category, posts]) => (
         <div key={category}>
-          <h2>{category}</h2>
+          <h2 className={styles.category}>{category}</h2>
           <div className={styles["posts-container"]}>
             {posts?.map((post: BlogPost) => (
               <div key={post?.post_id}>
@@ -40,6 +40,7 @@ export default async function BlogPosts() {
                   href={post.post_link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className={styles.flex}
                 >
                   <Image
                     src={post.post_thumbnail_image}
@@ -47,6 +48,10 @@ export default async function BlogPosts() {
                     height={144}
                     width={144}
                   />
+                  <div className={styles["explain-container"]}>
+                    <p className={styles.title}>{post.post_title}</p>
+                    <p className={styles.summary}>{post.post_summary}</p>
+                  </div>
                 </a>
               </div>
             ))}

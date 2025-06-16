@@ -105,13 +105,10 @@ export default function AboutMe() {
               <strong>
                 기술 블로그에 주관적인 탐구 기록을 작성하고 있습니다
               </strong>
-              <p>
-                <Link href={`/blog`}>
-                  <p>블로그 포스트 Preview</p>
-                </Link>
-              </p>
+              <Link href={`/blog`}>
+                <p>블로그 포스트 Preview</p>
+              </Link>
             </dt>
-            {/* <dd className={styles["education-sentence"]}>2025.02 ~ </dd> */}
           </dl>
         </div>
       </div>

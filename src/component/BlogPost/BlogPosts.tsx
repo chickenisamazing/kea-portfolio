@@ -36,12 +36,18 @@ export default async function BlogPosts() {
           <div className={styles["posts-container"]}>
             {posts?.map((post: BlogPost) => (
               <div key={post?.post_id}>
-                <Image
-                  src={post.post_thumbnail_image}
-                  alt={post.post_title}
-                  height={144}
-                  width={144}
-                />
+                <a
+                  href={post.post_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={post.post_thumbnail_image}
+                    alt={post.post_title}
+                    height={144}
+                    width={144}
+                  />
+                </a>
               </div>
             ))}
           </div>

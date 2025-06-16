@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./AboutMe.module.css";
 import SectionTitle from "../common/SectionTitle";
@@ -46,6 +47,7 @@ export default function AboutMe() {
               unhandled.tistory.com
             </a>
           </dd>
+          <Link href={`/blog`}>TEMP 블로그 포스트 리스트 모달</Link>
 
           <dt className={styles["link-category"]}>email.</dt>
           <dd className={styles["link-item"]}>

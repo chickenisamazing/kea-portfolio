@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "../component/Navbar/Navbar";
+import NavbarContainer from "@/component/Navbar/NavbarContainer";
 
 const pretendard = localFont({
   src: [
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${pretendard.className}`}>
-        <Navbar />
+        <NavbarContainer />
         <main>
           {children}
           {modal}

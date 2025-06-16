@@ -1,13 +1,8 @@
 .stack-posting-container {
   /* padding: 0.5rem; */
-
-  .posts-container {
-    display: flex;
-    flex-direction: row;
-  }
 }
 
-/* .thumbnail-container {
+.thumbnail-container {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -25,4 +20,4 @@
     width: 140px;
     height: 140px;
   }
-} */
+}

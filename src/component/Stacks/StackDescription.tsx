@@ -2,17 +2,23 @@ import React, { useState, useEffect, Suspense } from "react";
 
 import styles from "./StackDescription.module.css";
 
-const ClientBlogPost = React.lazy(
-  () => import("@/component/BlogPost/ClientBlogPost")
+const ClientBlogPosts = React.lazy(
+  () => import("@/component/BlogPost/ClientBlogPosts")
 );
 
 interface Props {
   color: string;
   name: string;
   description: string[];
+  title: string;
 }
 
-export default function StackDescription({ color, name, description }: Props) {
+export default function StackDescription({
+  color,
+  name,
+  description,
+  title,
+}: Props) {
   const [blogArea, setBlogArea] = useState<boolean>(false);
 
   useEffect(() => {
@@ -32,20 +38,24 @@ export default function StackDescription({ color, name, description }: Props) {
         >
           {name}
         </span>
-        <button
-          type="button"
-          className={styles["open-blog-text"]}
-          onClick={setBlogAreaState}
-        >
-          블로그 포스팅 펼치기
-        </button>
+
+        {title === "Skills" ? (
+          <button
+            type="button"
+            className={styles["open-blog-text"]}
+            onClick={setBlogAreaState}
+          >
+            블로그 포스팅 {blogArea ? "닫기" : "펼치기"}
+          </button>
+        ) : null}
       </div>
 
       {blogArea && (
         <Suspense fallback={null}>
-          <ClientBlogPost category={name} />
+          <ClientBlogPosts category={name} />
         </Suspense>
       )}
+
       <ul className={styles["sentence-list"]}>
         {description.map((sentence: string) => (
           <li key={sentence} className={styles.sentence}>

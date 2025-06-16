@@ -13,7 +13,7 @@ export default function Stacks({ title, data }: StackProps) {
           <SectionTitle title={title} />
         </div>
         <div className={styles["stacks-container-seat"]}>
-          <StacksContainer data={data} />
+          <StacksContainer title={title} data={data} />
         </div>
       </div>
     </section>

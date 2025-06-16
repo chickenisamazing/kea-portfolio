@@ -1,4 +1,4 @@
-import ScrollToTop from "@/component/scrollhandler/ScrollToTop";
+import ScrollToTop from "@/component/scroll/ScrollToTop";
 
 import getAllProjectData from "@/services/getAllProjectData";
 import getOneProjectData from "@/services/getOneProjectData";

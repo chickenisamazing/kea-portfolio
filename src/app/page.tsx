@@ -1,4 +1,4 @@
-import ScrollToStoredSection from "@/component/client/ScrollToStoredSection";
+import ScrollToStoredSection from "@/component/scroll/ScrollToStoredSection";
 
 import AboutMe from "@/component/AboutMe/AboutMe";
 import StacksSection from "@/component/Stacks/StacksSection";

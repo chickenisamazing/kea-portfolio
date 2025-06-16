@@ -62,10 +62,14 @@
   .project-description-seat,
   .project-skills-list-seat,
   .project-features-seat {
-    grid-column: 2 / span 10;
+    grid-column: 1 / span 10;
+  }
+
+  .project-inner-container {
+    padding: 1rem;
   }
 
   .project-link-container-seat {
-    grid-column: 9 / span 3;
+    grid-column: 8 / span 3;
   }
 }

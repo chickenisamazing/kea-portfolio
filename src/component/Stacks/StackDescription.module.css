@@ -16,6 +16,30 @@
     /* margin-bottom: 4rem; */
   }
 
+  .open-blog-text {
+    font-size: 1rem;
+    align-self: end;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .open-blog-text:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+    align-self: end;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .sentence-list {
     display: flex;
     flex-direction: column;
@@ -24,7 +48,6 @@
 
   .sentence {
     font-size: 1.25rem;
-
     line-height: 1.5;
 
     /* 앞의 점 삭제 */

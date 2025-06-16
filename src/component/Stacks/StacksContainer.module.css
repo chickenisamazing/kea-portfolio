@@ -67,3 +67,31 @@
   /* li 태그 기본 스타일링 제거 */
   list-style: none;
 }
+
+@media (max-width: 768px) {
+  .logo-icon {
+    transform: scale(0.9);
+  }
+
+  .logo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    place-items: center;
+  }
+}
+
+/* 반응형 - 더 작은 화면 (576px) */
+@media (max-width: 576px) {
+  .content {
+    padding: 0 1.5rem;
+  }
+
+  /* 중첩그리드 */
+  .logo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    place-items: center;
+  }
+}

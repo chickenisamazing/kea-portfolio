@@ -8,7 +8,13 @@ import styles from "./StacksContainer.module.css";
 
 import StackDescription from "./StackDescription";
 
-export default function StacksContainer({ data }: { data: Stack[] }) {
+export default function StacksContainer({
+  title,
+  data,
+}: {
+  title: string;
+  data: Stack[];
+}) {
   const [selected, setSelected] = useState<string>(data[0]?.stack_name || "");
 
   const selectedStack = data.find(
@@ -42,6 +48,7 @@ export default function StacksContainer({ data }: { data: Stack[] }) {
 
       {selectedStack && (
         <StackDescription
+          title={title}
           color={selectedStack.stack_color}
           name={selectedStack.stack_name}
           description={selectedStack.stack_description}

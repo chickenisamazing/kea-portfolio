@@ -1,28 +1,42 @@
 .stack-posting-container {
-  /* padding: 0.5rem; */
+  padding: 1rem;
 
   .posts-container {
+    padding: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 48rem;
+  }
+
+  .category {
+    margin: 1rem 1rem;
+    font-size: 2rem;
+  }
+
+  .flex {
+    display: flex;
+    /* padding: 0.5rem; */
+    color: black;
+    border: 3px solid rgb(219, 219, 219);
+
+    .explain-container {
+      padding: 0.5rem;
+
+      .title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .summary {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  .flex:hover {
+    border: 3px solid black;
   }
 }
-
-/* .thumbnail-container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-
-  .thumbnail-image {
-    cursor: pointer;
-    width: 140px;
-    height: 140px;
-  }
-
-  .thumbnail-hover {
-    cursor: pointer;
-    background-color: grey;
-    width: 140px;
-    height: 140px;
-  }
-} */

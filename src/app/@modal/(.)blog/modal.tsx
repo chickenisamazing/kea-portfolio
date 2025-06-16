@@ -31,6 +31,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
       <div
         onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
         className={styles.modal}
+        posts-modal="true"
       >
         {children}
       </div>

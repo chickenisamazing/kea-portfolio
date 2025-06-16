@@ -61,25 +61,35 @@ export default function ClientBlogPosts({ category }: { category: string }) {
           post.length > 0 &&
           post?.map((post: BlogPost) => (
             <div key={post?.post_id}>
-              {isHovered !== post.post_id ? (
-                <Image
-                  className={styles["thumbnail-image"]}
-                  src={post.post_thumbnail_image}
-                  alt={post.post_title}
-                  height={140}
-                  width={140}
-                  onMouseOver={() => handleMouseOver(post.post_id)}
-                  onMouseOut={() => handleMouseOut()}
-                />
-              ) : (
-                <div
-                  className={styles["thumbnail-hover"]}
-                  onMouseOver={() => handleMouseOver(post.post_id)}
-                  onMouseOut={() => handleMouseOut()}
-                >
-                  {post.post_title}
-                </div>
-              )}
+              <a
+                href={post.post_link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {isHovered !== post.post_id ? (
+                  <Image
+                    className={styles["thumbnail-image"]}
+                    src={post.post_thumbnail_image}
+                    alt={post.post_title}
+                    height={140}
+                    width={140}
+                    onMouseOver={() => handleMouseOver(post.post_id)}
+                    onMouseOut={() => handleMouseOut()}
+                  />
+                ) : (
+                  <div
+                    className={styles["thumbnail-hover"]}
+                    onMouseOver={() => handleMouseOver(post.post_id)}
+                    onMouseOut={() => handleMouseOut()}
+                  >
+                    <p className={styles["link-text"]}>
+                      {/* 블로그 포스팅 보러가기
+                       */}
+                      {post.post_title}
+                    </p>
+                  </div>
+                )}
+              </a>
             </div>
           ))}
       </div>

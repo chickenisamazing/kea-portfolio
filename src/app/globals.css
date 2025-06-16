@@ -42,3 +42,7 @@ input,
 textarea {
   font-family: inherit;
 }
+
+a {
+  text-decoration: none;
+}

@@ -75,6 +75,13 @@ export default function Navbar() {
       }
     });
 
+    const allSectionsFound = SECTION_ID_ARRAY.every(
+      (id) => sectionRefs.current[id]
+    );
+    if (allSectionsFound) {
+      mutationObserver.disconnect();
+    }
+
     mutationObserver.observe(document.body, {
       childList: true,
       subtree: true,

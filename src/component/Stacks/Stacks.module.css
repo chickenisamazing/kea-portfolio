@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 0 15rem;
 
-  /* 그리드 */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.5rem;
@@ -17,14 +16,14 @@
   grid-column: 2 / span 10;
 }
 
-/* 반응형 - 데스크탑(작은 모니터) (1440px) */
+/* 작은 데스크탑 (1440px) */
 @media (max-width: 1440px) {
   .content {
     padding: 0 10rem;
   }
 }
 
-/* 반응형 - 태블릿 (1024px) */
+/* 태블릿 (1024px) */
 @media (max-width: 1024px) {
   .content {
     padding: 0 5rem;
@@ -52,7 +51,7 @@
   }
 }
 
-/* 반응형 - 모바일 (768px) */
+/* 모바일 (768px) */
 @media (max-width: 768px) {
   .content {
     padding: 0 1.5rem;
@@ -64,8 +63,6 @@
   }
 
   .logo-container {
-    /* grid-column: 1/-1; */
-
     display: flex;
     grid-column: 2 / span 10;
     margin-top: 2rem;
@@ -96,7 +93,7 @@
   }
 }
 
-/* 반응형 - 더 작은 화면 (576px) */
+/* 더 작은 모바일 (576px) */
 @media (max-width: 576px) {
   .content {
     padding: 0 1.5rem;

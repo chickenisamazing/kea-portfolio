@@ -25,8 +25,6 @@ export default async function BlogPosts() {
     {}
   );
 
-  // console.log(groupedByCategory, "그룹");
-
   return (
     <div className={styles["stack-posting-container"]}>
       <p> 블로그 포스팅 클릭시 외부 링크(티스토리) 새창이 뜹니다.</p>

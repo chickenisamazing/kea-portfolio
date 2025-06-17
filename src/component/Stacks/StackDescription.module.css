@@ -1,6 +1,4 @@
 .description {
-  /* grid-column: 2 / span 10; */
-  /* margin-top: 4rem; */
   padding: 1rem;
   word-break: keep-all;
 
@@ -9,11 +7,8 @@
   gap: 2rem;
 
   .selected-skill-name {
-    /* display: block; */
     font-size: 2rem;
     font-weight: 700;
-    color: #663399;
-    /* margin-bottom: 4rem; */
   }
 
   .open-blog-text {

@@ -9,12 +9,10 @@ import { getBlogPostsByCategory } from "../../services/blog-client";
 export default function ClientBlogPosts({ category }: { category: string }) {
   const [post, setPost] = useState<BlogPost[]>([]);
   const [isHovered, setIsHovered] = useState<number>(0);
-  // const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const getBlogData = async () => {
       try {
-        // setIsLoading(true);
         const { data, error } = await getBlogPostsByCategory(category);
         if (error) {
           console.error("에러 발생", error);
@@ -24,7 +22,6 @@ export default function ClientBlogPosts({ category }: { category: string }) {
       } catch (error) {
         console.error(error);
       } finally {
-        // setIsLoading(false);
       }
     };
     getBlogData();
@@ -41,18 +38,6 @@ export default function ClientBlogPosts({ category }: { category: string }) {
   if (!post || post.length === 0) {
     return null;
   }
-
-  // if (isLoading) {
-  //   return (
-  //     <div className={styles["stack-posting-container"]}>
-  //       <div className={styles["thumbnail-container"]}>
-  //         {Array.from({ length: 5 }, (_, index) => (
-  //           <div key={index} className={styles["thumbnail-skeleton"]}></div>
-  //         ))}
-  //       </div>
-  //     </div>
-  //   );
-  // }
 
   return (
     <div className={styles["stack-posting-container"]}>
@@ -82,11 +67,7 @@ export default function ClientBlogPosts({ category }: { category: string }) {
                     onMouseOver={() => handleMouseOver(post.post_id)}
                     onMouseOut={() => handleMouseOut()}
                   >
-                    <p className={styles["link-text"]}>
-                      {/* 블로그 포스팅 보러가기
-                       */}
-                      {post.post_title}
-                    </p>
+                    <p className={styles["link-text"]}>{post.post_title}</p>
                   </div>
                 )}
               </a>

@@ -1,7 +1,5 @@
 import styles from "./ProjectDetailContainer.module.css";
-
 import type { Project } from "@/types/project";
-
 import ProjectSectionLabel from "./ProjectSectionLabel";
 
 export default function ProjectDetailContainer({

@@ -35,11 +35,11 @@
   grid-column: 9 / span 3;
 }
 
-/* 반응형 - 데스크탑(작은 모니터) (1440px) */
+/* 작은 데스크탑 (1440px) */
 @media (max-width: 1440px) {
 }
 
-/* 반응형 - 태블릿 (1024px) */
+/* 태블릿 (1024px) */
 @media (max-width: 1024px) {
   .project-name-seat {
     grid-column: 2 / span 7;
@@ -54,7 +54,7 @@
   }
 }
 
-/* 반응형 - 모바일 (768px) */
+/* 모바일 (768px) */
 @media (max-width: 768px) {
   .project-detail-container-seat,
   .project-name-seat,

@@ -50,7 +50,11 @@ export default async function ProjectSkillsList({
             >
               <span className={styles["icon-align"]}>
                 {IconToRender ? (
-                  <IconToRender className={styles.icon} color="white" />
+                  <IconToRender
+                    className={styles.icon}
+                    color="white"
+                    size={13}
+                  />
                 ) : null}
                 {stack.stack_name}
               </span>

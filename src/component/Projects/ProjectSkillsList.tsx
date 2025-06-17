@@ -25,7 +25,7 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
   JavaScript: JavaScriptIcon,
   TypeScript: TypeScriptIcon,
   React: ReactIcon,
-  "Next.js App Router": NextIcon,
+  "Next.js": NextIcon,
   PWA: PWAIcon,
   Zustand: ZustandIcon,
 };

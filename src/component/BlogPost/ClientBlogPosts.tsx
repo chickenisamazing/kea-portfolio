@@ -4,7 +4,7 @@ import Image from "next/image";
 import { type BlogPost } from "../../types/blogPost";
 import styles from "./ClientBlogPosts.module.css";
 
-import getClientBlogPostsData from "../../services/getClientBlogPostsData";
+import { getBlogPostsByCategory } from "../../services/blog-client";
 
 export default function ClientBlogPosts({ category }: { category: string }) {
   const [post, setPost] = useState<BlogPost[]>([]);
@@ -15,7 +15,7 @@ export default function ClientBlogPosts({ category }: { category: string }) {
     const getBlogData = async () => {
       try {
         // setIsLoading(true);
-        const { data, error } = await getClientBlogPostsData(category);
+        const { data, error } = await getBlogPostsByCategory(category);
         if (error) {
           console.error("에러 발생", error);
           return;

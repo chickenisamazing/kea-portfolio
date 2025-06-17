@@ -6,8 +6,6 @@
 }
 
 .logo-container {
-  /* margin-top: 4rem; */
-  /* margin-bottom: 2rem; */
   display: flex;
   grid-column: 2 / span 10;
   gap: 2rem;
@@ -81,7 +79,7 @@
   }
 }
 
-/* 반응형 - 더 작은 화면 (576px) */
+/* 더 작은 모바일 (576px) */
 @media (max-width: 576px) {
   .content {
     padding: 0 1.5rem;

@@ -1,6 +1,11 @@
 import supabase from "@/lib/supabase";
 
-export default async function getToolsData() {
+export async function getSkills() {
+  const { data, error } = await supabase.from("stacks").select();
+  return { data, error };
+}
+
+export async function getTools() {
   const { data, error } = await supabase.from("tools").select();
 
   // 컬럼명이 다르니 매핑하자
@@ -11,6 +16,5 @@ export default async function getToolsData() {
     stack_color: item.tool_color,
     stack_description: [item.tool_description],
   }));
-
   return { mappedData, error };
 }

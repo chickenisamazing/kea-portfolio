@@ -1,14 +1,14 @@
 import { type Project } from "@/types/project";
 
-import getAllProjectData from "@/services/getAllProjectData";
+import { getAllProject } from "@/services/project";
 
 import styles from "./Projects.module.css";
 
 import ProjectCard from "./ProjectCard";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 
 export default async function Projects() {
-  const { data } = await getAllProjectData();
+  const { data } = await getAllProject();
 
   return (
     <section>

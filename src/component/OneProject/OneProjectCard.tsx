@@ -1,5 +1,3 @@
-// import Image from "next/image";
-
 import type { Project } from "@/types/project";
 
 import styles from "./OneProjectCard.module.css";

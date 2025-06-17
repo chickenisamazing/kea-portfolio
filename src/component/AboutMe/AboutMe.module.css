@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 0 15rem;
 
-  /* 그리드 */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.5rem;
@@ -14,13 +13,11 @@
 .profile-image {
   grid-column: 2 / span 4;
   padding: 1rem;
-  /* margin-top: 4rem; */
 }
 
 .link-container {
   padding: 1rem;
   grid-column: 7 / span 6;
-  /* margin-top: 4rem; */
 
   .link-category {
     font-size: 1.75rem;
@@ -33,7 +30,6 @@
     margin-top: 0.5rem;
     font-size: 1.25rem;
     font-style: italic;
-    /* margin-inline-start: 0; */
     word-break: break-all;
     margin-bottom: 0.75rem;
 
@@ -56,7 +52,6 @@
 
 .slogan {
   grid-column: 2 / span 10;
-  /* margin-top: 4rem; */
   padding: 1rem;
   font-size: 2.5rem;
   word-break: keep-all;
@@ -64,7 +59,6 @@
   .sentence {
     margin-bottom: 0.5rem;
     display: block;
-    /* 줄 간격 */
     line-height: 1.25;
 
     .thinking {
@@ -85,10 +79,8 @@
 
 .values {
   grid-column: 2 / span 10;
-  /* margin-top: 1.75rem; */
   padding: 1rem;
   font-size: 1.75rem;
-  /* word-break: keep-all; */
 
   display: flex;
   flex-direction: column;
@@ -97,10 +89,8 @@
   line-height: 1.5;
 }
 
-/* 교육사항 */
 .education-container {
   grid-column: 2 / span 10;
-  /* margin-top: 1.75rem; */
   padding: 1rem;
   font-size: 1.75rem;
   word-break: keep-all;
@@ -135,28 +125,26 @@
     }
 
     .education-sentence {
-      /* dd 기본 스타일링 제거 */
-      margin: 0;
       order: 1;
     }
   }
 }
 
-/* 반응형 - 데스크탑(작은 모니터) (1440px) */
+/* 작은 데스크탑 (1440px) */
 @media (max-width: 1440px) {
   .content {
     padding: 0 10rem;
   }
 }
 
-/* 반응형 - 태블릿 (1024px) */
+/* 태블릿 (1024px) */
 @media (max-width: 1024px) {
   .content {
     padding: 0 5rem;
   }
 }
 
-/* 반응형 - 모바일 (768px) */
+/* 모바일 (768px) */
 @media (max-width: 768px) {
   .content {
     padding: 0 1.5rem;
@@ -189,7 +177,6 @@
   .link-container {
     margin-top: 2rem;
     grid-column: 1 / span 12;
-    /* justify-self: center; */
   }
 
   .slogan {
@@ -201,7 +188,6 @@
 
   .values {
     grid-column: 1 / span 12;
-
     margin-top: 0.25rem;
     font-size: 1.25rem;
   }

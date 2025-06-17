@@ -2,7 +2,7 @@ import { type Project } from "@/types/project";
 import styles from "./OneProject.module.css";
 
 import OneProjectCard from "./OneProjectCard";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 
 interface OneProjectProps {
   data: Project;

@@ -4,11 +4,11 @@ import { type BlogPost } from "@/types/blogPost";
 
 import styles from "./BlogPosts.module.css";
 
-import getBlogPostsData from "@/services/getBlogPostsData";
+import { getBlogPosts } from "@/services/blog-server";
 import ScrollToTopPassive from "../scroll/ScrollToTopPassive";
 
 export default async function BlogPosts() {
-  const { data } = await getBlogPostsData();
+  const { data } = await getBlogPosts();
 
   if (!data) {
     return <div>블로그 포스트 데이터가 없습니다.</div>;
@@ -24,8 +24,6 @@ export default async function BlogPosts() {
     },
     {}
   );
-
-  // console.log(groupedByCategory, "그룹");
 
   return (
     <div className={styles["stack-posting-container"]}>

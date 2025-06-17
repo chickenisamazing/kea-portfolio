@@ -1,9 +1,7 @@
-/* 기술 스택 */
 .skills-container {
   .skill-list {
     padding: 0.25rem;
     gap: 1rem;
-
     margin-top: 0.25rem;
   }
 
@@ -18,10 +16,7 @@
     margin-right: 0.25rem;
     margin-bottom: 0.25rem;
 
-    /* text-shadow: -0.7px 0px black, 0px 0.7px black, 0.7px 0px black,
-      0px -0.7px black; */
-
-    /* li 태그  */
+    /* li 태그 기본 스타일(.) 삭제 */
     list-style: none;
   }
 
@@ -32,14 +27,14 @@
   }
 }
 
-/* 반응형 - 데스크탑(작은 모니터) (1440px) */
+/* 작은 데스크탑 (1440px) */
 @media (max-width: 1440px) {
 }
 
-/* 반응형 - 태블릿 (1024px) */
+/* 태블릿 (1024px) */
 @media (max-width: 1024px) {
 }
 
-/* 반응형 - 모바일 (768px) */
+/* 모바일 (768px) */
 @media (max-width: 768px) {
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./AboutMe.module.css";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 
 export default function AboutMe() {
   return (

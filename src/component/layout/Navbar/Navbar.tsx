@@ -50,7 +50,6 @@ export default function Navbar() {
 
     const mutationObserver = new MutationObserver((mutations) => {
       const hasNewSections = mutations.some((mutation) => {
-        // console.log(mutation);
         return Array.from(mutation.addedNodes).some((node) => {
           if (node.nodeType === 1) {
             const element = node as Element;
@@ -74,6 +73,13 @@ export default function Navbar() {
         setIntersectionObserver();
       }
     });
+
+    const allSectionsFound = SECTION_ID_ARRAY.every(
+      (id) => sectionRefs.current[id]
+    );
+    if (allSectionsFound) {
+      mutationObserver.disconnect();
+    }
 
     mutationObserver.observe(document.body, {
       childList: true,

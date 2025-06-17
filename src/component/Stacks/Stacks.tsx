@@ -1,7 +1,7 @@
 import styles from "./Stacks.module.css";
 
 import type { StackProps } from "@/types/stacks";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 
 import StacksContainer from "./StacksContainer";
 

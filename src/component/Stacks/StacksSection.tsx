@@ -2,14 +2,13 @@ import type { Stack } from "@/types/stacks";
 
 import Stacks from "@/component/Stacks/Stacks";
 
-import getSkillsData from "@/services/getSkillsData";
-import getToolsData from "@/services/getToolsData";
+import { getSkills, getTools } from "@/services/stack";
 
 import styles from "./StacksSection.module.css";
 
 export default async function StacksSection() {
-  const { data } = await getSkillsData();
-  const { mappedData } = await getToolsData();
+  const { data } = await getSkills();
+  const { mappedData } = await getTools();
   return (
     <section className={styles["stacks-container"]}>
       <Stacks title="Skills" data={data ?? []} />

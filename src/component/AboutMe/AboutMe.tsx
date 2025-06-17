@@ -9,8 +9,9 @@ export default function AboutMe() {
     <section>
       <div className={styles.content}>
         {/* 타이틀 */}
-        <SectionTitle title="About Me" />
-
+        <div className={styles.title}>
+          <SectionTitle title="About Me" />
+        </div>
         {/* 프로필 이미지 */}
         <Image
           className={styles["profile-image"]}

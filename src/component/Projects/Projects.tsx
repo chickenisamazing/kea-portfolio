@@ -5,7 +5,7 @@ import { getAllProject } from "@/services/project";
 import styles from "./Projects.module.css";
 
 import ProjectCard from "./ProjectCard";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 
 export default async function Projects() {
   const { data } = await getAllProject();

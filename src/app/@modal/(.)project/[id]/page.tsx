@@ -1,11 +1,10 @@
-import getAllProjectData from "@/services/getAllProjectData";
-import getOneProjectData from "@/services/getOneProjectData";
 import OneProject from "@/component/OneProject/OneProject";
-
 import { Modal } from "./modal";
 
+import { getAllProject, getOneProjectById } from "@/services/project";
+
 export async function generateStaticParams() {
-  const { data: projectListData } = await getAllProjectData();
+  const { data: projectListData } = await getAllProject();
 
   return (
     projectListData?.map((post) => ({
@@ -23,7 +22,7 @@ export default async function ProjectModal({
 
   // parseInt는 동기함수
   const id = parseInt(resolvedParams.id);
-  const { data: projectData, error } = await getOneProjectData(id);
+  const { data: projectData, error } = await getOneProjectById(id);
 
   if (error || !projectData) {
     console.error("에러 발생", error);

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import "./globals.css";
-import NavbarContainer from "@/component/Navbar/NavbarContainer";
+import NavbarContainer from "@/component/layout/Navbar/NavbarContainer";
 
 const pretendard = localFont({
   src: [

@@ -1,8 +1,59 @@
-.content {
+/* .content {
   max-width: 90rem;
   margin: 0 auto;
   padding: 0 15rem;
 
   margin-top: 20rem;
   text-align: center;
+} */
+
+.content {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 15rem;
+
+  margin-top: 15rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circle-wrapper {
+  /* width: 25rem; */
+  height: 25rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .circle {
+    width: 15rem;
+    height: 15rem;
+    border: 2px solid black;
+    border-radius: 100%;
+    cursor: pointer;
+
+    transition: all 1s ease-in-out;
+    position: fixed;
+
+    /* reset 버튼을 위해 */
+    z-index: -10;
+  }
+
+  .return-to-main {
+    color: black;
+    font-weight: 1rem;
+    transition: all 1s ease-in-out;
+    z-index: 2;
+  }
+}
+
+.circle-wrapper:hover {
+  .circle {
+    position: fixed;
+    width: 48rem;
+    height: 48rem;
+  }
 }

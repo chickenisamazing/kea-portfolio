@@ -1,7 +1,7 @@
 import { type Project } from "@/types/project";
 import styles from "./OneProject.module.css";
 
-import OneProjectCard from "./OneProjectCard";
+import ProjectCard from "@/component/Projects/ProjectCard";
 import SectionTitle from "../ui/SectionTitle";
 
 interface OneProjectProps {
@@ -18,7 +18,7 @@ export default function OneProject({
       <div className={styles.content}>
         {showTitle && <SectionTitle title="Projects" />}
         <div className={styles["project-container"]}>
-          <OneProjectCard project={data} />
+          <ProjectCard project={data} />
         </div>
       </div>
     </section>

@@ -10,6 +10,10 @@
   gap: 2rem;
 }
 
+.title {
+  grid-column: 2 / span 10;
+}
+
 .profile-image {
   grid-column: 2 / span 4;
   padding: 1rem;
@@ -148,6 +152,7 @@
 @media (max-width: 768px) {
   .content {
     padding: 0 1.5rem;
+    justify-content: center;
   }
 
   .title,

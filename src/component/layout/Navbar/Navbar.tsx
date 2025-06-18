@@ -22,7 +22,6 @@ export default function Navbar() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(entry.isIntersecting, "????");
           if (entry.isIntersecting) {
             if (!doNotChangeRef.current) {
               setActiveSection(entry.target.id);
@@ -87,10 +86,10 @@ export default function Navbar() {
     });
 
     // 디버깅용 콘솔
-    SECTION_ID_ARRAY.forEach((id) => {
-      const el = document.getElementById(id);
-      console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
-    });
+    // SECTION_ID_ARRAY.forEach((id) => {
+    //   const el = document.getElementById(id);
+    //   console.log(`${id}:`, el ? "찾음" : "못 찾음", el);
+    // });
 
     return () => {
       observer.disconnect();

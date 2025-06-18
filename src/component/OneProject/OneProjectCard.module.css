@@ -63,6 +63,11 @@
     grid-column: 2 / span 10;
   }
 
+  .project-inner-container {
+    justify-content: center;
+    padding: 1rem;
+  }
+
   .project-link-container-seat {
     grid-column: 9 / span 3;
   }

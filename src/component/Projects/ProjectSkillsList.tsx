@@ -1,6 +1,7 @@
 import { ComponentType } from "react";
 
-import styles from "./ProjectSkillsList.module.css";
+import smallStyles from "./ProjectSkillsListSmall.module.css";
+import bigStyles from "./ProjectSkillsListBig.module.css";
 
 import type { Stack, IconProps, Project } from "@/types/project";
 
@@ -32,9 +33,15 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
 
 export default async function ProjectSkillsList({
   project,
+  badge,
+  size,
 }: {
   project: Project;
+  badge: string;
+  size: number;
 }) {
+  const styles = badge === "small" ? smallStyles : bigStyles;
+
   return (
     <div className={styles["skills-container"]}>
       <ProjectSectionLabel label="Skills" />
@@ -50,9 +57,13 @@ export default async function ProjectSkillsList({
             >
               <span className={styles["icon-align"]}>
                 {IconToRender ? (
-                  <IconToRender className={styles.icon} color="white" />
+                  <IconToRender
+                    className={styles.icon}
+                    color="white"
+                    size={size}
+                  />
                 ) : null}
-                {stack.stack_name}
+                <p className={styles["stack-name"]}>{stack.stack_name}</p>
               </span>
             </li>
           );

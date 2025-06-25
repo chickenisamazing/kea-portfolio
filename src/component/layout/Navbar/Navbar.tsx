@@ -4,7 +4,12 @@ import { usePathname } from "next/navigation";
 
 import styles from "./Navbar.module.css";
 
-const SECTION_ID_ARRAY = ["about-me-title", "skills-title", "projects-title"];
+const SECTION_ID_ARRAY = [
+  "about-me-title",
+  "skills-title",
+  "blog-title",
+  "projects-title",
+];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -138,6 +143,17 @@ export default function Navbar() {
           }`}
         >
           Skills
+        </button>
+        <button
+          key="blog-title"
+          onClick={() => scrollTo("blog-title")}
+          className={`${styles.btn} ${
+            activeSection === "blog-title"
+              ? styles["btn-selected"]
+              : styles["btn-unselected"]
+          }`}
+        >
+          Blog
         </button>
         <button
           key="projects-title"

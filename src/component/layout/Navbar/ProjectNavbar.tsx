@@ -30,6 +30,13 @@ export default function NavbarProject() {
           Skills
         </button>
         <button
+          key="blog-title"
+          onClick={() => NavigateAndscroll("blog-title")}
+          className={`${styles.btn} ${styles["btn-unselected"]}`}
+        >
+          Blog
+        </button>
+        <button
           key="projects-title"
           onClick={() => NavigateAndscroll("projects-title")}
           className={`${styles.btn} ${styles["btn-selected"]}`}

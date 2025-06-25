@@ -6,8 +6,9 @@
 
 /* 프로젝트 카드 그다음 컨테이너 */
 .project-inner-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(12, 1fr); */
+
   gap: 2rem;
   align-items: flex-start;
   padding: 2rem;
@@ -15,24 +16,26 @@
 
 .project-name-seat,
 .project-image-seat {
-  grid-column: 2 / span 6;
+  /* grid-column: 2 / span 6; */
 }
 
 .project-detail-container-seat {
-  grid-column: 8 / span 4;
+  /* grid-column: 8 / span 4; */
 }
 
 .project-description-seat {
-  grid-column: 2 / span 10;
+  /* grid-column: 2 / span 10; */
+  margin-top: 1rem;
 }
 
 .project-skills-list-seat,
 .project-features-seat {
-  grid-column: 2 / span 8;
+  margin-top: 2rem;
+  /* grid-column: 2 / span 8; */
 }
 
 .project-link-container-seat {
-  grid-column: 9 / span 3;
+  /* grid-column: 9 / span 3; */
 }
 
 /* 작은 데스크탑 (1440px) */
@@ -42,7 +45,7 @@
 /* 태블릿 (1024px) */
 @media (max-width: 1024px) {
   .project-name-seat {
-    grid-column: 2 / span 7;
+    /* grid-column: 2 / span 7; */
   }
 
   .project-detail-container-seat,

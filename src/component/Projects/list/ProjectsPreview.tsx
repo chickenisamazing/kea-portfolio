@@ -4,7 +4,7 @@ import { getAllProject } from "@/services/project";
 
 import styles from "./ProjectsPreview.module.css";
 
-import SectionTitle from "../ui/SectionTitle";
+import SectionTitle from "../../ui/SectionTitle";
 import ProjectPreviewCard from "./ProjectPreviewCard";
 
 export default async function ProjectsSimple() {

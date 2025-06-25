@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 import styles from "./ProjectPreviewCard.module.css";
 
 import type { Project } from "@/types/project";
 
-import ProjectName from "./ProjectName";
+import ProjectName from "../ProjectName";
 // import ProjectDetailContainer from "./ProjectDetailContainer";
-import ProjectDescription from "./ProjectDescription";
-import ProjectSkillsList from "./ProjectSkillsList";
-import ProjectFeatures from "./ProjectFeatures";
+import ProjectDescription from "../ProjectDescription";
+import ProjectSkillsList from "../ProjectSkillsList";
+import ProjectFeatures from "../ProjectFeatures";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -37,6 +39,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className={styles["project-features-seat"]}>
           <ProjectFeatures features={project.project_features} />
         </div>
+
+        <Link
+          href={`/project/${project.project_id}`}
+          scroll={false}
+          aria-label={`${project.project_name} 프로젝트 상세 페이지로 이동`}
+        >
+          모달
+        </Link>
       </div>
     </article>
   );

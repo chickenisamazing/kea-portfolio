@@ -2,7 +2,8 @@ import ScrollToStoredSection from "@/component/scroll/ScrollToStoredSection";
 
 import AboutMe from "@/component/AboutMe/AboutMe";
 import StacksSection from "@/component/Stacks/StacksSection";
-import Projects from "@/component/Projects/Projects";
+// import Projects from "@/component/Projects/Projects";
+import ProjectsPreivew from "@/component/Projects/ProjectsPreview";
 
 import styles from "./page.module.css";
 
@@ -19,8 +20,12 @@ export default function Home() {
         <StacksSection />
       </div>
 
-      <div id="projects-title">
+      {/* <div id="projects-title">
         <Projects />
+      </div> */}
+
+      <div id="projects-title">
+        <ProjectsPreivew />
       </div>
     </div>
   );

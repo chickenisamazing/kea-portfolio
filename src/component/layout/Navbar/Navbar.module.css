@@ -19,7 +19,7 @@
   align-items: center;
 
   .btn {
-    grid-column: span 4;
+    grid-column: span 3;
     cursor: pointer;
 
     /* 버튼 기본 CSS 제거 */

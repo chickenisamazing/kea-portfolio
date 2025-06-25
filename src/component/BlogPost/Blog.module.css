@@ -1,0 +1,92 @@
+.content {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 15rem;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1.5rem;
+
+  gap: 2rem;
+}
+
+.title {
+  grid-column: 2 / span 10;
+}
+
+.education-container {
+  grid-column: 2 / span 10;
+  padding: 1rem;
+  font-size: 1.75rem;
+  word-break: keep-all;
+
+  display: flex;
+  flex-direction: column;
+
+  .education-title {
+    font-size: 2.75rem;
+    font-style: italic;
+    font-weight: 700;
+    grid-column: 2 / span 8;
+    margin-bottom: 4rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(
+      to right bottom,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .education-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    .education-term {
+      order: 2;
+    }
+
+    .education-sentence {
+      order: 1;
+    }
+  }
+}
+
+/* 작은 데스크탑 (1440px) */
+@media (max-width: 1440px) {
+  .content {
+    padding: 0 10rem;
+  }
+}
+
+/* 태블릿 (1024px) */
+@media (max-width: 1024px) {
+  .content {
+    padding: 0 5rem;
+  }
+}
+
+/* 모바일 (768px) */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1.5rem;
+    justify-content: center;
+  }
+
+  .title {
+    grid-column: 1 / -1;
+    margin-top: 4rem;
+  }
+
+  .education-container {
+    grid-column: 1 / span 12;
+    margin-top: 1.75rem;
+
+    .education-title {
+      margin-bottom: 2rem;
+    }
+  }
+}

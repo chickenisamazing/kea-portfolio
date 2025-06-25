@@ -2,11 +2,11 @@ import styles from "./ProjectPreviewCard.module.css";
 
 import type { Project } from "@/types/project";
 
-import ProjectName from "./ProjectName";
+import ProjectName from "../ProjectName";
 // import ProjectDetailContainer from "./ProjectDetailContainer";
-import ProjectDescription from "./ProjectDescription";
-import ProjectSkillsList from "./ProjectSkillsList";
-import ProjectFeatures from "./ProjectFeatures";
+import ProjectDescription from "../ProjectDescription";
+import ProjectSkillsList from "../ProjectSkillsList";
+import ProjectFeatures from "../ProjectFeatures";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (

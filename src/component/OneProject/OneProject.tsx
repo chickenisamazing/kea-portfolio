@@ -1,7 +1,7 @@
 import { type Project } from "@/types/project";
 import styles from "./OneProject.module.css";
 
-import ProjectCard from "@/component/Projects/ProjectCard";
+import ProjectCard from "@/component/Projects/detail/ProjectCard";
 import SectionTitle from "../ui/SectionTitle";
 
 interface OneProjectProps {

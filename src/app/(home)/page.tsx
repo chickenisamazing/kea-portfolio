@@ -4,7 +4,7 @@ import AboutMe from "@/component/AboutMe/AboutMe";
 import StacksSection from "@/component/Stacks/StacksSection";
 import Blog from "@/component/BlogPost/Blog";
 // import Projects from "@/component/Projects/Projects";
-import ProjectsPreivew from "@/component/Projects/ProjectsPreview";
+import ProjectsPreivew from "@/component/Projects/list/ProjectsPreview";
 
 import styles from "./page.module.css";
 

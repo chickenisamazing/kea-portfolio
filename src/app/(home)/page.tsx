@@ -2,6 +2,7 @@ import ScrollToStoredSection from "@/component/scroll/ScrollToStoredSection";
 
 import AboutMe from "@/component/AboutMe/AboutMe";
 import StacksSection from "@/component/Stacks/StacksSection";
+import Blog from "@/component/BlogPost/Blog";
 // import Projects from "@/component/Projects/Projects";
 import ProjectsPreivew from "@/component/Projects/ProjectsPreview";
 
@@ -18,6 +19,10 @@ export default function Home() {
 
       <div id="skills-title">
         <StacksSection />
+      </div>
+
+      <div id="blog-title">
+        <Blog />
       </div>
 
       {/* <div id="projects-title">

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./ProjectPreviewCard.module.css";
 
 import type { Project } from "@/types/project";
@@ -37,6 +39,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className={styles["project-features-seat"]}>
           <ProjectFeatures features={project.project_features} />
         </div>
+
+        <Link
+          href={`/project/${project.project_id}`}
+          scroll={false}
+          aria-label={`${project.project_name} 프로젝트 상세 페이지로 이동`}
+        >
+          모달
+        </Link>
       </div>
     </article>
   );

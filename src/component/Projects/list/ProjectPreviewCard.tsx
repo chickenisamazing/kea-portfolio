@@ -8,7 +8,7 @@ import ProjectName from "../ProjectName";
 // import ProjectDetailContainer from "./ProjectDetailContainer";
 import ProjectDescription from "../ProjectDescription";
 import ProjectSkillsList from "../ProjectSkillsList";
-import ProjectFeatures from "../ProjectFeatures";
+// import ProjectFeatures from "../ProjectFeatures";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -36,16 +36,18 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         {/* 구현 기능 */}
-        <div className={styles["project-features-seat"]}>
+        {/* <div className={styles["project-features-seat"]}>
           <ProjectFeatures features={project.project_features} />
-        </div>
+        </div> */}
 
         <Link
           href={`/project/${project.project_id}`}
           scroll={false}
           aria-label={`${project.project_name} 프로젝트 상세 페이지로 이동`}
         >
-          모달
+          <button className={styles.btn} type="button">
+            자세히 보기
+          </button>
         </Link>
       </div>
     </article>

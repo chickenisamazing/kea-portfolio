@@ -43,6 +43,12 @@ textarea {
   font-family: inherit;
 }
 
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
 a {
   text-decoration: none;
 }

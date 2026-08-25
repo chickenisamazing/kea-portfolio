@@ -1,12 +1,20 @@
 import supabase from "@/lib/supabase";
 
 export async function getSkills() {
-  const { data, error } = await supabase.from("stacks").select();
+  const { data, error } = await supabase
+    .from("stacks")
+    .select("*")
+    .order("stack_id", { ascending: true });
+
+  console.log(data, "????");
   return { data, error };
 }
 
 export async function getTools() {
-  const { data, error } = await supabase.from("tools").select();
+  const { data, error } = await supabase
+    .from("tools")
+    .select("*")
+    .order("tool_id", { ascending: true });
 
   // 컬럼명이 다르니 매핑하자
   const mappedData = data?.map((item) => ({
@@ -16,5 +24,6 @@ export async function getTools() {
     stack_color: item.tool_color,
     stack_description: [item.tool_description],
   }));
+
   return { mappedData, error };
 }

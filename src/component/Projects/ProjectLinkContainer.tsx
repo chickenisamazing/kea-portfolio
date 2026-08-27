@@ -45,22 +45,6 @@ export default function ProjectLinkContainer({
         )}
       </a>
       <a
-        href={project.project_domain_link}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`${project.project_name} 프로젝트의 배포된 웹사이트 보러가기`}
-      >
-        {project.project_logo && (
-          <Image
-            className={styles["project-link-logo"]}
-            src={project.project_logo}
-            alt="배포된 도메인"
-            width={48}
-            height={48}
-          />
-        )}
-      </a>
-      <a
         href={project.project_blog_post_link}
         target="_blank"
         rel="noopener noreferrer"

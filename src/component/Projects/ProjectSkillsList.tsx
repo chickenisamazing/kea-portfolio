@@ -1,7 +1,6 @@
 import { ComponentType } from "react";
 
 import smallStyles from "./ProjectSkillsListSmall.module.css";
-import bigStyles from "./ProjectSkillsListBig.module.css";
 
 import type { Stack, IconProps, Project } from "@/types/project";
 
@@ -33,14 +32,12 @@ const iconComponents: { [key: string]: ComponentType<IconProps> } = {
 
 export default async function ProjectSkillsList({
   project,
-  badge,
   size,
 }: {
   project: Project;
-  badge: string;
   size: number;
 }) {
-  const styles = badge === "small" ? smallStyles : bigStyles;
+  const styles = smallStyles;
 
   return (
     <div className={styles["skills-container"]}>

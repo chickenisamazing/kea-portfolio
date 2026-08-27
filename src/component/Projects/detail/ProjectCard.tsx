@@ -37,12 +37,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         {/* 프로젝트 기술 스택 리스트 */}
         <div className={styles["project-skills-list-seat"]}>
-          <ProjectSkillsList project={project} badge={"small"} size={13} />
-        </div>
-
-        {/* 프로젝트 기술 스택 리스트 (ver.2)*/}
-        <div className={styles["project-skills-list-seat"]}>
-          <ProjectSkillsList project={project} badge={"big"} size={65} />
+          <ProjectSkillsList project={project} size={13} />
         </div>
 
         {/* 구현 기능 */}

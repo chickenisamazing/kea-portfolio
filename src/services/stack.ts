@@ -6,7 +6,6 @@ export async function getSkills() {
     .select("*")
     .order("stack_id", { ascending: true });
 
-  console.log(data, "????");
   return { data, error };
 }
 

@@ -19,7 +19,7 @@
   align-items: center;
 
   .btn {
-    grid-column: span 3;
+    grid-column: span 4;
     cursor: pointer;
 
     /* 버튼 기본 CSS 제거 */
@@ -48,7 +48,11 @@
 
   /* 선택되지않은 탭 상태 */
   .btn-unselected {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow:
+      -1px 0 black,
+      0 1px black,
+      1px 0 black,
+      0 -1px black;
   }
 }
 

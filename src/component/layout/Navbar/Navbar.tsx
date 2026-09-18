@@ -4,12 +4,7 @@ import { usePathname } from "next/navigation";
 
 import styles from "./Navbar.module.css";
 
-const SECTION_ID_ARRAY = [
-  "about-me-title",
-  "skills-title",
-  "blog-title",
-  "projects-title",
-];
+const SECTION_ID_ARRAY = ["about-me-title", "skills-title", "projects-title"];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -38,7 +33,7 @@ export default function Navbar() {
         root: null,
         rootMargin: "-64px 0px 0px 0px",
         threshold: 0.0,
-      }
+      },
     );
 
     function setIntersectionObserver() {
@@ -58,7 +53,7 @@ export default function Navbar() {
           if (node.nodeType === 1) {
             const element = node as Element;
             return SECTION_ID_ARRAY.some(
-              (id) => element.id === id || element.querySelector(`#${id}`)
+              (id) => element.id === id || element.querySelector(`#${id}`),
             );
           }
           return false;
@@ -79,7 +74,7 @@ export default function Navbar() {
     });
 
     const allSectionsFound = SECTION_ID_ARRAY.every(
-      (id) => sectionRefs.current[id]
+      (id) => sectionRefs.current[id],
     );
     if (allSectionsFound) {
       mutationObserver.disconnect();
@@ -143,17 +138,6 @@ export default function Navbar() {
           }`}
         >
           Skills
-        </button>
-        <button
-          key="blog-title"
-          onClick={() => scrollTo("blog-title")}
-          className={`${styles.btn} ${
-            activeSection === "blog-title"
-              ? styles["btn-selected"]
-              : styles["btn-unselected"]
-          }`}
-        >
-          Blog
         </button>
         <button
           key="projects-title"

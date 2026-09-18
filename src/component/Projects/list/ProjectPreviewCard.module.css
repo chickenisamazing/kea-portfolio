@@ -12,6 +12,8 @@
   gap: 2rem;
   align-items: flex-start;
   padding: 2rem;
+
+  position: relative;
 }
 
 .project-name-seat,
@@ -36,6 +38,13 @@
 
 .project-link-container-seat {
   /* grid-column: 9 / span 3; */
+}
+
+.project-detail-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
 }
 
 /* 작은 데스크탑 (1440px) */

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import styles from "./ProjectPreviewCard.module.css";
 
@@ -40,15 +41,24 @@ export default function ProjectCard({ project }: { project: Project }) {
           <ProjectFeatures features={project.project_features} />
         </div> */}
 
-        <Link
-          href={`/project/${project.project_id}`}
-          scroll={false}
-          aria-label={`${project.project_name} 프로젝트 상세 페이지로 이동`}
-        >
-          <button className={styles.btn} type="button">
-            자세히 보기
-          </button>
-        </Link>
+        {/* 프로젝트 상세 모달 링크 */}
+        <div className={styles["project-detail-button"]}>
+          <Link
+            href={`/project/${project.project_id}`}
+            scroll={false}
+            aria-label={`${project.project_name} 프로젝트 상세 페이지로 이동`}
+          >
+            {project.project_logo && (
+              <Image
+                className={styles["project-link-logo"]}
+                src="/assets/navigate_to_project_detail.png"
+                alt={`${project.project_name} 프로젝트 상세 이동 버튼`}
+                width={48}
+                height={48}
+              />
+            )}
+          </Link>
+        </div>
       </div>
     </article>
   );

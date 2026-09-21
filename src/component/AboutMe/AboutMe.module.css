@@ -57,7 +57,7 @@
 .slogan {
   grid-column: 2 / span 10;
   padding: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   word-break: keep-all;
 
   .sentence {
@@ -84,7 +84,7 @@
 .values {
   grid-column: 2 / span 10;
   padding: 1rem;
-  font-size: 1.75rem;
+  font-size: 1.625rem;
 
   display: flex;
   flex-direction: column;
